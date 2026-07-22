@@ -497,10 +497,10 @@
       <label for="marketSelect">Market</label>
       <select id="marketSelect"><option value="">All markets</option></select>
     </div>
-    <div class="field">
+    <!-- <div class="field">
       <label for="dateInput">Arrival date</label>
       <input type="date" id="dateInput">
-    </div>
+    </div> -->
     <button class="btn-refresh" id="refreshBtn" type="button">Check rates</button>
   </div>
 </div>
@@ -549,13 +549,12 @@
 
   const HIST_API_BASE = "https://api.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24";
   const HIST_API_KEY = "579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b";
-  const HIST_MAX_POINTS = 60; // most recent reported days shown on the chart
+  const TREND_DAYS = 7; // most recent reported days shown on the chart
 
   const els = {
     search: document.getElementById('searchInput'),
     district: document.getElementById('districtSelect'),
     market: document.getElementById('marketSelect'),
-    date: document.getElementById('dateInput'),
     refresh: document.getElementById('refreshBtn'),
     statusCount: document.getElementById('statusCount'),
     statusUpdated: document.getElementById('statusUpdated'),
@@ -571,17 +570,6 @@
   let allRecords = [];   // records for the selected date, straight from the API
   let sortKey = 'commodity';
   let sortDir = 1;
-
-  function todayStr(){
-    const d = new Date();
-    return d.toISOString().slice(0,10); // yyyy-mm-dd for <input type=date>
-  }
-  function toApiDate(yyyyMmDd){
-    const [y,m,d] = yyyyMmDd.split('-');
-    return `${d}/${m}/${y}`;
-  }
-
-  els.date.value = todayStr();
 
   function setStatus(text, updated){
     els.statusCount.innerHTML = text;
@@ -726,8 +714,11 @@
     showState('loading');
     setStatus('Loading…');
 
-    const apiDate = toApiDate(els.date.value);
-    const url = `${API_BASE}?api-key=${API_KEY}&format=json&filters[state]=Karnataka&filters[arrival_date]=${encodeURIComponent(apiDate)}&limit=2000`;
+    const url =
+      `${API_BASE}?api-key=${API_KEY}`
+      + `&format=json`
+      + `&filters[state]=Karnataka`
+      + `&limit=2000`;
 
     try{
       const res = await fetch(url);
@@ -735,8 +726,8 @@
       const data = await res.json();
       allRecords = Array.isArray(data.records) ? data.records : [];
 
-      const updatedAt = new Date().toLocaleTimeString('en-IN', {hour:'2-digit', minute:'2-digit'});
-      setStatus(`<strong>${allRecords.length}</strong> listings for ${apiDate}`, `checked at ${updatedAt}`);
+      const updatedAt = new Date().toLocaleTimeString('en-IN', {hour:'2-digit', minute:'2-digit'});      
+      setStatus(`<strong>${allRecords.length}</strong> latest listings`,`Updated at ${updatedAt}`);
 
       refreshFilterOptions();
       if(allRecords.length === 0){
@@ -752,8 +743,7 @@
     }
   }
 
-  els.refresh.addEventListener('click', load);
-  els.date.addEventListener('change', load);
+  els.refresh.addEventListener('click', load);  
   els.district.addEventListener('change', () => { refreshFilterOptions(); applyFiltersAndRender(); });
   els.market.addEventListener('change', applyFiltersAndRender);
   els.search.addEventListener('input', applyFiltersAndRender);
@@ -821,60 +811,147 @@
     openTrend(btn.dataset.commodity, btn.dataset.market, btn.dataset.district);
   });
 
-  async function loadTrend(commodity, market, district){
-    const url = `${HIST_API_BASE}?api-key=${HIST_API_KEY}&format=json`
-      + `&filters[State]=Karnataka`
-      + `&filters[District]=${encodeURIComponent(district)}`
-      + `&filters[Commodity]=${encodeURIComponent(commodity)}`
-      + `&filters[Market]=${encodeURIComponent(market)}`
-      + `&limit=1000`;
+  async function fetchRecentHistoricalRecords(commodity, market, district, daysNeeded = TREND_DAYS) {
+  const pageSize = 10; // hard cap enforced by data.gov.in on this resource
+  const baseFilters =
+    `filters[State]=Karnataka`
+    + `&filters[District]=${encodeURIComponent(district)}`
+    + `&filters[Commodity]=${encodeURIComponent(commodity)}`
+    + `&filters[Market]=${encodeURIComponent(market)}`;
 
-    try{
-      const res = await fetch(url);
-      if(!res.ok) throw new Error(`Server responded with ${res.status}`);
-      const data = await res.json();
-      const raw = Array.isArray(data.records) ? data.records : [];
+  // Step 1: find out how many rows exist in total (single lightweight call)
+  const countUrl =
+    `${HIST_API_BASE}?api-key=${HIST_API_KEY}&format=json`
+    + `&${baseFilters}`
+    + `&sort[Arrival_Date]=asc`
+    + `&limit=1&offset=0`;
 
-      if(raw.length === 0){
-        els.trendBody.innerHTML = trendStateHtml('empty');
-        return;
-      }
+  const countRes = await fetch(countUrl);
+  if (!countRes.ok) throw new Error(`Server responded with ${countRes.status}`);
+  const countData = await countRes.json();
+  const total = Number(countData.total || 0);
 
-      // Group by date (a date can have >1 row across variety/grade) and average.
-      const byDate = new Map();
-      raw.forEach(rec => {
-        const dt = parseHistDate(rec.Arrival_Date);
-        if(!dt) return;
-        const key = dt.getTime();
-        const min = num(rec.Min_Price), max = num(rec.Max_Price), modal = num(rec.Modal_Price);
-        if(!byDate.has(key)) byDate.set(key, {date:dt, min:[], max:[], modal:[]});
-        const bucket = byDate.get(key);
-        if(min !== null) bucket.min.push(min);
-        if(max !== null) bucket.max.push(max);
-        if(modal !== null) bucket.modal.push(modal);
-      });
+  if (total === 0) return [];
 
-      const avg = arr => arr.length ? arr.reduce((a,b)=>a+b,0)/arr.length : null;
-      let points = [...byDate.values()]
-        .map(b => ({date:b.date, min:avg(b.min), max:avg(b.max), modal:avg(b.modal)}))
-        .filter(p => p.modal !== null)
-        .sort((a,b) => a.date - b.date);
+  // Step 2: walk backward from the end, one page at a time, until we've
+  // collected enough distinct reported days (or run out of history)
+  let collected = [];
+  let offset = Math.max(0, total - pageSize);
+  let uniqueDays = new Set();
 
-      if(points.length === 0){
-        els.trendBody.innerHTML = trendStateHtml('empty');
-        return;
-      }
+  while (true) {
+    const url =
+      `${HIST_API_BASE}?api-key=${HIST_API_KEY}&format=json`
+      + `&${baseFilters}`
+      + `&sort[Arrival_Date]=asc`
+      + `&limit=${pageSize}`
+      + `&offset=${offset}`;
 
-      if(points.length > HIST_MAX_POINTS){
-        points = points.slice(points.length - HIST_MAX_POINTS);
-      }
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Server responded with ${res.status}`);
+    const data = await res.json();
+    const rows = Array.isArray(data.records) ? data.records : [];
 
-      renderTrend(points, {commodity, market, district, totalRows: raw.length});
-    }catch(err){
-      els.trendBody.innerHTML = trendStateHtml('error',
-        `${err.message}. If this keeps happening, data.gov.in may be rate-limiting requests — wait a moment and try again.`);
-    }
+    // Prepend, since we're walking backward toward offset 0
+    collected = [...rows, ...collected];
+    rows.forEach(r => uniqueDays.add(r.Arrival_Date));
+
+    // Stop once we have enough distinct days, or we've hit the very start
+    if (uniqueDays.size >= daysNeeded || offset === 0) break;
+
+    offset = Math.max(0, offset - pageSize);
   }
+
+  console.log(`Fetched ${collected.length} rows across ${uniqueDays.size} days (backward pagination)`);
+  return collected;
+}
+
+  async function loadTrend(commodity, market, district) {
+
+  try {
+
+    const raw = await fetchRecentHistoricalRecords(
+      commodity,
+      market,
+      district
+    );
+
+    if (raw.length === 0) {
+      els.trendBody.innerHTML = trendStateHtml('empty');
+      return;
+    }
+
+    // Group rows by Arrival_Date
+    const byDate = new Map();
+
+    raw.forEach(rec => {
+
+      const dt = parseHistDate(rec.Arrival_Date);
+
+      if (!dt) return;
+
+      const key = dt.getTime();
+
+      const min = num(rec.Min_Price);
+      const max = num(rec.Max_Price);
+      const modal = num(rec.Modal_Price);
+
+      if (!byDate.has(key)) {
+        byDate.set(key, {
+          date: dt,
+          min: [],
+          max: [],
+          modal: []
+        });
+      }
+
+      const bucket = byDate.get(key);
+
+      if (min !== null) bucket.min.push(min);
+      if (max !== null) bucket.max.push(max);
+      if (modal !== null) bucket.modal.push(modal);
+
+    });
+
+    const avg = arr =>
+      arr.length
+        ? arr.reduce((a, b) => a + b, 0) / arr.length
+        : null;
+
+    let points = [...byDate.values()]
+      .map(b => ({
+        date: b.date,
+        min: avg(b.min),
+        max: avg(b.max),
+        modal: avg(b.modal)
+      }))
+      .filter(p => p.modal !== null)
+      .sort((a, b) => a.date - b.date);
+
+    if (points.length === 0) {
+      els.trendBody.innerHTML = trendStateHtml('empty');
+      return;
+    }
+
+    // Show only the latest 7 reported days
+    points = points.slice(-TREND_DAYS);
+
+    renderTrend(points, {
+      commodity,
+      market,
+      district,
+      totalRows: raw.length
+    });
+
+  } catch (err) {
+
+    els.trendBody.innerHTML = trendStateHtml(
+      'error',
+      `${err.message}. If this keeps happening, data.gov.in may be rate-limiting requests — wait a moment and try again.`
+    );
+
+  }
+}
 
   function renderTrend(points, meta){
     const fmt = v => v === null || v === undefined ? '—' : Math.round(v).toLocaleString('en-IN');
@@ -886,8 +963,8 @@
 
     const dateLabel = d => d.toLocaleDateString('en-IN', {day:'numeric', month:'short'});
     const spanLabel = `${dateLabel(points[0].date)} – ${dateLabel(points[points.length-1].date)}`;
-
-    els.trendSub.textContent = `${meta.market} · ${meta.district} district · ${points.length} reported day${points.length!==1?'s':''} (${spanLabel})`;
+    
+    els.trendSub.textContent = `${meta.market} · ${meta.district} district · Last ${points.length} reported day${points.length !== 1 ? 's' : ''} (${spanLabel})`;
 
     els.trendBody.innerHTML = `
       <div class="trend-stats">
