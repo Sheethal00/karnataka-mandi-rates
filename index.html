@@ -261,6 +261,138 @@
   }
   .lcd.modal .lcd-value{font-size:18px;}
 
+  /* ---------- Trend link (opens historical chart) ---------- */
+  .trend-link{
+    display:inline-block;
+    margin-top:7px;
+    background:none;
+    border:none;
+    padding:0;
+    font-family:'Space Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:0.3px;
+    color:var(--brick);
+    cursor:pointer;
+    text-decoration:underline;
+    text-underline-offset:2px;
+  }
+  .trend-link:hover{color:var(--turmeric-dim);}
+  .trend-link:focus-visible{outline:2px solid var(--brick); outline-offset:2px;}
+
+  /* ---------- Trend overlay / modal ---------- */
+  .trend-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(11,20,13,0.72);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    z-index:50;
+  }
+  .trend-overlay[hidden]{display:none;}
+  .trend-panel{
+    background:var(--paper);
+    border:1px solid var(--ink);
+    border-radius:6px;
+    max-width:720px;
+    width:100%;
+    max-height:88vh;
+    overflow:auto;
+    box-shadow:0 16px 44px rgba(0,0,0,0.35);
+  }
+  .trend-head{
+    background:var(--board);
+    color:var(--paper);
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:12px;
+    padding:16px 20px;
+    position:sticky;
+    top:0;
+    z-index:1;
+  }
+  .trend-title{
+    font-family:'Rajdhani',sans-serif;
+    font-weight:700;
+    font-size:22px;
+    text-transform:uppercase;
+    letter-spacing:0.3px;
+  }
+  .trend-sub{
+    font-family:'Space Mono',monospace;
+    font-size:11px;
+    color:var(--turmeric);
+    margin-top:4px;
+  }
+  .trend-close{
+    background:none;
+    border:1px solid rgba(243,236,221,0.3);
+    border-radius:3px;
+    color:var(--paper);
+    font-size:15px;
+    line-height:1;
+    padding:6px 10px;
+    cursor:pointer;
+    flex-shrink:0;
+  }
+  .trend-close:hover{border-color:var(--turmeric); color:var(--turmeric);}
+
+  .trend-body{padding:20px;}
+
+  .trend-stats{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:16px;
+  }
+  .trend-stat{
+    background:var(--lcd-bg);
+    border-radius:4px;
+    padding:8px 14px;
+    min-width:96px;
+  }
+  .trend-stat .k{
+    font-family:'Space Mono',monospace;
+    font-size:9px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--lcd-fg-dim);
+    display:block;
+  }
+  .trend-stat .v{
+    font-family:'Space Mono',monospace;
+    font-weight:700;
+    font-size:17px;
+    color:var(--lcd-fg);
+    text-shadow:0 0 6px rgba(111,255,158,0.4);
+  }
+  .trend-stat .v.up{color:#8FE38A; text-shadow:0 0 6px rgba(143,227,138,0.4);}
+  .trend-stat .v.down{color:#E38A8A; text-shadow:0 0 6px rgba(227,138,138,0.4);}
+
+  .trend-chart-wrap{
+    background:#fff;
+    border:1px solid var(--rule);
+    border-radius:4px;
+    padding:10px 12px 4px;
+  }
+  svg.trend-svg{width:100%; height:auto; display:block;}
+  .trend-grid{stroke:var(--rule); stroke-width:1;}
+  .trend-axis-label{
+    font-family:'Space Mono',monospace;
+    font-size:10px;
+    fill:var(--ink-soft);
+  }
+  .trend-band{fill:rgba(217,164,65,0.28);}
+  .trend-modal-line{fill:none; stroke:var(--brick); stroke-width:2.25;}
+  .trend-point{fill:var(--brick);}
+  .trend-note{
+    margin-top:10px;
+    font-size:12px;
+    color:var(--ink-soft);
+  }
+
   /* ---------- Empty / error / loading ---------- */
   .state-panel{
     text-align:center;
@@ -308,6 +440,7 @@
   }
   footer a{color:var(--turmeric); text-decoration:none;}
   footer a:hover{text-decoration:underline;}
+  footer p{max-width:720px; margin:6px auto;}
 
   /* ---------- Responsive ---------- */
   @media (max-width: 760px){
@@ -325,6 +458,8 @@
     .row-card .lcd:nth-of-type(1){grid-area:min;}
     .row-card .lcd:nth-of-type(2){grid-area:modal;}
     .row-card .lcd:nth-of-type(3){grid-area:max;}
+    .trend-stats{gap:8px;}
+    .trend-stat{min-width:84px; padding:7px 10px;}
   }
 
   @media (prefers-reduced-motion: reduce){
@@ -345,7 +480,7 @@
       SOURCE <strong>data.gov.in</strong>
     </div>
   </div>
-  <p class="masthead-sub">Daily min, modal and max prices reported from APMC yards and markets across Karnataka.</p>
+  <p class="masthead-sub">Daily min, modal and max prices reported from APMC yards and markets across Karnataka. Click any listing to see its price trend.</p>
 </header>
 
 <div class="controls-wrap">
@@ -389,14 +524,32 @@
 </main>
 
 <footer>
-  Data from the Ministry of Agriculture &amp; Farmers Welfare's <a href="https://www.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070" target="_blank" rel="noopener">Variety-wise Daily Market Prices</a> dataset via data.gov.in.
-  Prices are as reported by market committees and may lag actual trading by a day. Rates are per quintal (100&nbsp;kg).
+  <p>Live rates from the Ministry of Agriculture &amp; Farmers Welfare's <a href="https://www.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070" target="_blank" rel="noopener">Variety-wise Daily Market Prices</a> dataset via data.gov.in. Prices are as reported by market committees and may lag actual trading by a day. Rates are per quintal (100&nbsp;kg).</p>
+  <p>Price trends use the same ministry's <a href="https://www.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24" target="_blank" rel="noopener">historical daily prices</a> resource.</p>
 </footer>
+
+<!-- Trend overlay -->
+<div class="trend-overlay" id="trendOverlay" hidden>
+  <div class="trend-panel" role="dialog" aria-modal="true" aria-labelledby="trendTitle">
+    <div class="trend-head">
+      <div>
+        <div class="trend-title" id="trendTitle">—</div>
+        <div class="trend-sub" id="trendSub">—</div>
+      </div>
+      <button class="trend-close" id="trendClose" type="button" aria-label="Close trend">✕ Close</button>
+    </div>
+    <div class="trend-body" id="trendBody"></div>
+  </div>
+</div>
 
 <script>
 (function(){
   const API_BASE = "https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070";
   const API_KEY = "579b464db66ec23bdd0000010cd27d3e5a454e487978c56932e5a38e";
+
+  const HIST_API_BASE = "https://api.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24";
+  const HIST_API_KEY = "579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b";
+  const HIST_MAX_POINTS = 60; // most recent reported days shown on the chart
 
   const els = {
     search: document.getElementById('searchInput'),
@@ -408,6 +561,11 @@
     statusUpdated: document.getElementById('statusUpdated'),
     rows: document.getElementById('rows'),
     colHeaders: document.getElementById('colHeaders'),
+    trendOverlay: document.getElementById('trendOverlay'),
+    trendTitle: document.getElementById('trendTitle'),
+    trendSub: document.getElementById('trendSub'),
+    trendBody: document.getElementById('trendBody'),
+    trendClose: document.getElementById('trendClose'),
   };
 
   let allRecords = [];   // records for the selected date, straight from the API
@@ -484,6 +642,10 @@
     return isNaN(n) ? null : n;
   }
 
+  function esc(s){
+    return (s||'').toString().replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
   function applyFiltersAndRender(){
     const q = els.search.value.trim().toLowerCase();
     const district = els.district.value;
@@ -516,7 +678,6 @@
 
     if(filtered.length === 0){
       showState('empty');
-      const marketsCount = new Set(allRecords.map(r=>r.market)).size;
       setStatus(`<strong>0</strong> listings match your filters (out of ${allRecords.length} for this date)`);
       return;
     }
@@ -528,10 +689,6 @@
     setStatus(`<strong>${filtered.length}</strong> listings across ${marketsCount} market${marketsCount!==1?'s':''}`);
   }
 
-  function esc(s){
-    return (s||'').toString().replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-  }
-
   function rowHtml(r){
     const min = num(r.min_price), max = num(r.max_price), modal = num(r.modal_price);
     const fmt = v => v === null ? '—' : Math.round(v).toLocaleString('en-IN');
@@ -540,6 +697,10 @@
         <div class="commodity-cell">
           <div class="name">${esc(r.commodity)}</div>
           <div class="variety">${esc(r.variety || 'General')}${r.grade && r.grade !== '-' ? ' · ' + esc(r.grade) : ''}</div>
+          <button class="trend-link" type="button"
+            data-commodity="${esc(r.commodity)}"
+            data-market="${esc(r.market)}"
+            data-district="${esc(r.district)}">View price trend →</button>
         </div>
         <div class="market-cell">
           <div class="market-name">${esc(r.market)}</div>
@@ -603,6 +764,211 @@
     if(sortKey === key){ sortDir *= -1; } else { sortKey = key; sortDir = 1; }
     applyFiltersAndRender();
   });
+
+  /* ================= Price trend (historical API) ================= */
+
+  function parseHistDate(s){
+    // format from this resource: "DD/MM/YYYY"
+    const [d,m,y] = (s||'').split('/').map(Number);
+    if(!d || !m || !y) return null;
+    return new Date(y, m-1, d);
+  }
+
+  function trendStateHtml(kind, detail){
+    const glyphs = {loading:'···', empty:'—', error:'!'};
+    const titles = {
+      loading:'Pulling the historical ledger…',
+      empty:'No historical rows for this listing',
+      error:"Couldn't reach the historical ledger"
+    };
+    const bodies = {
+      loading:'Fetching daily prices reported for this commodity and market.',
+      empty:'This exact commodity / market / district combination has no rows in the historical dataset yet.',
+      error: detail || 'The connection to data.gov.in failed. Check your network and try again.'
+    };
+    return `
+      <div class="state-panel">
+        <div class="glyph">${glyphs[kind]}</div>
+        <h3>${titles[kind]}</h3>
+        <p>${bodies[kind]}</p>
+      </div>`;
+  }
+
+  function openTrend(commodity, market, district){
+    els.trendTitle.textContent = commodity;
+    els.trendSub.textContent = `${market} · ${district} district`;
+    els.trendBody.innerHTML = trendStateHtml('loading');
+    els.trendOverlay.hidden = false;
+    document.body.style.overflow = 'hidden';
+    loadTrend(commodity, market, district);
+  }
+
+  function closeTrend(){
+    els.trendOverlay.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  els.trendClose.addEventListener('click', closeTrend);
+  els.trendOverlay.addEventListener('click', e => {
+    if(e.target === els.trendOverlay) closeTrend();
+  });
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape' && !els.trendOverlay.hidden) closeTrend();
+  });
+  els.rows.addEventListener('click', e => {
+    const btn = e.target.closest('.trend-link');
+    if(!btn) return;
+    openTrend(btn.dataset.commodity, btn.dataset.market, btn.dataset.district);
+  });
+
+  async function loadTrend(commodity, market, district){
+    const url = `${HIST_API_BASE}?api-key=${HIST_API_KEY}&format=json`
+      + `&filters[State]=Karnataka`
+      + `&filters[District]=${encodeURIComponent(district)}`
+      + `&filters[Commodity]=${encodeURIComponent(commodity)}`
+      + `&filters[Market]=${encodeURIComponent(market)}`
+      + `&limit=1000`;
+
+    try{
+      const res = await fetch(url);
+      if(!res.ok) throw new Error(`Server responded with ${res.status}`);
+      const data = await res.json();
+      const raw = Array.isArray(data.records) ? data.records : [];
+
+      if(raw.length === 0){
+        els.trendBody.innerHTML = trendStateHtml('empty');
+        return;
+      }
+
+      // Group by date (a date can have >1 row across variety/grade) and average.
+      const byDate = new Map();
+      raw.forEach(rec => {
+        const dt = parseHistDate(rec.Arrival_Date);
+        if(!dt) return;
+        const key = dt.getTime();
+        const min = num(rec.Min_Price), max = num(rec.Max_Price), modal = num(rec.Modal_Price);
+        if(!byDate.has(key)) byDate.set(key, {date:dt, min:[], max:[], modal:[]});
+        const bucket = byDate.get(key);
+        if(min !== null) bucket.min.push(min);
+        if(max !== null) bucket.max.push(max);
+        if(modal !== null) bucket.modal.push(modal);
+      });
+
+      const avg = arr => arr.length ? arr.reduce((a,b)=>a+b,0)/arr.length : null;
+      let points = [...byDate.values()]
+        .map(b => ({date:b.date, min:avg(b.min), max:avg(b.max), modal:avg(b.modal)}))
+        .filter(p => p.modal !== null)
+        .sort((a,b) => a.date - b.date);
+
+      if(points.length === 0){
+        els.trendBody.innerHTML = trendStateHtml('empty');
+        return;
+      }
+
+      if(points.length > HIST_MAX_POINTS){
+        points = points.slice(points.length - HIST_MAX_POINTS);
+      }
+
+      renderTrend(points, {commodity, market, district, totalRows: raw.length});
+    }catch(err){
+      els.trendBody.innerHTML = trendStateHtml('error',
+        `${err.message}. If this keeps happening, data.gov.in may be rate-limiting requests — wait a moment and try again.`);
+    }
+  }
+
+  function renderTrend(points, meta){
+    const fmt = v => v === null || v === undefined ? '—' : Math.round(v).toLocaleString('en-IN');
+    const first = points[0].modal;
+    const last = points[points.length-1].modal;
+    const change = (first && last !== null) ? ((last-first)/first*100) : null;
+    const changeClass = change === null ? '' : (change > 0 ? 'up' : (change < 0 ? 'down' : ''));
+    const changeLabel = change === null ? '—' : `${change > 0 ? '+' : ''}${change.toFixed(1)}%`;
+
+    const dateLabel = d => d.toLocaleDateString('en-IN', {day:'numeric', month:'short'});
+    const spanLabel = `${dateLabel(points[0].date)} – ${dateLabel(points[points.length-1].date)}`;
+
+    els.trendSub.textContent = `${meta.market} · ${meta.district} district · ${points.length} reported day${points.length!==1?'s':''} (${spanLabel})`;
+
+    els.trendBody.innerHTML = `
+      <div class="trend-stats">
+        <div class="trend-stat">
+          <span class="k">Latest modal</span>
+          <span class="v">₹${fmt(last)}</span>
+        </div>
+        <div class="trend-stat">
+          <span class="k">Change over period</span>
+          <span class="v ${changeClass}">${changeLabel}</span>
+        </div>
+        <div class="trend-stat">
+          <span class="k">Range shown</span>
+          <span class="v" style="font-size:13px">₹${fmt(Math.min(...points.map(p=>p.min ?? p.modal)))}–${fmt(Math.max(...points.map(p=>p.max ?? p.modal)))}</span>
+        </div>
+      </div>
+      <div class="trend-chart-wrap">
+        ${buildTrendSvg(points)}
+      </div>
+      <p class="trend-note">Shaded band shows the daily min–max range; the line tracks the modal (most common) price, per quintal. Source: ministry's historical daily prices dataset for Karnataka.</p>
+    `;
+  }
+
+  function buildTrendSvg(points){
+    const W = 680, H = 260, padL = 54, padR = 16, padT = 16, padB = 30;
+    const innerW = W - padL - padR, innerH = H - padT - padB;
+
+    const allVals = [];
+    points.forEach(p => {
+      allVals.push(p.modal);
+      if(p.min !== null) allVals.push(p.min);
+      if(p.max !== null) allVals.push(p.max);
+    });
+    let lo = Math.min(...allVals), hi = Math.max(...allVals);
+    if(lo === hi){ lo -= 1; hi += 1; }
+    const pad = (hi-lo) * 0.08;
+    lo -= pad; hi += pad;
+
+    const n = points.length;
+    const xFor = i => padL + (n <= 1 ? innerW/2 : (i/(n-1)) * innerW);
+    const yFor = v => padT + innerH - ((v-lo)/(hi-lo)) * innerH;
+
+    // Band path (min below, max above), falling back to modal where a value is missing
+    const topPts = points.map((p,i) => [xFor(i), yFor(p.max ?? p.modal)]);
+    const botPts = points.map((p,i) => [xFor(i), yFor(p.min ?? p.modal)]).reverse();
+    const bandPath = 'M ' + topPts.map(pt=>pt.join(',')).join(' L ')
+      + ' L ' + botPts.map(pt=>pt.join(',')).join(' L ') + ' Z';
+
+    const linePath = 'M ' + points.map((p,i) => `${xFor(i)},${yFor(p.modal)}`).join(' L ');
+
+    // Show markers sparingly if there are many points
+    const markerStep = n > 30 ? Math.ceil(n/20) : 1;
+    const markers = points.map((p,i) => (i % markerStep === 0 || i === n-1)
+      ? `<circle class="trend-point" cx="${xFor(i)}" cy="${yFor(p.modal)}" r="2.6"></circle>` : '').join('');
+
+    // Y gridlines (4 bands) with price labels
+    const gridCount = 4;
+    let grid = '';
+    for(let g=0; g<=gridCount; g++){
+      const v = lo + (hi-lo) * (g/gridCount);
+      const y = yFor(v);
+      grid += `<line class="trend-grid" x1="${padL}" y1="${y}" x2="${W-padR}" y2="${y}"></line>`;
+      grid += `<text class="trend-axis-label" x="${padL-8}" y="${y+3}" text-anchor="end">₹${Math.round(v).toLocaleString('en-IN')}</text>`;
+    }
+
+    // X labels: first, middle, last date
+    const idxs = n > 1 ? [0, Math.floor((n-1)/2), n-1] : [0];
+    const xLabels = [...new Set(idxs)].map(i => {
+      const label = points[i].date.toLocaleDateString('en-IN', {day:'numeric', month:'short'});
+      return `<text class="trend-axis-label" x="${xFor(i)}" y="${H-padB+18}" text-anchor="middle">${label}</text>`;
+    }).join('');
+
+    return `
+      <svg class="trend-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Price trend chart">
+        ${grid}
+        <path class="trend-band" d="${bandPath}"></path>
+        <path class="trend-modal-line" d="${linePath}"></path>
+        ${markers}
+        ${xLabels}
+      </svg>`;
+  }
 
   load();
 })();
