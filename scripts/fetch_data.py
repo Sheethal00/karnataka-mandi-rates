@@ -13,6 +13,7 @@ import json
 import os
 import sys
 from datetime import datetime, timezone, date
+import time
 
 import requests
 
@@ -31,17 +32,31 @@ HISTORY_FILE = os.path.join(DATA_DIR, "history.json")
 TREND_DAYS_KEPT = 14       # keep a bit more than 7 so the frontend has slicing headroom
 MAX_NEW_COMBOS_PER_RUN = 30  # cap backfill work per cron run to stay within rate limits
 
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:152.0) Gecko/20100101 Firefox/152.0"
+}
 
-def fetch_current():
+session = requests.Session()
+session.headers.update(HEADERS)
+
+def fetch_current(retries=3):
     params = {
         "api-key": API_KEY,
         "format": "json",
         "filters[state]": "Karnataka",
-        "limit": 2000,
+        "limit": 500,
     }
-    resp = requests.get(CURRENT_URL, params=params, timeout=30)
-    resp.raise_for_status()
-    return resp.json().get("records", [])
+    for attempt in range(retries):
+        try:
+            resp = session.get(CURRENT_URL, params=params, timeout=45)            
+            resp.raise_for_status()
+            return resp.json().get("records", [])
+        except requests.exceptions.RequestException as e:
+            print(f"fetch_current attempt {attempt+1} failed: {e}")
+            if attempt < retries - 1:
+                time.sleep(5 * (attempt + 1))
+    print("fetch_current: all retries failed, returning empty list")
+    return []
 
 
 def fetch_historical_paginated(filters, sort_field=None, max_pages=50):
@@ -61,7 +76,7 @@ def fetch_historical_paginated(filters, sort_field=None, max_pages=50):
         if sort_field:
             params[f"sort[{sort_field}]"] = "desc"
 
-        resp = requests.get(HIST_URL, params=params, timeout=30)
+        resp = session.get(HIST_URL, params=params, timeout=45)  # <-- added headers here
         resp.raise_for_status()
         data = resp.json()
         rows = data.get("records", [])
