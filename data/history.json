@@ -43,9 +43,9 @@
       "modal_price": "2583"
     },
     "22/07/2026": {
-      "min_price": "2475",
-      "max_price": "2549",
-      "modal_price": "2529"
+      "min_price": 2475,
+      "max_price": 2549,
+      "modal_price": 2529
     }
   },
   "Red gram/Arhar/Tur(whole)|Bagalkot APMC|Bagalkot": {
@@ -55,9 +55,9 @@
       "modal_price": "4001"
     },
     "22/07/2026": {
-      "min_price": "7000",
-      "max_price": "7000",
-      "modal_price": "7000"
+      "min_price": 7000,
+      "max_price": 7000,
+      "modal_price": 7000
     }
   },
   "Jowar(Sorghum)|Bagalkot APMC|Bagalkot": {
@@ -155,9 +155,9 @@
       "modal_price": "8502"
     },
     "22/07/2026": {
-      "min_price": "6070",
-      "max_price": "9053",
-      "modal_price": "7633"
+      "min_price": 6070,
+      "max_price": 9053,
+      "modal_price": 7633
     },
     "15/07/2026": {
       "min_price": "1511",
@@ -197,16 +197,16 @@
       "modal_price": "4259"
     },
     "22/07/2026": {
-      "min_price": "5189",
-      "max_price": "5189",
-      "modal_price": "5189"
+      "min_price": 5189,
+      "max_price": 5189,
+      "modal_price": 5189
     }
   },
   "Mataki|Bagalkot APMC|Bagalkot": {
     "22/07/2026": {
-      "min_price": "8100",
-      "max_price": "8100",
-      "modal_price": "8100"
+      "min_price": 8100,
+      "max_price": 8100,
+      "modal_price": 8100
     }
   },
   "Green Gram(Moong)(Whole)|Bagalkot APMC|Bagalkot": {
@@ -972,6 +972,11 @@
       "min_price": "2500",
       "max_price": "3000",
       "modal_price": "2700"
+    },
+    "23/07/2026": {
+      "min_price": 2500,
+      "max_price": 3000,
+      "modal_price": 2700
     }
   },
   "Tomato|Channapatna APMC|Bengaluru South": {
@@ -981,9 +986,9 @@
       "modal_price": "1500"
     },
     "22/07/2026": {
-      "min_price": "500",
-      "max_price": "1500",
-      "modal_price": "1000"
+      "min_price": 500,
+      "max_price": 1500,
+      "modal_price": 1000
     },
     "16/07/2026": {
       "min_price": "850",
@@ -1009,6 +1014,11 @@
       "min_price": "500",
       "max_price": "1500",
       "modal_price": "1000"
+    },
+    "23/07/2026": {
+      "min_price": 500,
+      "max_price": 1250,
+      "modal_price": 900
     }
   },
   "Green Chilli|Channapatna APMC|Bengaluru South": {
@@ -1023,9 +1033,9 @@
       "modal_price": "3900"
     },
     "22/07/2026": {
-      "min_price": "4500",
-      "max_price": "5000",
-      "modal_price": "4700"
+      "min_price": 4500,
+      "max_price": 5000,
+      "modal_price": 4700
     },
     "21/07/2026": {
       "min_price": "4800",
@@ -1046,6 +1056,11 @@
       "min_price": "3000",
       "max_price": "3500",
       "modal_price": "3300"
+    },
+    "23/07/2026": {
+      "min_price": 3700,
+      "max_price": 4200,
+      "modal_price": 4000
     }
   },
   "Ladies Finger|Channapatna APMC|Bengaluru South": {
@@ -1080,9 +1095,14 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "2500",
-      "modal_price": "2300"
+      "min_price": 2000,
+      "max_price": 2500,
+      "modal_price": 2300
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 2500,
+      "modal_price": 2300
     }
   },
   "Cucumbar(Kheera)|Channapatna APMC|Bengaluru South": {
@@ -1102,9 +1122,9 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "1200",
-      "max_price": "2000",
-      "modal_price": "1600"
+      "min_price": 1200,
+      "max_price": 2000,
+      "modal_price": 1600
     },
     "17/07/2026": {
       "min_price": "1400",
@@ -1120,6 +1140,11 @@
       "min_price": "1400",
       "max_price": "2200",
       "modal_price": "2000"
+    },
+    "23/07/2026": {
+      "min_price": 1200,
+      "max_price": 2000,
+      "modal_price": 1600
     }
   },
   "Banana|Channapatna APMC|Bengaluru South": {
@@ -1157,6 +1182,11 @@
       "min_price": "3000",
       "max_price": "6500",
       "modal_price": "5700"
+    },
+    "23/07/2026": {
+      "min_price": 3500,
+      "max_price": 6700,
+      "modal_price": 6000
     }
   },
   "Brinjal|Channapatna APMC|Bengaluru South": {
@@ -1171,9 +1201,9 @@
       "modal_price": "3500"
     },
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "3000",
-      "modal_price": "2700"
+      "min_price": 2500,
+      "max_price": 3000,
+      "modal_price": 2700
     },
     "21/07/2026": {
       "min_price": "2500",
@@ -1194,6 +1224,11 @@
       "min_price": "2500",
       "max_price": "3000",
       "modal_price": "2700"
+    },
+    "23/07/2026": {
+      "min_price": 2500,
+      "max_price": 3000,
+      "modal_price": 2700
     }
   },
   "Green Avare(W)|Ramanagara APMC|Bengaluru South": {
@@ -1231,6 +1266,11 @@
       "min_price": "2800",
       "max_price": "3300",
       "modal_price": "3000"
+    },
+    "23/07/2026": {
+      "min_price": 3600,
+      "max_price": 5000,
+      "modal_price": 4400
     }
   },
   "Drumstick|Ramanagara APMC|Bengaluru South": {
@@ -1250,9 +1290,9 @@
       "modal_price": "5500"
     },
     "22/07/2026": {
-      "min_price": "6000",
-      "max_price": "8000",
-      "modal_price": "7000"
+      "min_price": 6000,
+      "max_price": 8000,
+      "modal_price": 7000
     },
     "17/07/2026": {
       "min_price": "4400",
@@ -1273,6 +1313,11 @@
       "min_price": "4400",
       "max_price": "6000",
       "modal_price": "5500"
+    },
+    "23/07/2026": {
+      "min_price": 5000,
+      "max_price": 7400,
+      "modal_price": 6500
     }
   },
   "Seemebadnekai|Ramanagara APMC|Bengaluru South": {
@@ -1315,13 +1360,18 @@
       "min_price": "2400",
       "max_price": "3200",
       "modal_price": "3000"
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 2600,
+      "modal_price": 2400
     }
   },
   "Knool Khol|Ramanagara APMC|Bengaluru South": {
     "22/07/2026": {
-      "min_price": "3500",
-      "max_price": "5000",
-      "modal_price": "4000"
+      "min_price": 3500,
+      "max_price": 5000,
+      "modal_price": 4000
     },
     "18/07/2026": {
       "min_price": "4000",
@@ -1352,6 +1402,11 @@
       "min_price": "4000",
       "max_price": "5000",
       "modal_price": "4400"
+    },
+    "23/07/2026": {
+      "min_price": 3000,
+      "max_price": 4500,
+      "modal_price": 4000
     }
   },
   "Alsandikai|Ramanagara APMC|Bengaluru South": {
@@ -1391,9 +1446,14 @@
       "modal_price": "3200"
     },
     "22/07/2026": {
-      "min_price": "3500",
-      "max_price": "4200",
-      "modal_price": "4000"
+      "min_price": 3500,
+      "max_price": 4200,
+      "modal_price": 4000
+    },
+    "23/07/2026": {
+      "min_price": 3200,
+      "max_price": 4000,
+      "modal_price": 3600
     }
   },
   "Ridgeguard(Tori)|Ramanagara APMC|Bengaluru South": {
@@ -1436,6 +1496,11 @@
       "min_price": "2800",
       "max_price": "4000",
       "modal_price": "3500"
+    },
+    "23/07/2026": {
+      "min_price": 2400,
+      "max_price": 3200,
+      "modal_price": 2800
     }
   },
   "Onion|Ramanagara APMC|Bengaluru South": {
@@ -1462,9 +1527,9 @@
       "modal_price": "7000"
     },
     "22/07/2026": {
-      "min_price": "6000",
-      "max_price": "8000",
-      "modal_price": "7000"
+      "min_price": 6000,
+      "max_price": 8000,
+      "modal_price": 7000
     },
     "17/07/2026": {
       "min_price": "7000",
@@ -1485,6 +1550,11 @@
       "min_price": "6000",
       "max_price": "8000",
       "modal_price": "7000"
+    },
+    "23/07/2026": {
+      "min_price": 6000,
+      "max_price": 8000,
+      "modal_price": 7000
     }
   },
   "Ginger(Green)|Ramanagara APMC|Bengaluru South": {
@@ -1527,6 +1597,11 @@
       "min_price": "7000",
       "max_price": "12000",
       "modal_price": "10000"
+    },
+    "23/07/2026": {
+      "min_price": 7000,
+      "max_price": 11000,
+      "modal_price": 10000
     }
   },
   "Kulthi(Horse Gram)|Ramanagara APMC|Bengaluru South": {
@@ -1558,9 +1633,9 @@
       "modal_price": "2400"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "2400",
-      "modal_price": "2000"
+      "min_price": 1500,
+      "max_price": 2400,
+      "modal_price": 2000
     },
     "21/07/2026": {
       "min_price": "2000",
@@ -1576,6 +1651,11 @@
       "min_price": "2000",
       "max_price": "3200",
       "modal_price": "2400"
+    },
+    "23/07/2026": {
+      "min_price": 1500,
+      "max_price": 2600,
+      "modal_price": 2000
     }
   },
   "Brinjal|Ramanagara APMC|Bengaluru South": {
@@ -1615,9 +1695,14 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "1600",
-      "max_price": "2400",
-      "modal_price": "2000"
+      "min_price": 1600,
+      "max_price": 2400,
+      "modal_price": 2000
+    },
+    "23/07/2026": {
+      "min_price": 1500,
+      "max_price": 2200,
+      "modal_price": 2000
     }
   },
   "Chilly Capsicum|Ramanagara APMC|Bengaluru South": {
@@ -1647,9 +1732,9 @@
       "modal_price": "6000"
     },
     "22/07/2026": {
-      "min_price": "5000",
-      "max_price": "7000",
-      "modal_price": "6000"
+      "min_price": 5000,
+      "max_price": 7000,
+      "modal_price": 6000
     },
     "21/07/2026": {
       "min_price": "5000",
@@ -1660,6 +1745,11 @@
       "min_price": "5000",
       "max_price": "7000",
       "modal_price": "6200"
+    },
+    "23/07/2026": {
+      "min_price": 5000,
+      "max_price": 7000,
+      "modal_price": 6000
     }
   },
   "Raddish|Ramanagara APMC|Bengaluru South": {
@@ -1679,9 +1769,9 @@
       "modal_price": "3000"
     },
     "22/07/2026": {
-      "min_price": "1600",
-      "max_price": "2800",
-      "modal_price": "2200"
+      "min_price": 1600,
+      "max_price": 2800,
+      "modal_price": 2200
     },
     "20/07/2026": {
       "min_price": "2000",
@@ -1702,6 +1792,11 @@
       "min_price": "2400",
       "max_price": "3500",
       "modal_price": "3000"
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 2800,
+      "modal_price": 2400
     }
   },
   "Cabbage|Ramanagara APMC|Bengaluru South": {
@@ -1716,9 +1811,9 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3000",
-      "modal_price": "2400"
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2400
     },
     "17/07/2026": {
       "min_price": "1600",
@@ -1744,6 +1839,11 @@
       "min_price": "1600",
       "max_price": "2400",
       "modal_price": "2000"
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 2800,
+      "modal_price": 2500
     }
   },
   "Beans|Ramanagara APMC|Bengaluru South": {
@@ -1758,9 +1858,9 @@
       "modal_price": "5000"
     },
     "22/07/2026": {
-      "min_price": "3000",
-      "max_price": "5000",
-      "modal_price": "4000"
+      "min_price": 3000,
+      "max_price": 5000,
+      "modal_price": 4000
     },
     "21/07/2026": {
       "min_price": "4000",
@@ -1786,6 +1886,11 @@
       "min_price": "4000",
       "max_price": "6000",
       "modal_price": "5200"
+    },
+    "23/07/2026": {
+      "min_price": 3000,
+      "max_price": 5000,
+      "modal_price": 4400
     }
   },
   "Green Chilli|Ramanagara APMC|Bengaluru South": {
@@ -1795,9 +1900,9 @@
       "modal_price": "4000"
     },
     "22/07/2026": {
-      "min_price": "2400",
-      "max_price": "4500",
-      "modal_price": "3000"
+      "min_price": 2400,
+      "max_price": 4500,
+      "modal_price": 3000
     },
     "20/07/2026": {
       "min_price": "2400",
@@ -1828,6 +1933,11 @@
       "min_price": "2000",
       "max_price": "4000",
       "modal_price": "3200"
+    },
+    "23/07/2026": {
+      "min_price": 2400,
+      "max_price": 4500,
+      "modal_price": 3200
     }
   },
   "Beetroot|Ramanagara APMC|Bengaluru South": {
@@ -1870,6 +1980,11 @@
       "min_price": "3000",
       "max_price": "4000",
       "modal_price": "3500"
+    },
+    "23/07/2026": {
+      "min_price": 2400,
+      "max_price": 3200,
+      "modal_price": 2800
     }
   },
   "Bottle gourd|Ramanagara APMC|Bengaluru South": {
@@ -1904,14 +2019,19 @@
       "modal_price": "1200"
     },
     "22/07/2026": {
-      "min_price": "1100",
-      "max_price": "1600",
-      "modal_price": "1500"
+      "min_price": 1100,
+      "max_price": 1600,
+      "modal_price": 1500
     },
     "21/07/2026": {
       "min_price": "1200",
       "max_price": "1600",
       "modal_price": "1400"
+    },
+    "23/07/2026": {
+      "min_price": 1200,
+      "max_price": 1600,
+      "modal_price": 1400
     }
   },
   "Bitter gourd|Ramanagara APMC|Bengaluru South": {
@@ -1951,9 +2071,14 @@
       "modal_price": "4000"
     },
     "22/07/2026": {
-      "min_price": "4000",
-      "max_price": "5000",
-      "modal_price": "4500"
+      "min_price": 4000,
+      "max_price": 5000,
+      "modal_price": 4500
+    },
+    "23/07/2026": {
+      "min_price": 3000,
+      "max_price": 4400,
+      "modal_price": 4000
     }
   },
   "Tomato|Ramanagara APMC|Bengaluru South": {
@@ -1993,9 +2118,14 @@
       "modal_price": "1500"
     },
     "22/07/2026": {
-      "min_price": "700",
-      "max_price": "1300",
-      "modal_price": "1000"
+      "min_price": 700,
+      "max_price": 1300,
+      "modal_price": 1000
+    },
+    "23/07/2026": {
+      "min_price": 800,
+      "max_price": 1300,
+      "modal_price": 1000
     }
   },
   "Carrot|Ramanagara APMC|Bengaluru South": {
@@ -2025,9 +2155,9 @@
       "modal_price": "5000"
     },
     "22/07/2026": {
-      "min_price": "4000",
-      "max_price": "6500",
-      "modal_price": "5000"
+      "min_price": 4000,
+      "max_price": 6500,
+      "modal_price": 5000
     },
     "21/07/2026": {
       "min_price": "4000",
@@ -2038,6 +2168,11 @@
       "min_price": "4000",
       "max_price": "6000",
       "modal_price": "5200"
+    },
+    "23/07/2026": {
+      "min_price": 4000,
+      "max_price": 5600,
+      "modal_price": 5000
     }
   },
   "Ladies Finger|Ramanagara APMC|Bengaluru South": {
@@ -2052,9 +2187,9 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "2800",
-      "modal_price": "2500"
+      "min_price": 2000,
+      "max_price": 2800,
+      "modal_price": 2500
     },
     "18/07/2026": {
       "min_price": "1600",
@@ -2080,6 +2215,11 @@
       "min_price": "2000",
       "max_price": "3000",
       "modal_price": "2400"
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 2800,
+      "modal_price": 2400
     }
   },
   "Cucumbar(Kheera)|Ramanagara APMC|Bengaluru South": {
@@ -2089,9 +2229,9 @@
       "modal_price": "2400"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "2400",
-      "modal_price": "2200"
+      "min_price": 2000,
+      "max_price": 2400,
+      "modal_price": 2200
     },
     "16/07/2026": {
       "min_price": "2000",
@@ -2122,6 +2262,11 @@
       "min_price": "2000",
       "max_price": "2400",
       "modal_price": "2200"
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 2400,
+      "modal_price": 2200
     }
   },
   "Snakeguard|Ramanagara APMC|Bengaluru South": {
@@ -2161,9 +2306,14 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "1600",
-      "max_price": "2400",
-      "modal_price": "2000"
+      "min_price": 1600,
+      "max_price": 2400,
+      "modal_price": 2000
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 2400,
+      "modal_price": 2200
     }
   },
   "Coconut|Ramanagara APMC|Bengaluru South": {
@@ -2309,9 +2459,9 @@
       "modal_price": "4200"
     },
     "22/07/2026": {
-      "min_price": "4000",
-      "max_price": "4500",
-      "modal_price": "4200"
+      "min_price": 4000,
+      "max_price": 4500,
+      "modal_price": 4200
     }
   },
   "Jowar(Sorghum)|Belgaum APMC|Belagavi": {
@@ -2353,9 +2503,9 @@
       "modal_price": "1300"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "1800",
-      "modal_price": "1300"
+      "min_price": 1000,
+      "max_price": 1800,
+      "modal_price": 1300
     },
     "17/07/2026": {
       "min_price": "1000",
@@ -2370,9 +2520,9 @@
       "modal_price": "2400"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "2800",
-      "modal_price": "2400"
+      "min_price": 1000,
+      "max_price": 2800,
+      "modal_price": 2400
     },
     "15/07/2026": {
       "min_price": "1000",
@@ -2397,9 +2547,9 @@
       "modal_price": "1800"
     },
     "22/07/2026": {
-      "min_price": "3000",
-      "max_price": "4000",
-      "modal_price": "3500"
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3500
     },
     "16/07/2026": {
       "min_price": "1000",
@@ -2570,16 +2720,16 @@
       "modal_price": "7190"
     },
     "22/07/2026": {
-      "min_price": "7160",
-      "max_price": "7200",
-      "modal_price": "7180"
+      "min_price": 7160,
+      "max_price": 7200,
+      "modal_price": 7180
     }
   },
   "Wheat|Ramdurga APMC|Belagavi": {
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "2500",
-      "modal_price": "2500"
+      "min_price": 2500,
+      "max_price": 2500,
+      "modal_price": 2500
     }
   },
   "Bengal Gram(Gram)(Whole)|Ramdurga APMC|Belagavi": {
@@ -2608,9 +2758,9 @@
   },
   "Cotton|Ramdurga APMC|Belagavi": {
     "22/07/2026": {
-      "min_price": "8900",
-      "max_price": "9000",
-      "modal_price": "8950"
+      "min_price": 8900,
+      "max_price": 9000,
+      "modal_price": 8950
     }
   },
   "Jowar(Sorghum)|Ramdurga APMC|Belagavi": {
@@ -2692,9 +2842,9 @@
   },
   "Maize|Sankeshwar APMC|Belagavi": {
     "22/07/2026": {
-      "min_price": "2100",
-      "max_price": "2100",
-      "modal_price": "2100"
+      "min_price": 2100,
+      "max_price": 2100,
+      "modal_price": 2100
     }
   },
   "Cotton|Soundati APMC|Belagavi": {
@@ -3030,9 +3180,9 @@
       "modal_price": "7750"
     },
     "22/07/2026": {
-      "min_price": "8000",
-      "max_price": "8000",
-      "modal_price": "8000"
+      "min_price": 8000,
+      "max_price": 8000,
+      "modal_price": 8000
     }
   },
   "Rice|Kampli APMC|Bellary": {
@@ -3042,9 +3192,9 @@
       "modal_price": "5600"
     },
     "22/07/2026": {
-      "min_price": "2570",
-      "max_price": "2570",
-      "modal_price": "2570"
+      "min_price": 2570,
+      "max_price": 2570,
+      "modal_price": 2570
     },
     "15/07/2026": {
       "min_price": "2100",
@@ -3074,9 +3224,9 @@
   },
   "Paddy(Common)|Kampli APMC|Bellary": {
     "22/07/2026": {
-      "min_price": "2973",
-      "max_price": "3785",
-      "modal_price": "3379"
+      "min_price": 2973,
+      "max_price": 3785,
+      "modal_price": 3379
     },
     "18/07/2026": {
       "min_price": "2600",
@@ -3138,9 +3288,9 @@
   },
   "Coconut|Bengaluru APMC|Bengaluru": {
     "22/07/2026": {
-      "min_price": "20000",
-      "max_price": "30000",
-      "modal_price": "25000"
+      "min_price": 20000,
+      "max_price": 30000,
+      "modal_price": 25000
     },
     "21/07/2026": {
       "min_price": "20000",
@@ -3171,6 +3321,11 @@
       "min_price": "20000",
       "max_price": "30000",
       "modal_price": "25000"
+    },
+    "23/07/2026": {
+      "min_price": 20000,
+      "max_price": 30000,
+      "modal_price": 25000
     }
   },
   "Gur(Jaggery)|Bengaluru APMC|Bengaluru": {
@@ -3205,9 +3360,14 @@
       "modal_price": "5300"
     },
     "22/07/2026": {
-      "min_price": "5200",
-      "max_price": "5400",
-      "modal_price": "5300"
+      "min_price": 5200,
+      "max_price": 5400,
+      "modal_price": 5300
+    },
+    "23/07/2026": {
+      "min_price": 5200,
+      "max_price": 5400,
+      "modal_price": 5300
     }
   },
   "Corriander seed|Bengaluru APMC|Bengaluru": {
@@ -3254,9 +3414,9 @@
       "modal_price": "1200"
     },
     "22/07/2026": {
-      "min_price": "1400",
-      "max_price": "2200",
-      "modal_price": "2000"
+      "min_price": 2000,
+      "max_price": 3200,
+      "modal_price": 2600
     },
     "17/07/2026": {
       "min_price": "1800",
@@ -3282,6 +3442,11 @@
       "min_price": "1500",
       "max_price": "2200",
       "modal_price": "1800"
+    },
+    "23/07/2026": {
+      "min_price": 2400,
+      "max_price": 2800,
+      "modal_price": 2500
     }
   },
   "Jowar(Sorghum)|Bengaluru APMC|Bengaluru": {
@@ -3291,9 +3456,9 @@
       "modal_price": "3500"
     },
     "22/07/2026": {
-      "min_price": "3000",
-      "max_price": "3500",
-      "modal_price": "3250"
+      "min_price": 3000,
+      "max_price": 3500,
+      "modal_price": 3250
     },
     "17/07/2026": {
       "min_price": "3000",
@@ -3314,6 +3479,11 @@
       "min_price": "3000",
       "max_price": "3500",
       "modal_price": "3250"
+    },
+    "23/07/2026": {
+      "min_price": 3000,
+      "max_price": 3500,
+      "modal_price": 3250
     }
   },
   "Green Gram(Moong)(Whole)|Bengaluru APMC|Bengaluru": {
@@ -3323,9 +3493,9 @@
       "modal_price": "11500"
     },
     "22/07/2026": {
-      "min_price": "8000",
-      "max_price": "12000",
-      "modal_price": "10000"
+      "min_price": 8000,
+      "max_price": 12000,
+      "modal_price": 10000
     },
     "17/07/2026": {
       "min_price": "11000",
@@ -3351,6 +3521,11 @@
       "min_price": "11000",
       "max_price": "12000",
       "modal_price": "11500"
+    },
+    "23/07/2026": {
+      "min_price": 8000,
+      "max_price": 12000,
+      "modal_price": 10000
     }
   },
   "Maize|Bengaluru APMC|Bengaluru": {
@@ -3373,6 +3548,11 @@
       "min_price": "2400",
       "max_price": "2800",
       "modal_price": "2600"
+    },
+    "23/07/2026": {
+      "min_price": 5000,
+      "max_price": 7000,
+      "modal_price": 6000
     }
   },
   "Ginger(Green)|Bengaluru APMC|Bengaluru": {
@@ -3407,9 +3587,14 @@
       "modal_price": "13000"
     },
     "22/07/2026": {
-      "min_price": "5000",
-      "max_price": "12000",
-      "modal_price": "10000"
+      "min_price": 5000,
+      "max_price": 12000,
+      "modal_price": 10000
+    },
+    "23/07/2026": {
+      "min_price": 5000,
+      "max_price": 12000,
+      "modal_price": 10000
     }
   },
   "Rice|Bengaluru APMC|Bengaluru": {
@@ -3434,9 +3619,9 @@
       "modal_price": "6000"
     },
     "22/07/2026": {
-      "min_price": "3100",
-      "max_price": "3300",
-      "modal_price": "3200"
+      "min_price": 3100,
+      "max_price": 3300,
+      "modal_price": 3200
     },
     "16/07/2026": {
       "min_price": "3800",
@@ -3447,6 +3632,11 @@
       "min_price": "5400",
       "max_price": "5600",
       "modal_price": "5500"
+    },
+    "23/07/2026": {
+      "min_price": 3100,
+      "max_price": 3300,
+      "modal_price": 3200
     }
   },
   "Bengal Gram(Gram)(Whole)|Bengaluru APMC|Bengaluru": {
@@ -3484,13 +3674,18 @@
       "min_price": "6000",
       "max_price": "6500",
       "modal_price": "6250"
+    },
+    "23/07/2026": {
+      "min_price": 7000,
+      "max_price": 7500,
+      "modal_price": 7250
     }
   },
   "Garlic|Bengaluru APMC|Bengaluru": {
     "22/07/2026": {
-      "min_price": "9000",
-      "max_price": "25000",
-      "modal_price": "14000"
+      "min_price": 9000,
+      "max_price": 25000,
+      "modal_price": 14000
     },
     "20/07/2026": {
       "min_price": "9000",
@@ -3521,6 +3716,11 @@
       "min_price": "9000",
       "max_price": "25000",
       "modal_price": "14000"
+    },
+    "23/07/2026": {
+      "min_price": 9000,
+      "max_price": 25000,
+      "modal_price": 14000
     }
   },
   "Potato|Bengaluru APMC|Bengaluru": {
@@ -3530,9 +3730,9 @@
       "modal_price": "1600"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "2400",
-      "modal_price": "2000"
+      "min_price": 1800,
+      "max_price": 2100,
+      "modal_price": 1900
     },
     "21/07/2026": {
       "min_price": "1000",
@@ -3558,6 +3758,11 @@
       "min_price": "800",
       "max_price": "2000",
       "modal_price": "1600"
+    },
+    "23/07/2026": {
+      "min_price": 1800,
+      "max_price": 2100,
+      "modal_price": 1900
     }
   },
   "Bajra(Pearl Millet/Cumbu)|Bengaluru APMC|Bengaluru": {
@@ -3585,6 +3790,11 @@
       "min_price": "2800",
       "max_price": "3400",
       "modal_price": "3100"
+    },
+    "23/07/2026": {
+      "min_price": 2800,
+      "max_price": 3200,
+      "modal_price": 3000
     }
   },
   "Black Gram(Urd Beans)(Whole)|Bengaluru APMC|Bengaluru": {
@@ -3599,9 +3809,9 @@
       "modal_price": "7100"
     },
     "22/07/2026": {
-      "min_price": "11500",
-      "max_price": "13000",
-      "modal_price": "12250"
+      "min_price": 11500,
+      "max_price": 13000,
+      "modal_price": 12250
     },
     "16/07/2026": {
       "min_price": "7000",
@@ -3622,6 +3832,11 @@
       "min_price": "7000",
       "max_price": "7200",
       "modal_price": "7100"
+    },
+    "23/07/2026": {
+      "min_price": 11500,
+      "max_price": 13000,
+      "modal_price": 12250
     }
   },
   "Kulthi(Horse Gram)|Bengaluru APMC|Bengaluru": {
@@ -3631,9 +3846,9 @@
       "modal_price": "7250"
     },
     "22/07/2026": {
-      "min_price": "5800",
-      "max_price": "6500",
-      "modal_price": "6150"
+      "min_price": 5800,
+      "max_price": 6500,
+      "modal_price": 6150
     },
     "21/07/2026": {
       "min_price": "5800",
@@ -3654,6 +3869,11 @@
       "min_price": "7000",
       "max_price": "7500",
       "modal_price": "7250"
+    },
+    "23/07/2026": {
+      "min_price": 5800,
+      "max_price": 6500,
+      "modal_price": 6150
     }
   },
   "Foxtail Millet(Navane)|Bengaluru APMC|Bengaluru": {
@@ -3671,6 +3891,11 @@
       "min_price": "4000",
       "max_price": "4500",
       "modal_price": "4250"
+    },
+    "23/07/2026": {
+      "min_price": 4000,
+      "max_price": 4500,
+      "modal_price": 4250
     }
   },
   "Ragi(Finger Millet)|Bengaluru APMC|Bengaluru": {
@@ -3680,9 +3905,9 @@
       "modal_price": "5000"
     },
     "22/07/2026": {
-      "min_price": "4300",
-      "max_price": "4800",
-      "modal_price": "4550"
+      "min_price": 4300,
+      "max_price": 4800,
+      "modal_price": 4550
     },
     "20/07/2026": {
       "min_price": "4800",
@@ -3708,13 +3933,18 @@
       "min_price": "4300",
       "max_price": "4800",
       "modal_price": "4550"
+    },
+    "23/07/2026": {
+      "min_price": 4300,
+      "max_price": 4800,
+      "modal_price": 4550
     }
   },
   "Turmeric|Bengaluru APMC|Bengaluru": {
     "22/07/2026": {
-      "min_price": "18000",
-      "max_price": "22000",
-      "modal_price": "20000"
+      "min_price": 18000,
+      "max_price": 22000,
+      "modal_price": 20000
     },
     "15/07/2026": {
       "min_price": "18000",
@@ -3759,9 +3989,14 @@
       "modal_price": "10850"
     },
     "22/07/2026": {
-      "min_price": "9800",
-      "max_price": "11500",
-      "modal_price": "10650"
+      "min_price": 9800,
+      "max_price": 11500,
+      "modal_price": 10650
+    },
+    "23/07/2026": {
+      "min_price": 9800,
+      "max_price": 11500,
+      "modal_price": 10650
     }
   },
   "Ground Nut Seed|Bengaluru APMC|Bengaluru": {
@@ -3776,9 +4011,9 @@
       "modal_price": "14850"
     },
     "22/07/2026": {
-      "min_price": "16000",
-      "max_price": "18000",
-      "modal_price": "17000"
+      "min_price": 16000,
+      "max_price": 18000,
+      "modal_price": 17000
     },
     "16/07/2026": {
       "min_price": "14700",
@@ -3799,6 +4034,11 @@
       "min_price": "14700",
       "max_price": "15000",
       "modal_price": "14850"
+    },
+    "23/07/2026": {
+      "min_price": 16000,
+      "max_price": 18000,
+      "modal_price": 17000
     }
   },
   "Alasande Gram|Bengaluru APMC|Bengaluru": {
@@ -3836,6 +4076,11 @@
       "min_price": "8000",
       "max_price": "9000",
       "modal_price": "8500"
+    },
+    "23/07/2026": {
+      "min_price": 8000,
+      "max_price": 9000,
+      "modal_price": 8500
     }
   },
   "Green Peas|Bengaluru APMC|Bengaluru": {
@@ -3868,6 +4113,11 @@
       "min_price": "9000",
       "max_price": "10000",
       "modal_price": "9500"
+    },
+    "23/07/2026": {
+      "min_price": 7000,
+      "max_price": 10000,
+      "modal_price": 8500
     }
   },
   "Bengal Gram Dal(Chana Dal)|Bengaluru APMC|Bengaluru": {
@@ -3897,14 +4147,19 @@
       "modal_price": "7500"
     },
     "22/07/2026": {
-      "min_price": "7000",
-      "max_price": "8500",
-      "modal_price": "7750"
+      "min_price": 7000,
+      "max_price": 8500,
+      "modal_price": 7750
     },
     "20/07/2026": {
       "min_price": "7000",
       "max_price": "8000",
       "modal_price": "7500"
+    },
+    "23/07/2026": {
+      "min_price": 7000,
+      "max_price": 8500,
+      "modal_price": 7750
     }
   },
   "Tamarind Fruit|Bengaluru APMC|Bengaluru": {
@@ -3914,9 +4169,9 @@
       "modal_price": "13000"
     },
     "22/07/2026": {
-      "min_price": "7000",
-      "max_price": "13000",
-      "modal_price": "10000"
+      "min_price": 7000,
+      "max_price": 13000,
+      "modal_price": 10000
     },
     "21/07/2026": {
       "min_price": "7000",
@@ -3937,6 +4192,11 @@
       "min_price": "11000",
       "max_price": "15000",
       "modal_price": "13000"
+    },
+    "23/07/2026": {
+      "min_price": 7000,
+      "max_price": 13000,
+      "modal_price": 10000
     }
   },
   "Red gram split/Arhar dal/Tur dal|Bengaluru APMC|Bengaluru": {
@@ -3956,9 +4216,9 @@
       "modal_price": "12250"
     },
     "22/07/2026": {
-      "min_price": "8000",
-      "max_price": "12500",
-      "modal_price": "10250"
+      "min_price": 8000,
+      "max_price": 12500,
+      "modal_price": 10250
     },
     "18/07/2026": {
       "min_price": "12000",
@@ -3974,6 +4234,11 @@
       "min_price": "12000",
       "max_price": "12500",
       "modal_price": "12250"
+    },
+    "23/07/2026": {
+      "min_price": 8000,
+      "max_price": 12500,
+      "modal_price": 10250
     }
   },
   "Dry Chillies|Bengaluru APMC|Bengaluru": {
@@ -4003,14 +4268,19 @@
       "modal_price": "25000"
     },
     "22/07/2026": {
-      "min_price": "20000",
-      "max_price": "28000",
-      "modal_price": "24000"
+      "min_price": 20000,
+      "max_price": 28000,
+      "modal_price": 24000
     },
     "21/07/2026": {
       "min_price": "20000",
       "max_price": "28000",
       "modal_price": "24000"
+    },
+    "23/07/2026": {
+      "min_price": 20000,
+      "max_price": 28000,
+      "modal_price": 24000
     }
   },
   "Sesamum(Sesame,Gingelly,Til)|Bengaluru APMC|Bengaluru": {
@@ -4033,6 +4303,11 @@
       "min_price": "13500",
       "max_price": "18000",
       "modal_price": "15750"
+    },
+    "23/07/2026": {
+      "min_price": 14500,
+      "max_price": 19500,
+      "modal_price": 17000
     }
   },
   "Wheat|Bengaluru APMC|Bengaluru": {
@@ -4070,6 +4345,11 @@
       "min_price": "3200",
       "max_price": "4500",
       "modal_price": "3850"
+    },
+    "23/07/2026": {
+      "min_price": 3200,
+      "max_price": 4500,
+      "modal_price": 3850
     }
   },
   "Soyabean|Bengaluru APMC|Bengaluru": {
@@ -4114,6 +4394,11 @@
       "min_price": "4000",
       "max_price": "5500",
       "modal_price": "4750"
+    },
+    "23/07/2026": {
+      "min_price": 4000,
+      "max_price": 5500,
+      "modal_price": 4750
     }
   },
   "Black Gram Dal(Urd Dal)|Bengaluru APMC|Bengaluru": {
@@ -4128,9 +4413,9 @@
       "modal_price": "12000"
     },
     "22/07/2026": {
-      "min_price": "9000",
-      "max_price": "15000",
-      "modal_price": "12000"
+      "min_price": 9000,
+      "max_price": 15000,
+      "modal_price": 12000
     },
     "16/07/2026": {
       "min_price": "8000",
@@ -4151,6 +4436,11 @@
       "min_price": "8000",
       "max_price": "8300",
       "modal_price": "8150"
+    },
+    "23/07/2026": {
+      "min_price": 9000,
+      "max_price": 15000,
+      "modal_price": 12000
     }
   },
   "Green Gram Dal(Moong Dal)|Bengaluru APMC|Bengaluru": {
@@ -4165,9 +4455,9 @@
       "modal_price": "12000"
     },
     "22/07/2026": {
-      "min_price": "8800",
-      "max_price": "10800",
-      "modal_price": "9800"
+      "min_price": 8800,
+      "max_price": 10800,
+      "modal_price": 9800
     },
     "16/07/2026": {
       "min_price": "11500",
@@ -4188,6 +4478,11 @@
       "min_price": "11500",
       "max_price": "12500",
       "modal_price": "12000"
+    },
+    "23/07/2026": {
+      "min_price": 8800,
+      "max_price": 10800,
+      "modal_price": 9800
     }
   },
   "Chennangi Dal|Bengaluru APMC|Bengaluru": {
@@ -4202,9 +4497,9 @@
       "modal_price": "6250"
     },
     "22/07/2026": {
-      "min_price": "7000",
-      "max_price": "8000",
-      "modal_price": "7500"
+      "min_price": 7000,
+      "max_price": 8000,
+      "modal_price": 7500
     },
     "15/07/2026": {
       "min_price": "6000",
@@ -4225,6 +4520,11 @@
       "min_price": "7000",
       "max_price": "8000",
       "modal_price": "7500"
+    },
+    "23/07/2026": {
+      "min_price": 7000,
+      "max_price": 8000,
+      "modal_price": 7500
     }
   },
   "Methi Seeds|Bengaluru APMC|Bengaluru": {
@@ -4239,6 +4539,11 @@
       "min_price": "38000",
       "max_price": "88000",
       "modal_price": "63000"
+    },
+    "23/07/2026": {
+      "min_price": 38000,
+      "max_price": 88000,
+      "modal_price": 63000
     }
   },
   "Avare Dal|Bengaluru APMC|Bengaluru": {
@@ -5704,9 +6009,9 @@
       "modal_price": "1450"
     },
     "22/07/2026": {
-      "min_price": "1300",
-      "max_price": "1500",
-      "modal_price": "1400"
+      "min_price": 1300,
+      "max_price": 1500,
+      "modal_price": 1400
     },
     "20/07/2026": {
       "min_price": "1300",
@@ -5736,9 +6041,9 @@
   },
   "Chapparad Avare|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
     "22/07/2026": {
-      "min_price": "3600",
-      "max_price": "4000",
-      "modal_price": "3800"
+      "min_price": 3600,
+      "max_price": 4000,
+      "modal_price": 3800
     },
     "16/07/2026": {
       "min_price": "3400",
@@ -5783,9 +6088,9 @@
       "modal_price": "3400"
     },
     "22/07/2026": {
-      "min_price": "2600",
-      "max_price": "3000",
-      "modal_price": "2900"
+      "min_price": 2600,
+      "max_price": 3000,
+      "modal_price": 2900
     },
     "16/07/2026": {
       "min_price": "3300",
@@ -5872,9 +6177,9 @@
       "modal_price": "3500"
     },
     "22/07/2026": {
-      "min_price": "2300",
-      "max_price": "3800",
-      "modal_price": "3400"
+      "min_price": 2300,
+      "max_price": 3800,
+      "modal_price": 3400
     },
     "21/07/2026": {
       "min_price": "3000",
@@ -5946,9 +6251,9 @@
       "modal_price": "900"
     },
     "22/07/2026": {
-      "min_price": "800",
-      "max_price": "1000",
-      "modal_price": "900"
+      "min_price": 800,
+      "max_price": 1000,
+      "modal_price": 900
     },
     "16/07/2026": {
       "min_price": "900",
@@ -6025,9 +6330,9 @@
       "modal_price": "1950"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "7100",
-      "modal_price": "1050"
+      "min_price": 1000,
+      "max_price": 7100,
+      "modal_price": 1050
     }
   },
   "Grapes|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
@@ -6052,9 +6357,9 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "3000",
-      "max_price": "4000",
-      "modal_price": "3500"
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3500
     },
     "17/07/2026": {
       "min_price": "3500",
@@ -6089,9 +6394,9 @@
       "modal_price": "2800"
     },
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "2700",
-      "modal_price": "2600"
+      "min_price": 2500,
+      "max_price": 2700,
+      "modal_price": 2600
     },
     "20/07/2026": {
       "min_price": "2500",
@@ -6126,9 +6431,9 @@
       "modal_price": "14000"
     },
     "22/07/2026": {
-      "min_price": "8000",
-      "max_price": "16000",
-      "modal_price": "13000"
+      "min_price": 8000,
+      "max_price": 16000,
+      "modal_price": 13000
     },
     "15/07/2026": {
       "min_price": "10000",
@@ -6173,9 +6478,9 @@
       "modal_price": "3000"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3000",
-      "modal_price": "2500"
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
     }
   },
   "Cauliflower|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
@@ -6205,9 +6510,9 @@
       "modal_price": "2300"
     },
     "22/07/2026": {
-      "min_price": "2200",
-      "max_price": "2600",
-      "modal_price": "2400"
+      "min_price": 2200,
+      "max_price": 2600,
+      "modal_price": 2400
     },
     "18/07/2026": {
       "min_price": "2000",
@@ -6274,9 +6579,9 @@
       "modal_price": "3000"
     },
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "3500",
-      "modal_price": "3000"
+      "min_price": 2500,
+      "max_price": 3500,
+      "modal_price": 3000
     },
     "21/07/2026": {
       "min_price": "2000",
@@ -6306,9 +6611,9 @@
       "modal_price": "1900"
     },
     "22/07/2026": {
-      "min_price": "1800",
-      "max_price": "2000",
-      "modal_price": "1900"
+      "min_price": 1800,
+      "max_price": 2000,
+      "modal_price": 1900
     },
     "16/07/2026": {
       "min_price": "1800",
@@ -6348,9 +6653,9 @@
       "modal_price": "1600"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "1700",
-      "modal_price": "1600"
+      "min_price": 1500,
+      "max_price": 1700,
+      "modal_price": 1600
     },
     "15/07/2026": {
       "min_price": "1400",
@@ -6375,9 +6680,9 @@
       "modal_price": "4500"
     },
     "22/07/2026": {
-      "min_price": "4000",
-      "max_price": "5000",
-      "modal_price": "4500"
+      "min_price": 4000,
+      "max_price": 5000,
+      "modal_price": 4500
     },
     "21/07/2026": {
       "min_price": "4000",
@@ -6427,9 +6732,9 @@
       "modal_price": "2600"
     },
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "2700",
-      "modal_price": "2600"
+      "min_price": 2500,
+      "max_price": 2700,
+      "modal_price": 2600
     },
     "21/07/2026": {
       "min_price": "2500",
@@ -6506,9 +6811,9 @@
       "modal_price": "5000"
     },
     "22/07/2026": {
-      "min_price": "5500",
-      "max_price": "6500",
-      "modal_price": "6000"
+      "min_price": 5500,
+      "max_price": 6500,
+      "modal_price": 6000
     }
   },
   "Cabbage|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
@@ -6543,9 +6848,9 @@
       "modal_price": "1500"
     },
     "22/07/2026": {
-      "min_price": "1600",
-      "max_price": "1800",
-      "modal_price": "1700"
+      "min_price": 1600,
+      "max_price": 1800,
+      "modal_price": 1700
     }
   },
   "Ladies Finger|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
@@ -6580,16 +6885,16 @@
       "modal_price": "2800"
     },
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "2800",
-      "modal_price": "2700"
+      "min_price": 2500,
+      "max_price": 2800,
+      "modal_price": 2700
     }
   },
   "Beans|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
     "22/07/2026": {
-      "min_price": "4000",
-      "max_price": "5000",
-      "modal_price": "4500"
+      "min_price": 4000,
+      "max_price": 5000,
+      "modal_price": 4500
     },
     "16/07/2026": {
       "min_price": "4500",
@@ -6629,9 +6934,9 @@
       "modal_price": "3600"
     },
     "22/07/2026": {
-      "min_price": "3500",
-      "max_price": "4500",
-      "modal_price": "4000"
+      "min_price": 3500,
+      "max_price": 4500,
+      "modal_price": 4000
     },
     "16/07/2026": {
       "min_price": "3500",
@@ -6718,9 +7023,9 @@
       "modal_price": "1400"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "1600",
-      "modal_price": "1400"
+      "min_price": 1000,
+      "max_price": 1600,
+      "modal_price": 1400
     },
     "17/07/2026": {
       "min_price": "1200",
@@ -6755,9 +7060,9 @@
       "modal_price": "2700"
     },
     "22/07/2026": {
-      "min_price": "2600",
-      "max_price": "3000",
-      "modal_price": "2800"
+      "min_price": 2600,
+      "max_price": 3000,
+      "modal_price": 2800
     },
     "21/07/2026": {
       "min_price": "2600",
@@ -6777,9 +7082,9 @@
       "modal_price": "1450"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "2000",
-      "modal_price": "1800"
+      "min_price": 1500,
+      "max_price": 2000,
+      "modal_price": 1800
     },
     "18/07/2026": {
       "min_price": "1500",
@@ -6824,9 +7129,9 @@
       "modal_price": "3800"
     },
     "22/07/2026": {
-      "min_price": "3800",
-      "max_price": "4000",
-      "modal_price": "3900"
+      "min_price": 3800,
+      "max_price": 4000,
+      "modal_price": 3900
     },
     "15/07/2026": {
       "min_price": "3700",
@@ -6913,9 +7218,9 @@
       "modal_price": "16000"
     },
     "22/07/2026": {
-      "min_price": "10000",
-      "max_price": "18000",
-      "modal_price": "14000"
+      "min_price": 10000,
+      "max_price": 18000,
+      "modal_price": 14000
     }
   },
   "Mango|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
@@ -6930,9 +7235,9 @@
       "modal_price": "1000"
     },
     "22/07/2026": {
-      "min_price": "800",
-      "max_price": "1200",
-      "modal_price": "1000"
+      "min_price": 800,
+      "max_price": 1200,
+      "modal_price": 1000
     },
     "18/07/2026": {
       "min_price": "1500",
@@ -6967,9 +7272,9 @@
       "modal_price": "2400"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "2400",
-      "modal_price": "2300"
+      "min_price": 2000,
+      "max_price": 2400,
+      "modal_price": 2300
     },
     "21/07/2026": {
       "min_price": "2000",
@@ -6999,9 +7304,9 @@
       "modal_price": "2200"
     },
     "22/07/2026": {
-      "min_price": "2200",
-      "max_price": "2400",
-      "modal_price": "2300"
+      "min_price": 2200,
+      "max_price": 2400,
+      "modal_price": 2300
     },
     "17/07/2026": {
       "min_price": "2000",
@@ -7046,9 +7351,9 @@
       "modal_price": "1200"
     },
     "22/07/2026": {
-      "min_price": "1200",
-      "max_price": "1400",
-      "modal_price": "1300"
+      "min_price": 1200,
+      "max_price": 1400,
+      "modal_price": 1300
     },
     "18/07/2026": {
       "min_price": "1300",
@@ -7093,9 +7398,9 @@
       "modal_price": "12000"
     },
     "22/07/2026": {
-      "min_price": "12000",
-      "max_price": "14000",
-      "modal_price": "13000"
+      "min_price": 12000,
+      "max_price": 14000,
+      "modal_price": 13000
     }
   },
   "Capsicum|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
@@ -7189,16 +7494,16 @@
       "modal_price": "4000"
     },
     "22/07/2026": {
-      "min_price": "5000",
-      "max_price": "6000",
-      "modal_price": "5500"
+      "min_price": 5000,
+      "max_price": 6000,
+      "modal_price": 5500
     }
   },
   "Elephant Yam(Suran)/Amorphophallus|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
     "22/07/2026": {
-      "min_price": "3800",
-      "max_price": "4000",
-      "modal_price": "3900"
+      "min_price": 3800,
+      "max_price": 4000,
+      "modal_price": 3900
     },
     "21/07/2026": {
       "min_price": "3800",
@@ -7544,9 +7849,9 @@
       "modal_price": "5000"
     },
     "22/07/2026": {
-      "min_price": "4800",
-      "max_price": "5600",
-      "modal_price": "5100"
+      "min_price": 4800,
+      "max_price": 5600,
+      "modal_price": 5100
     },
     "15/07/2026": {
       "min_price": "4800",
@@ -7618,9 +7923,9 @@
       "modal_price": "6167"
     },
     "22/07/2026": {
-      "min_price": "7022",
-      "max_price": "8830",
-      "modal_price": "8074"
+      "min_price": 7022,
+      "max_price": 8830,
+      "modal_price": 8074
     },
     "15/07/2026": {
       "min_price": "5111",
@@ -7699,9 +8004,9 @@
       "modal_price": "8109"
     },
     "22/07/2026": {
-      "min_price": "3011",
-      "max_price": "8525",
-      "modal_price": "8185"
+      "min_price": 3011,
+      "max_price": 8525,
+      "modal_price": 8185
     },
     "18/07/2026": {
       "min_price": "3056",
@@ -7800,9 +8105,14 @@
       "modal_price": "1100"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "1200",
-      "modal_price": "1100"
+      "min_price": 1000,
+      "max_price": 1200,
+      "modal_price": 1100
+    },
+    "23/07/2026": {
+      "min_price": 1000,
+      "max_price": 1200,
+      "modal_price": 1100
     }
   },
   "Arecanut(Betelnut/Supari)|Chamarajanagar APMC|Chamarajanagar": {
@@ -7829,9 +8139,9 @@
   },
   "Ridgeguard(Tori)|Chamarajanagar APMC|Chamarajanagar": {
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "2400",
-      "modal_price": "2000"
+      "min_price": 1500,
+      "max_price": 2400,
+      "modal_price": 2000
     },
     "15/07/2026": {
       "min_price": "1500",
@@ -7862,6 +8172,11 @@
       "min_price": "1600",
       "max_price": "3200",
       "modal_price": "2300"
+    },
+    "23/07/2026": {
+      "min_price": 1400,
+      "max_price": 3200,
+      "modal_price": 2300
     }
   },
   "Knool Khol|Chamarajanagar APMC|Chamarajanagar": {
@@ -7881,9 +8196,9 @@
       "modal_price": "1800"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "3000",
-      "modal_price": "2300"
+      "min_price": 1500,
+      "max_price": 3000,
+      "modal_price": 2300
     },
     "21/07/2026": {
       "min_price": "1500",
@@ -7899,13 +8214,18 @@
       "min_price": "2500",
       "max_price": "4000",
       "modal_price": "3400"
+    },
+    "23/07/2026": {
+      "min_price": 1800,
+      "max_price": 3000,
+      "modal_price": 2400
     }
   },
   "Tomato|Chamarajanagar APMC|Chamarajanagar": {
     "22/07/2026": {
-      "min_price": "400",
-      "max_price": "1000",
-      "modal_price": "700"
+      "min_price": 400,
+      "max_price": 1000,
+      "modal_price": 700
     },
     "17/07/2026": {
       "min_price": "500",
@@ -7936,6 +8256,11 @@
       "min_price": "400",
       "max_price": "1200",
       "modal_price": "800"
+    },
+    "23/07/2026": {
+      "min_price": 400,
+      "max_price": 1000,
+      "modal_price": 700
     }
   },
   "Turmeric|Chamarajanagar APMC|Chamarajanagar": {
@@ -7955,9 +8280,9 @@
       "modal_price": "14000"
     },
     "22/07/2026": {
-      "min_price": "11543",
-      "max_price": "11543",
-      "modal_price": "11543"
+      "min_price": 11543,
+      "max_price": 11543,
+      "modal_price": 11543
     }
   },
   "Carrot|Chamarajanagar APMC|Chamarajanagar": {
@@ -7995,6 +8320,11 @@
       "min_price": "1500",
       "max_price": "2500",
       "modal_price": "2000"
+    },
+    "23/07/2026": {
+      "min_price": 1500,
+      "max_price": 3000,
+      "modal_price": 2300
     }
   },
   "Cabbage|Chamarajanagar APMC|Chamarajanagar": {
@@ -8024,14 +8354,19 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "1800",
-      "max_price": "2400",
-      "modal_price": "2100"
+      "min_price": 1800,
+      "max_price": 2400,
+      "modal_price": 2100
     },
     "17/07/2026": {
       "min_price": "1500",
       "max_price": "1800",
       "modal_price": "1600"
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 2600,
+      "modal_price": 2300
     }
   },
   "Green Chilli|Chamarajanagar APMC|Chamarajanagar": {
@@ -8056,9 +8391,9 @@
       "modal_price": "1900"
     },
     "22/07/2026": {
-      "min_price": "1400",
-      "max_price": "2300",
-      "modal_price": "1900"
+      "min_price": 1400,
+      "max_price": 2300,
+      "modal_price": 1900
     },
     "21/07/2026": {
       "min_price": "1400",
@@ -8069,6 +8404,11 @@
       "min_price": "1600",
       "max_price": "3000",
       "modal_price": "2200"
+    },
+    "23/07/2026": {
+      "min_price": 1400,
+      "max_price": 2200,
+      "modal_price": 1800
     }
   },
   "Tender Coconut|Chamarajanagar APMC|Chamarajanagar": {
@@ -8088,9 +8428,9 @@
       "modal_price": "20000"
     },
     "22/07/2026": {
-      "min_price": "20000",
-      "max_price": "25000",
-      "modal_price": "23000"
+      "min_price": 20000,
+      "max_price": 25000,
+      "modal_price": 23000
     },
     "21/07/2026": {
       "min_price": "20000",
@@ -8106,6 +8446,11 @@
       "min_price": "20000",
       "max_price": "25000",
       "modal_price": "21000"
+    },
+    "23/07/2026": {
+      "min_price": 20000,
+      "max_price": 23000,
+      "modal_price": 23000
     }
   },
   "Raddish|Chamarajanagar APMC|Chamarajanagar": {
@@ -8138,6 +8483,11 @@
       "min_price": "1800",
       "max_price": "3200",
       "modal_price": "2400"
+    },
+    "23/07/2026": {
+      "min_price": 1500,
+      "max_price": 3000,
+      "modal_price": 2300
     }
   },
   "Neem Seed|Chamarajanagar APMC|Chamarajanagar": {
@@ -8159,9 +8509,9 @@
       "modal_price": "20260"
     },
     "22/07/2026": {
-      "min_price": "13000",
-      "max_price": "25500",
-      "modal_price": "25000"
+      "min_price": 13000,
+      "max_price": 25500,
+      "modal_price": 25000
     },
     "18/07/2026": {
       "min_price": "12000",
@@ -8187,13 +8537,18 @@
       "min_price": "13000",
       "max_price": "27000",
       "modal_price": "25000"
+    },
+    "23/07/2026": {
+      "min_price": 14000,
+      "max_price": 18000,
+      "modal_price": 14000
     }
   },
   "Beans|Chamarajanagar APMC|Chamarajanagar": {
     "22/07/2026": {
-      "min_price": "1600",
-      "max_price": "4500",
-      "modal_price": "3000"
+      "min_price": 1600,
+      "max_price": 4500,
+      "modal_price": 3000
     },
     "20/07/2026": {
       "min_price": "1500",
@@ -8224,6 +8579,11 @@
       "min_price": "3500",
       "max_price": "4600",
       "modal_price": "4050"
+    },
+    "23/07/2026": {
+      "min_price": 2500,
+      "max_price": 4500,
+      "modal_price": 3500
     }
   },
   "Cucumbar(Kheera)|Chamarajanagar APMC|Chamarajanagar": {
@@ -8243,9 +8603,9 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "1800",
-      "modal_price": "1400"
+      "min_price": 1000,
+      "max_price": 1800,
+      "modal_price": 1400
     },
     "21/07/2026": {
       "min_price": "600",
@@ -8261,6 +8621,11 @@
       "min_price": "1500",
       "max_price": "2200",
       "modal_price": "1800"
+    },
+    "23/07/2026": {
+      "min_price": 1000,
+      "max_price": 1800,
+      "modal_price": 1300
     }
   },
   "Beetroot|Chamarajanagar APMC|Chamarajanagar": {
@@ -8290,14 +8655,19 @@
       "modal_price": "1800"
     },
     "22/07/2026": {
-      "min_price": "1600",
-      "max_price": "3000",
-      "modal_price": "2300"
+      "min_price": 1600,
+      "max_price": 3000,
+      "modal_price": 2300
     },
     "21/07/2026": {
       "min_price": "2200",
       "max_price": "3700",
       "modal_price": "3000"
+    },
+    "23/07/2026": {
+      "min_price": 1600,
+      "max_price": 3000,
+      "modal_price": 2200
     }
   },
   "Bengal Gram Dal(Chana Dal)|Chamarajanagar APMC|Chamarajanagar": {
@@ -8329,9 +8699,14 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "2000",
-      "modal_price": "2000"
+      "min_price": 2000,
+      "max_price": 2000,
+      "modal_price": 2000
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 2000,
+      "modal_price": 2000
     }
   },
   "White Pumpkin|Chamarajanagar APMC|Chamarajanagar": {
@@ -8355,9 +8730,9 @@
       "modal_price": "3200"
     },
     "22/07/2026": {
-      "min_price": "3200",
-      "max_price": "3200",
-      "modal_price": "3200"
+      "min_price": 3200,
+      "max_price": 3200,
+      "modal_price": 3200
     },
     "15/07/2026": {
       "min_price": "3200",
@@ -8379,9 +8754,9 @@
       "modal_price": "13300"
     },
     "22/07/2026": {
-      "min_price": "13700",
-      "max_price": "14700",
-      "modal_price": "14500"
+      "min_price": 13700,
+      "max_price": 14700,
+      "modal_price": 14500
     },
     "21/07/2026": {
       "min_price": "11000",
@@ -8411,9 +8786,9 @@
       "modal_price": "2300"
     },
     "22/07/2026": {
-      "min_price": "2100",
-      "max_price": "2200",
-      "modal_price": "2100"
+      "min_price": 2100,
+      "max_price": 2200,
+      "modal_price": 2100
     },
     "15/07/2026": {
       "min_price": "3400",
@@ -8439,6 +8814,11 @@
       "min_price": "3000",
       "max_price": "3200",
       "modal_price": "3000"
+    },
+    "23/07/2026": {
+      "min_price": 2100,
+      "max_price": 3000,
+      "modal_price": 2900
     }
   },
   "Neem Seed|Gundlupet APMC|Chamarajanagar": {
@@ -8451,6 +8831,11 @@
       "min_price": "6700",
       "max_price": "6700",
       "modal_price": "6700"
+    },
+    "23/07/2026": {
+      "min_price": 6700,
+      "max_price": 6700,
+      "modal_price": 6700
     }
   },
   "Kulthi(Horse Gram)|Gundlupet APMC|Chamarajanagar": {
@@ -8478,6 +8863,11 @@
       "min_price": "4000",
       "max_price": "5600",
       "modal_price": "4800"
+    },
+    "23/07/2026": {
+      "min_price": 5000,
+      "max_price": 5100,
+      "modal_price": 5000
     }
   },
   "Coconut|Gundlupet APMC|Chamarajanagar": {
@@ -8487,9 +8877,9 @@
       "modal_price": "28000"
     },
     "22/07/2026": {
-      "min_price": "20000",
-      "max_price": "23000",
-      "modal_price": "20000"
+      "min_price": 20000,
+      "max_price": 23000,
+      "modal_price": 20000
     },
     "20/07/2026": {
       "min_price": "20000",
@@ -8519,9 +8909,9 @@
       "modal_price": "2300"
     },
     "22/07/2026": {
-      "min_price": "2300",
-      "max_price": "2300",
-      "modal_price": "2300"
+      "min_price": 2300,
+      "max_price": 2300,
+      "modal_price": 2300
     },
     "15/07/2026": {
       "min_price": "4300",
@@ -8532,6 +8922,11 @@
       "min_price": "2100",
       "max_price": "2100",
       "modal_price": "2100"
+    },
+    "23/07/2026": {
+      "min_price": 2800,
+      "max_price": 2800,
+      "modal_price": 2800
     }
   },
   "Tomato|Gundlupet APMC|Chamarajanagar": {
@@ -8551,9 +8946,9 @@
       "modal_price": "1400"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "1000",
-      "modal_price": "1000"
+      "min_price": 1000,
+      "max_price": 1000,
+      "modal_price": 1000
     },
     "21/07/2026": {
       "min_price": "1000",
@@ -8569,6 +8964,11 @@
       "min_price": "1400",
       "max_price": "1500",
       "modal_price": "1400"
+    },
+    "23/07/2026": {
+      "min_price": 1000,
+      "max_price": 1000,
+      "modal_price": 1000
     }
   },
   "Black Gram(Urd Beans)(Whole)|Gundlupet APMC|Chamarajanagar": {
@@ -8760,9 +9160,9 @@
       "modal_price": "3200"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "2200",
-      "modal_price": "2100"
+      "min_price": 2000,
+      "max_price": 2200,
+      "modal_price": 2100
     },
     "16/07/2026": {
       "min_price": "3000",
@@ -8797,9 +9197,9 @@
       "modal_price": "2200"
     },
     "22/07/2026": {
-      "min_price": "1800",
-      "max_price": "2400",
-      "modal_price": "2000"
+      "min_price": 1800,
+      "max_price": 2400,
+      "modal_price": 2000
     }
   },
   "Capsicum|Bagepalli APMC|Chikkaballapur": {
@@ -8853,9 +9253,9 @@
       "modal_price": "2200"
     },
     "22/07/2026": {
-      "min_price": "1100",
-      "max_price": "2500",
-      "modal_price": "2000"
+      "min_price": 1100,
+      "max_price": 2500,
+      "modal_price": 2000
     },
     "16/07/2026": {
       "min_price": "1400",
@@ -8905,9 +9305,9 @@
       "modal_price": "1700"
     },
     "22/07/2026": {
-      "min_price": "300",
-      "max_price": "1590",
-      "modal_price": "1400"
+      "min_price": 300,
+      "max_price": 1590,
+      "modal_price": 1400
     }
   },
   "Green Chilli|Bagepalli APMC|Chikkaballapur": {
@@ -8927,9 +9327,9 @@
       "modal_price": "3500"
     },
     "22/07/2026": {
-      "min_price": "3000",
-      "max_price": "4000",
-      "modal_price": "3200"
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3200
     },
     "16/07/2026": {
       "min_price": "3500",
@@ -8949,9 +9349,9 @@
       "modal_price": "2600"
     },
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "3000",
-      "modal_price": "2600"
+      "min_price": 2500,
+      "max_price": 3000,
+      "modal_price": 2600
     },
     "19/07/2026": {
       "min_price": "3000",
@@ -9062,9 +9462,9 @@
       "modal_price": "4500"
     },
     "22/07/2026": {
-      "min_price": "3500",
-      "max_price": "5000",
-      "modal_price": "4000"
+      "min_price": 3500,
+      "max_price": 5000,
+      "modal_price": 4000
     },
     "15/07/2026": {
       "min_price": "4000",
@@ -9094,9 +9494,9 @@
       "modal_price": "1200"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "1500",
-      "modal_price": "1200"
+      "min_price": 1000,
+      "max_price": 1500,
+      "modal_price": 1200
     },
     "16/07/2026": {
       "min_price": "1000",
@@ -9126,9 +9526,9 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "1800",
-      "max_price": "2400",
-      "modal_price": "200"
+      "min_price": 1800,
+      "max_price": 2400,
+      "modal_price": 200
     }
   },
   "Cauliflower|Bagepalli APMC|Chikkaballapur": {
@@ -9163,9 +9563,9 @@
       "modal_price": "1000"
     },
     "22/07/2026": {
-      "min_price": "800",
-      "max_price": "1500",
-      "modal_price": "1000"
+      "min_price": 800,
+      "max_price": 1500,
+      "modal_price": 1000
     }
   },
   "Sheep|Bagepalli APMC|Chikkaballapur": {
@@ -9197,9 +9597,9 @@
       "modal_price": "1000"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "2000",
-      "modal_price": "1700"
+      "min_price": 1500,
+      "max_price": 2000,
+      "modal_price": 1700
     },
     "20/07/2026": {
       "min_price": "1500",
@@ -9224,9 +9624,9 @@
       "modal_price": "2200"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3000",
-      "modal_price": "2100"
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2100
     },
     "20/07/2026": {
       "min_price": "2000",
@@ -9614,9 +10014,9 @@
       "modal_price": "2250"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "2500",
-      "modal_price": "1750"
+      "min_price": 1000,
+      "max_price": 2500,
+      "modal_price": 1750
     }
   },
   "Chrysanthemum(Loose)|Chickkaballapura APMC|Chikkaballapur": {
@@ -9698,9 +10098,9 @@
       "modal_price": "4500"
     },
     "22/07/2026": {
-      "min_price": "3000",
-      "max_price": "6000",
-      "modal_price": "4500"
+      "min_price": 3000,
+      "max_price": 6000,
+      "modal_price": 4500
     }
   },
   "Bitter gourd|Chickkaballapura APMC|Chikkaballapur": {
@@ -10246,9 +10646,9 @@
       "modal_price": "1000"
     },
     "22/07/2026": {
-      "min_price": "300",
-      "max_price": "1333",
-      "modal_price": "933"
+      "min_price": 300,
+      "max_price": 1333,
+      "modal_price": 933
     },
     "19/07/2026": {
       "min_price": "300",
@@ -10632,9 +11032,9 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3000",
-      "modal_price": "2500"
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
     }
   },
   "Chapparad Avare|Gauribidanur APMC|Chikkaballapur": {
@@ -10644,9 +11044,9 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "2500",
-      "modal_price": "2000"
+      "min_price": 1500,
+      "max_price": 2500,
+      "modal_price": 2000
     },
     "18/07/2026": {
       "min_price": "1500",
@@ -10681,9 +11081,9 @@
       "modal_price": "1500"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "2500",
-      "modal_price": "2000"
+      "min_price": 1500,
+      "max_price": 2500,
+      "modal_price": 2000
     },
     "15/07/2026": {
       "min_price": "1000",
@@ -10713,9 +11113,9 @@
   },
   "Onion|Gauribidanur APMC|Chikkaballapur": {
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3000",
-      "modal_price": "2500"
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
     },
     "18/07/2026": {
       "min_price": "2000",
@@ -10760,9 +11160,9 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "2500",
-      "modal_price": "2000"
+      "min_price": 1500,
+      "max_price": 2500,
+      "modal_price": 2000
     },
     "20/07/2026": {
       "min_price": "1800",
@@ -10802,9 +11202,9 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3000",
-      "modal_price": "2500"
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
     },
     "18/07/2026": {
       "min_price": "2000",
@@ -10834,9 +11234,9 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "2500",
-      "modal_price": "2000"
+      "min_price": 1500,
+      "max_price": 2500,
+      "modal_price": 2000
     },
     "17/07/2026": {
       "min_price": "1500",
@@ -10866,9 +11266,9 @@
       "modal_price": "1300"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "1800",
-      "modal_price": "1500"
+      "min_price": 1000,
+      "max_price": 1800,
+      "modal_price": 1500
     },
     "20/07/2026": {
       "min_price": "600",
@@ -10925,9 +11325,9 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "3500",
-      "modal_price": "3000"
+      "min_price": 2500,
+      "max_price": 3500,
+      "modal_price": 3000
     },
     "15/07/2026": {
       "min_price": "2000",
@@ -10962,9 +11362,9 @@
       "modal_price": "3000"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3000",
-      "modal_price": "2500"
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
     },
     "17/07/2026": {
       "min_price": "2000",
@@ -11004,9 +11404,9 @@
       "modal_price": "3000"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3000",
-      "modal_price": "2500"
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
     },
     "15/07/2026": {
       "min_price": "2000",
@@ -11021,9 +11421,9 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3000",
-      "modal_price": "2500"
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
     },
     "17/07/2026": {
       "min_price": "3000",
@@ -11058,9 +11458,9 @@
       "modal_price": "1200"
     },
     "22/07/2026": {
-      "min_price": "800",
-      "max_price": "1500",
-      "modal_price": "1300"
+      "min_price": 800,
+      "max_price": 1500,
+      "modal_price": 1300
     },
     "17/07/2026": {
       "min_price": "1500",
@@ -11105,9 +11505,9 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3000",
-      "modal_price": "2500"
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
     },
     "17/07/2026": {
       "min_price": "2000",
@@ -11137,9 +11537,9 @@
       "modal_price": "4000"
     },
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "3500",
-      "modal_price": "3000"
+      "min_price": 2500,
+      "max_price": 3500,
+      "modal_price": 3000
     },
     "15/07/2026": {
       "min_price": "3000",
@@ -11189,9 +11589,9 @@
       "modal_price": "4000"
     },
     "22/07/2026": {
-      "min_price": "3000",
-      "max_price": "4000",
-      "modal_price": "3500"
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3500
     },
     "16/07/2026": {
       "min_price": "3500",
@@ -11243,9 +11643,9 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "2500",
-      "modal_price": "2000"
+      "min_price": 1500,
+      "max_price": 2500,
+      "modal_price": 2000
     },
     "18/07/2026": {
       "min_price": "1500",
@@ -11285,9 +11685,9 @@
       "modal_price": "4000"
     },
     "22/07/2026": {
-      "min_price": "3500",
-      "max_price": "4500",
-      "modal_price": "4000"
+      "min_price": 3500,
+      "max_price": 4500,
+      "modal_price": 4000
     },
     "15/07/2026": {
       "min_price": "3500",
@@ -11314,9 +11714,9 @@
   },
   "Potato|Gauribidanur APMC|Chikkaballapur": {
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "2500",
-      "modal_price": "2000"
+      "min_price": 1500,
+      "max_price": 2500,
+      "modal_price": 2000
     },
     "18/07/2026": {
       "min_price": "1000",
@@ -11401,16 +11801,16 @@
       "modal_price": "1660"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "1500",
-      "modal_price": "1500"
+      "min_price": 1500,
+      "max_price": 1500,
+      "modal_price": 1500
     }
   },
   "Black pepper|Chikkamagaluru APMC|Chikkamagaluru": {
     "22/07/2026": {
-      "min_price": "25000",
-      "max_price": "36000",
-      "modal_price": "30500"
+      "min_price": 25000,
+      "max_price": 36000,
+      "modal_price": 30500
     }
   },
   "Onion|Chikkamagaluru APMC|Chikkamagaluru": {
@@ -11430,9 +11830,9 @@
       "modal_price": "3000"
     },
     "22/07/2026": {
-      "min_price": "2600",
-      "max_price": "2800",
-      "modal_price": "2700"
+      "min_price": 2600,
+      "max_price": 2800,
+      "modal_price": 2700
     }
   },
   "Tomato|Chikkamagaluru APMC|Chikkamagaluru": {
@@ -11474,9 +11874,9 @@
   },
   "Beans|Chikkamagaluru APMC|Chikkamagaluru": {
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "2800",
-      "modal_price": "2650"
+      "min_price": 2500,
+      "max_price": 2800,
+      "modal_price": 2650
     },
     "16/07/2026": {
       "min_price": "6000",
@@ -11562,9 +11962,9 @@
       "modal_price": "1300"
     },
     "22/07/2026": {
-      "min_price": "1200",
-      "max_price": "1400",
-      "modal_price": "1300"
+      "min_price": 1200,
+      "max_price": 1400,
+      "modal_price": 1300
     },
     "17/07/2026": {
       "min_price": "1200",
@@ -11603,9 +12003,9 @@
   },
   "Potato|Chikkamagaluru APMC|Chikkamagaluru": {
     "22/07/2026": {
-      "min_price": "1900",
-      "max_price": "1900",
-      "modal_price": "1900"
+      "min_price": 1900,
+      "max_price": 1900,
+      "modal_price": 1900
     },
     "21/07/2026": {
       "min_price": "1850",
@@ -11625,9 +12025,9 @@
   },
   "Cabbage|Chikkamagaluru APMC|Chikkamagaluru": {
     "22/07/2026": {
-      "min_price": "1800",
-      "max_price": "1800",
-      "modal_price": "1800"
+      "min_price": 1800,
+      "max_price": 1800,
+      "modal_price": 1800
     }
   },
   "Arecanut(Betelnut/Supari)|Kadur APMC|Chikkamagaluru": {
@@ -11984,6 +12384,11 @@
       "min_price": "35200",
       "max_price": "45009",
       "modal_price": "45009"
+    },
+    "23/07/2026": {
+      "min_price": 35200,
+      "max_price": 35200,
+      "modal_price": 35200
     }
   },
   "Arecanut(Betelnut/Supari)|Mudigere APMC|Chikkamagaluru": {
@@ -12165,9 +12570,9 @@
       "modal_price": "8140"
     },
     "22/07/2026": {
-      "min_price": "6111",
-      "max_price": "8569",
-      "modal_price": "7689"
+      "min_price": 6111,
+      "max_price": 8569,
+      "modal_price": 7689
     },
     "20/07/2026": {
       "min_price": "6279",
@@ -12318,6 +12723,11 @@
       "min_price": "17000",
       "max_price": "17000",
       "modal_price": "17000"
+    },
+    "23/07/2026": {
+      "min_price": 17000,
+      "max_price": 17000,
+      "modal_price": 17000
     }
   },
   "Ground Nut Seed|Hiriyur APMC|Chitradurga": {
@@ -12352,14 +12762,19 @@
       "modal_price": "12710"
     },
     "22/07/2026": {
-      "min_price": "11000",
-      "max_price": "12761",
-      "modal_price": "11812"
+      "min_price": 11000,
+      "max_price": 12761,
+      "modal_price": 11812
     },
     "16/07/2026": {
       "min_price": "10500",
       "max_price": "14301",
       "modal_price": "12854"
+    },
+    "23/07/2026": {
+      "min_price": 11800,
+      "max_price": 11800,
+      "modal_price": 11800
     }
   },
   "Wheat|Hiriyur APMC|Chitradurga": {
@@ -12395,9 +12810,9 @@
       "modal_price": "23320"
     },
     "22/07/2026": {
-      "min_price": "18000",
-      "max_price": "18000",
-      "modal_price": "18000"
+      "min_price": 18000,
+      "max_price": 18000,
+      "modal_price": 18000
     },
     "15/07/2026": {
       "min_price": "25810",
@@ -12424,9 +12839,9 @@
       "modal_price": "25076"
     },
     "22/07/2026": {
-      "min_price": "23881",
-      "max_price": "26200",
-      "modal_price": "25795"
+      "min_price": 23881,
+      "max_price": 26200,
+      "modal_price": 25795
     },
     "20/07/2026": {
       "min_price": "22927",
@@ -12447,6 +12862,11 @@
       "min_price": "22000",
       "max_price": "26200",
       "modal_price": "25832"
+    },
+    "23/07/2026": {
+      "min_price": 23247,
+      "max_price": 26000,
+      "modal_price": 24131
     }
   },
   "Coconut|Hosadurga APMC|Chitradurga": {
@@ -12479,6 +12899,11 @@
       "min_price": "20000",
       "max_price": "22000",
       "modal_price": "21000"
+    },
+    "23/07/2026": {
+      "min_price": 20000,
+      "max_price": 22000,
+      "modal_price": 20000
     }
   },
   "Ragi(Finger Millet)|Hosadurga APMC|Chitradurga": {
@@ -12508,6 +12933,11 @@
       "min_price": "20000",
       "max_price": "20000",
       "modal_price": "20000"
+    },
+    "23/07/2026": {
+      "min_price": 16000,
+      "max_price": 19000,
+      "modal_price": 19000
     }
   },
   "Same/Savi|Hosadurga APMC|Chitradurga": {
@@ -12515,6 +12945,11 @@
       "min_price": "7000",
       "max_price": "7500",
       "modal_price": "7200"
+    },
+    "23/07/2026": {
+      "min_price": 7000,
+      "max_price": 7600,
+      "modal_price": 7500
     }
   },
   "Maize|Hosadurga APMC|Chitradurga": {
@@ -12813,9 +13248,9 @@
       "modal_price": "22000"
     },
     "22/07/2026": {
-      "min_price": "18000",
-      "max_price": "25000",
-      "modal_price": "21500"
+      "min_price": 18000,
+      "max_price": 25000,
+      "modal_price": 21500
     }
   },
   "Arecanut(Betelnut/Supari)|Sulya APMC|Dakshina Kannada": {
@@ -12845,9 +13280,9 @@
       "modal_price": "27000"
     },
     "22/07/2026": {
-      "min_price": "20000",
-      "max_price": "34000",
-      "modal_price": "27000"
+      "min_price": 20000,
+      "max_price": 34000,
+      "modal_price": 27000
     },
     "17/07/2026": {
       "min_price": "39000",
@@ -12897,6 +13332,11 @@
       "min_price": "49249",
       "max_price": "53100",
       "modal_price": "51585"
+    },
+    "23/07/2026": {
+      "min_price": 51849,
+      "max_price": 53699,
+      "modal_price": 53011
     }
   },
   "Coconut|Channagiri APMC|Davangere": {
@@ -12940,9 +13380,9 @@
       "modal_price": "3000"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "3200",
-      "modal_price": "2200"
+      "min_price": 1000,
+      "max_price": 3200,
+      "modal_price": 2200
     },
     "15/07/2026": {
       "min_price": "1000",
@@ -12967,9 +13407,9 @@
       "modal_price": "1400"
     },
     "22/07/2026": {
-      "min_price": "800",
-      "max_price": "2300",
-      "modal_price": "1000"
+      "min_price": 800,
+      "max_price": 2300,
+      "modal_price": 1000
     },
     "16/07/2026": {
       "min_price": "700",
@@ -13009,9 +13449,9 @@
       "modal_price": "4500"
     },
     "22/07/2026": {
-      "min_price": "4000",
-      "max_price": "5000",
-      "modal_price": "4500"
+      "min_price": 4000,
+      "max_price": 5000,
+      "modal_price": 4500
     },
     "21/07/2026": {
       "min_price": "3000",
@@ -13046,9 +13486,9 @@
       "modal_price": "1500"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "2000",
-      "modal_price": "1500"
+      "min_price": 1000,
+      "max_price": 2000,
+      "modal_price": 1500
     },
     "21/07/2026": {
       "min_price": "1000",
@@ -13127,9 +13567,9 @@
       "modal_price": "3000"
     },
     "22/07/2026": {
-      "min_price": "3000",
-      "max_price": "4000",
-      "modal_price": "3500"
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3500
     },
     "15/07/2026": {
       "min_price": "2000",
@@ -13203,9 +13643,9 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "800",
-      "max_price": "2200",
-      "modal_price": "1500"
+      "min_price": 800,
+      "max_price": 2200,
+      "modal_price": 1500
     },
     "16/07/2026": {
       "min_price": "1000",
@@ -13262,9 +13702,9 @@
   },
   "Potato|Davangere APMC|Davangere": {
     "22/07/2026": {
-      "min_price": "800",
-      "max_price": "2100",
-      "modal_price": "1400"
+      "min_price": 800,
+      "max_price": 2100,
+      "modal_price": 1400
     },
     "17/07/2026": {
       "min_price": "700",
@@ -13309,9 +13749,9 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3000",
-      "modal_price": "2500"
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
     },
     "21/07/2026": {
       "min_price": "2000",
@@ -13351,9 +13791,9 @@
       "modal_price": "1600"
     },
     "22/07/2026": {
-      "min_price": "600",
-      "max_price": "2400",
-      "modal_price": "1300"
+      "min_price": 600,
+      "max_price": 2400,
+      "modal_price": 1300
     },
     "15/07/2026": {
       "min_price": "700",
@@ -13420,9 +13860,9 @@
       "modal_price": "1400"
     },
     "22/07/2026": {
-      "min_price": "700",
-      "max_price": "2100",
-      "modal_price": "1300"
+      "min_price": 700,
+      "max_price": 2100,
+      "modal_price": 1300
     }
   },
   "Seemebadnekai|Davangere APMC|Davangere": {
@@ -13437,9 +13877,9 @@
       "modal_price": "2200"
     },
     "22/07/2026": {
-      "min_price": "1300",
-      "max_price": "3600",
-      "modal_price": "2500"
+      "min_price": 1300,
+      "max_price": 3600,
+      "modal_price": 2500
     },
     "17/07/2026": {
       "min_price": "1300",
@@ -13479,9 +13919,9 @@
       "modal_price": "3000"
     },
     "22/07/2026": {
-      "min_price": "1400",
-      "max_price": "3800",
-      "modal_price": "2800"
+      "min_price": 1400,
+      "max_price": 3800,
+      "modal_price": 2800
     },
     "17/07/2026": {
       "min_price": "1400",
@@ -13516,9 +13956,9 @@
       "modal_price": "4000"
     },
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "4400",
-      "modal_price": "3700"
+      "min_price": 2500,
+      "max_price": 4400,
+      "modal_price": 3700
     }
   },
   "Sweet Pumpkin|Davangere APMC|Davangere": {
@@ -13538,9 +13978,9 @@
       "modal_price": "1000"
     },
     "22/07/2026": {
-      "min_price": "800",
-      "max_price": "2300",
-      "modal_price": "1000"
+      "min_price": 800,
+      "max_price": 2300,
+      "modal_price": 1000
     },
     "18/07/2026": {
       "min_price": "600",
@@ -13555,9 +13995,9 @@
   },
   "Tomato|Davangere APMC|Davangere": {
     "22/07/2026": {
-      "min_price": "600",
-      "max_price": "2400",
-      "modal_price": "900"
+      "min_price": 600,
+      "max_price": 2400,
+      "modal_price": 900
     },
     "21/07/2026": {
       "min_price": "500",
@@ -13666,9 +14106,9 @@
       "modal_price": "15000"
     },
     "22/07/2026": {
-      "min_price": "10000",
-      "max_price": "20000",
-      "modal_price": "15000"
+      "min_price": 10000,
+      "max_price": 20000,
+      "modal_price": 15000
     },
     "15/07/2026": {
       "min_price": "10000",
@@ -13740,9 +14180,9 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "700",
-      "max_price": "2400",
-      "modal_price": "1500"
+      "min_price": 700,
+      "max_price": 2400,
+      "modal_price": 1500
     },
     "17/07/2026": {
       "min_price": "800",
@@ -13782,9 +14222,9 @@
       "modal_price": "2800"
     },
     "22/07/2026": {
-      "min_price": "700",
-      "max_price": "3000",
-      "modal_price": "1800"
+      "min_price": 700,
+      "max_price": 3000,
+      "modal_price": 1800
     }
   },
   "Cabbage|Davangere APMC|Davangere": {
@@ -13814,9 +14254,9 @@
       "modal_price": "1500"
     },
     "22/07/2026": {
-      "min_price": "800",
-      "max_price": "2500",
-      "modal_price": "1600"
+      "min_price": 800,
+      "max_price": 2500,
+      "modal_price": 1600
     }
   },
   "Ladies Finger|Davangere APMC|Davangere": {
@@ -13846,9 +14286,9 @@
       "modal_price": "2400"
     },
     "22/07/2026": {
-      "min_price": "900",
-      "max_price": "2500",
-      "modal_price": "1400"
+      "min_price": 900,
+      "max_price": 2500,
+      "modal_price": 1400
     }
   },
   "Green Chilli|Davangere APMC|Davangere": {
@@ -13863,9 +14303,9 @@
       "modal_price": "1700"
     },
     "22/07/2026": {
-      "min_price": "800",
-      "max_price": "2300",
-      "modal_price": "1300"
+      "min_price": 800,
+      "max_price": 2300,
+      "modal_price": 1300
     },
     "16/07/2026": {
       "min_price": "1000",
@@ -13890,9 +14330,9 @@
       "modal_price": "1500"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "2000",
-      "modal_price": "1500"
+      "min_price": 1000,
+      "max_price": 2000,
+      "modal_price": 1500
     },
     "20/07/2026": {
       "min_price": "1000",
@@ -13974,9 +14414,9 @@
       "modal_price": "1600"
     },
     "22/07/2026": {
-      "min_price": "600",
-      "max_price": "2400",
-      "modal_price": "1400"
+      "min_price": 600,
+      "max_price": 2400,
+      "modal_price": 1400
     },
     "21/07/2026": {
       "min_price": "800",
@@ -14043,9 +14483,9 @@
       "modal_price": "2800"
     },
     "22/07/2026": {
-      "min_price": "1200",
-      "max_price": "3400",
-      "modal_price": "2600"
+      "min_price": 1200,
+      "max_price": 3400,
+      "modal_price": 2600
     }
   },
   "Coconut|Davangere APMC|Davangere": {
@@ -14109,9 +14549,9 @@
       "modal_price": "5000"
     },
     "22/07/2026": {
-      "min_price": "4000",
-      "max_price": "6000",
-      "modal_price": "5000"
+      "min_price": 4000,
+      "max_price": 6000,
+      "modal_price": 5000
     },
     "17/07/2026": {
       "min_price": "4000",
@@ -14141,9 +14581,9 @@
       "modal_price": "1600"
     },
     "22/07/2026": {
-      "min_price": "700",
-      "max_price": "2400",
-      "modal_price": "1400"
+      "min_price": 700,
+      "max_price": 2400,
+      "modal_price": 1400
     },
     "17/07/2026": {
       "min_price": "600",
@@ -14183,9 +14623,9 @@
       "modal_price": "1100"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "2400",
-      "modal_price": "1600"
+      "min_price": 1000,
+      "max_price": 2400,
+      "modal_price": 1600
     },
     "21/07/2026": {
       "min_price": "800",
@@ -14200,9 +14640,9 @@
       "modal_price": "1700"
     },
     "22/07/2026": {
-      "min_price": "700",
-      "max_price": "1900",
-      "modal_price": "1400"
+      "min_price": 700,
+      "max_price": 1900,
+      "modal_price": 1400
     }
   },
   "Copra|Davangere APMC|Davangere": {
@@ -14241,9 +14681,9 @@
       "modal_price": "1400"
     },
     "22/07/2026": {
-      "min_price": "700",
-      "max_price": "1900",
-      "modal_price": "1400"
+      "min_price": 700,
+      "max_price": 1900,
+      "modal_price": 1400
     },
     "16/07/2026": {
       "min_price": "800",
@@ -14273,9 +14713,9 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "800",
-      "max_price": "2300",
-      "modal_price": "1300"
+      "min_price": 800,
+      "max_price": 2300,
+      "modal_price": 1300
     },
     "21/07/2026": {
       "min_price": "900",
@@ -14313,6 +14753,11 @@
       "min_price": "3120",
       "max_price": "3500",
       "modal_price": "3188"
+    },
+    "23/07/2026": {
+      "min_price": 3510,
+      "max_price": 3510,
+      "modal_price": 3510
     }
   },
   "Maize|HarappanaHalli APMC|Davangere": {
@@ -14359,6 +14804,11 @@
       "min_price": "2200",
       "max_price": "2730",
       "modal_price": "2465"
+    },
+    "23/07/2026": {
+      "min_price": 2860,
+      "max_price": 3300,
+      "modal_price": 3050
     }
   },
   "Coconut|Harihara APMC|Davangere": {
@@ -14371,6 +14821,11 @@
       "min_price": "20000",
       "max_price": "20000",
       "modal_price": "20000"
+    },
+    "23/07/2026": {
+      "min_price": 22000,
+      "max_price": 22000,
+      "modal_price": 22000
     }
   },
   "Brinjal|Honnali APMC|Davangere": {
@@ -14385,9 +14840,9 @@
       "modal_price": "1100"
     },
     "22/07/2026": {
-      "min_price": "800",
-      "max_price": "1000",
-      "modal_price": "900"
+      "min_price": 800,
+      "max_price": 1000,
+      "modal_price": 900
     },
     "20/07/2026": {
       "min_price": "1100",
@@ -14398,6 +14853,11 @@
       "min_price": "1300",
       "max_price": "1500",
       "modal_price": "1400"
+    },
+    "23/07/2026": {
+      "min_price": 800,
+      "max_price": 1200,
+      "modal_price": 1100
     }
   },
   "Maize|Honnali APMC|Davangere": {
@@ -14417,9 +14877,9 @@
       "modal_price": "2557"
     },
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "2650",
-      "modal_price": "2590"
+      "min_price": 2500,
+      "max_price": 2650,
+      "modal_price": 2590
     },
     "17/07/2026": {
       "min_price": "2400",
@@ -14435,13 +14895,18 @@
       "min_price": "2160",
       "max_price": "2730",
       "modal_price": "2430"
+    },
+    "23/07/2026": {
+      "min_price": 2500,
+      "max_price": 2650,
+      "modal_price": 2600
     }
   },
   "Arecanut(Betelnut/Supari)|Honnali APMC|Davangere": {
     "22/07/2026": {
-      "min_price": "25000",
-      "max_price": "25100",
-      "modal_price": "25090"
+      "min_price": 51099,
+      "max_price": 51099,
+      "modal_price": 51099
     },
     "16/07/2026": {
       "min_price": "11200",
@@ -14491,16 +14956,21 @@
       "modal_price": "2800"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3000",
-      "modal_price": "2800"
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2800
+    },
+    "23/07/2026": {
+      "min_price": 2500,
+      "max_price": 3000,
+      "modal_price": 2800
     }
   },
   "Ragi(Finger Millet)|Honnali APMC|Davangere": {
     "22/07/2026": {
-      "min_price": "3360",
-      "max_price": "3360",
-      "modal_price": "3360"
+      "min_price": 3360,
+      "max_price": 3360,
+      "modal_price": 3360
     },
     "21/07/2026": {
       "min_price": "3260",
@@ -14513,6 +14983,11 @@
       "min_price": "2600",
       "max_price": "2600",
       "modal_price": "2600"
+    },
+    "23/07/2026": {
+      "min_price": 2600,
+      "max_price": 2600,
+      "modal_price": 2600
     }
   },
   "Ladies Finger|Honnali APMC|Davangere": {
@@ -14527,9 +15002,9 @@
       "modal_price": "1600"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "2200",
-      "modal_price": "2100"
+      "min_price": 2000,
+      "max_price": 2200,
+      "modal_price": 2100
     },
     "15/07/2026": {
       "min_price": "2500",
@@ -14550,6 +15025,11 @@
       "min_price": "1500",
       "max_price": "2000",
       "modal_price": "1800"
+    },
+    "23/07/2026": {
+      "min_price": 1500,
+      "max_price": 2000,
+      "modal_price": 1800
     }
   },
   "Green Chilli|Honnali APMC|Davangere": {
@@ -14579,14 +15059,19 @@
       "modal_price": "1100"
     },
     "22/07/2026": {
-      "min_price": "1600",
-      "max_price": "1800",
-      "modal_price": "1700"
+      "min_price": 1600,
+      "max_price": 1800,
+      "modal_price": 1700
     },
     "21/07/2026": {
       "min_price": "1400",
       "max_price": "1500",
       "modal_price": "1450"
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 2100,
+      "modal_price": 2050
     }
   },
   "Cucumbar(Kheera)|Honnali APMC|Davangere": {
@@ -14624,6 +15109,11 @@
       "min_price": "1500",
       "max_price": "1800",
       "modal_price": "1700"
+    },
+    "23/07/2026": {
+      "min_price": 1000,
+      "max_price": 1200,
+      "modal_price": 1100
     }
   },
   "Beetroot|Honnali APMC|Davangere": {
@@ -14648,9 +15138,9 @@
       "modal_price": "1900"
     },
     "22/07/2026": {
-      "min_price": "2200",
-      "max_price": "2400",
-      "modal_price": "2300"
+      "min_price": 2200,
+      "max_price": 2400,
+      "modal_price": 2300
     },
     "16/07/2026": {
       "min_price": "1500",
@@ -14661,6 +15151,11 @@
       "min_price": "2000",
       "max_price": "2200",
       "modal_price": "2100"
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 2200,
+      "modal_price": 2100
     }
   },
   "Cowpea(Veg)|Honnali APMC|Davangere": {
@@ -14675,9 +15170,9 @@
       "modal_price": "3300"
     },
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "3000",
-      "modal_price": "2800"
+      "min_price": 2500,
+      "max_price": 3000,
+      "modal_price": 2800
     },
     "20/07/2026": {
       "min_price": "1500",
@@ -14698,6 +15193,11 @@
       "min_price": "2000",
       "max_price": "2200",
       "modal_price": "2100"
+    },
+    "23/07/2026": {
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3800
     }
   },
   "Beans|Honnali APMC|Davangere": {
@@ -14735,6 +15235,11 @@
       "min_price": "3500",
       "max_price": "4000",
       "modal_price": "3800"
+    },
+    "23/07/2026": {
+      "min_price": 2500,
+      "max_price": 2800,
+      "modal_price": 2700
     }
   },
   "Coconut|Honnali APMC|Davangere": {
@@ -14759,9 +15264,14 @@
       "modal_price": "20000"
     },
     "22/07/2026": {
-      "min_price": "20000",
-      "max_price": "33000",
-      "modal_price": "27290"
+      "min_price": 20000,
+      "max_price": 33000,
+      "modal_price": 27290
+    },
+    "23/07/2026": {
+      "min_price": 12000,
+      "max_price": 20000,
+      "modal_price": 13400
     }
   },
   "Ridgeguard(Tori)|Honnali APMC|Davangere": {
@@ -14781,9 +15291,9 @@
       "modal_price": "2300"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "1600",
-      "modal_price": "1550"
+      "min_price": 1500,
+      "max_price": 1600,
+      "modal_price": 1550
     },
     "21/07/2026": {
       "min_price": "1200",
@@ -14799,6 +15309,11 @@
       "min_price": "2000",
       "max_price": "2300",
       "modal_price": "2100"
+    },
+    "23/07/2026": {
+      "min_price": 1000,
+      "max_price": 1500,
+      "modal_price": 1300
     }
   },
   "Paddy(Common)|Honnali APMC|Davangere": {
@@ -14821,6 +15336,11 @@
       "min_price": "2498",
       "max_price": "2960",
       "modal_price": "2698"
+    },
+    "23/07/2026": {
+      "min_price": 2600,
+      "max_price": 2600,
+      "modal_price": 2600
     }
   },
   "Cabbage|Honnali APMC|Davangere": {
@@ -14830,9 +15350,9 @@
       "modal_price": "1100"
     },
     "22/07/2026": {
-      "min_price": "1200",
-      "max_price": "1400",
-      "modal_price": "1300"
+      "min_price": 1200,
+      "max_price": 1400,
+      "modal_price": 1300
     },
     "20/07/2026": {
       "min_price": "1000",
@@ -14858,6 +15378,11 @@
       "min_price": "1000",
       "max_price": "1200",
       "modal_price": "1100"
+    },
+    "23/07/2026": {
+      "min_price": 1500,
+      "max_price": 1600,
+      "modal_price": 1550
     }
   },
   "Ragi(Finger Millet)|Jagalur APMC|Davangere": {
@@ -15718,9 +16243,9 @@
       "modal_price": "5125"
     },
     "22/07/2026": {
-      "min_price": "4947",
-      "max_price": "4947",
-      "modal_price": "4947"
+      "min_price": 4947,
+      "max_price": 4947,
+      "modal_price": 4947
     },
     "18/07/2026": {
       "min_price": "3700",
@@ -15755,9 +16280,9 @@
       "modal_price": "5092"
     },
     "22/07/2026": {
-      "min_price": "4800",
-      "max_price": "6517",
-      "modal_price": "6296"
+      "min_price": 4800,
+      "max_price": 6517,
+      "modal_price": 6296
     },
     "15/07/2026": {
       "min_price": "4244",
@@ -15799,9 +16324,9 @@
       "modal_price": "5400"
     },
     "22/07/2026": {
-      "min_price": "5400",
-      "max_price": "5400",
-      "modal_price": "5400"
+      "min_price": 5400,
+      "max_price": 5400,
+      "modal_price": 5400
     }
   },
   "Kulthi(Horse Gram)|Gadag APMC|Gadag": {
@@ -15892,9 +16417,9 @@
       "modal_price": "3437"
     },
     "22/07/2026": {
-      "min_price": "3357",
-      "max_price": "5413",
-      "modal_price": "4290"
+      "min_price": 3357,
+      "max_price": 5413,
+      "modal_price": 4290
     }
   },
   "Sunflower/Sunflower Seed|Gadag APMC|Gadag": {
@@ -15968,9 +16493,9 @@
       "modal_price": "3382"
     },
     "22/07/2026": {
-      "min_price": "2219",
-      "max_price": "6412",
-      "modal_price": "3371"
+      "min_price": 2219,
+      "max_price": 6412,
+      "modal_price": 3371
     },
     "17/07/2026": {
       "min_price": "1912",
@@ -16039,9 +16564,9 @@
       "modal_price": "12162"
     },
     "22/07/2026": {
-      "min_price": "15200",
-      "max_price": "15200",
-      "modal_price": "15200"
+      "min_price": 15200,
+      "max_price": 15200,
+      "modal_price": 15200
     }
   },
   "Ground Nut Seed|Gadag APMC|Gadag": {
@@ -16124,9 +16649,9 @@
       "modal_price": "8460"
     },
     "22/07/2026": {
-      "min_price": "8450",
-      "max_price": "8450",
-      "modal_price": "8450"
+      "min_price": 8450,
+      "max_price": 8450,
+      "modal_price": 8450
     }
   },
   "Groundnut|Gadag APMC|Gadag": {
@@ -16141,9 +16666,9 @@
       "modal_price": "7282"
     },
     "22/07/2026": {
-      "min_price": "6253",
-      "max_price": "7669",
-      "modal_price": "7399"
+      "min_price": 6253,
+      "max_price": 7669,
+      "modal_price": 7399
     },
     "20/07/2026": {
       "min_price": "7021",
@@ -16291,9 +16816,9 @@
       "modal_price": "3081"
     },
     "22/07/2026": {
-      "min_price": "2186",
-      "max_price": "3160",
-      "modal_price": "2250"
+      "min_price": 2186,
+      "max_price": 3160,
+      "modal_price": 2250
     },
     "15/07/2026": {
       "min_price": "1944",
@@ -16558,9 +17083,9 @@
       "modal_price": "6400"
     },
     "22/07/2026": {
-      "min_price": "6400",
-      "max_price": "6400",
-      "modal_price": "6400"
+      "min_price": 6400,
+      "max_price": 6400,
+      "modal_price": 6400
     },
     "20/07/2026": {
       "min_price": "7500",
@@ -16570,9 +17095,9 @@
   },
   "Green Gram(Moong)(Whole)|Rona APMC|Gadag": {
     "22/07/2026": {
-      "min_price": "8109",
-      "max_price": "9117",
-      "modal_price": "8397"
+      "min_price": 8109,
+      "max_price": 9117,
+      "modal_price": 8397
     }
   },
   "Coconut|Arakalgud APMC|Hassan": {
@@ -16706,9 +17231,9 @@
       "modal_price": "24000"
     },
     "22/07/2026": {
-      "min_price": "24000",
-      "max_price": "36500",
-      "modal_price": "24000"
+      "min_price": 24000,
+      "max_price": 36500,
+      "modal_price": 24000
     },
     "18/07/2026": {
       "min_price": "32000",
@@ -16728,9 +17253,9 @@
       "modal_price": "21000"
     },
     "22/07/2026": {
-      "min_price": "21000",
-      "max_price": "21000",
-      "modal_price": "21000"
+      "min_price": 21000,
+      "max_price": 21000,
+      "modal_price": 21000
     }
   },
   "Gur(Jaggery)|Arasikere APMC|Hassan": {
@@ -17809,9 +18334,9 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "2400",
-      "max_price": "2500",
-      "modal_price": "2400"
+      "min_price": 2400,
+      "max_price": 2500,
+      "modal_price": 2400
     },
     "16/07/2026": {
       "min_price": "2370",
@@ -17822,6 +18347,11 @@
       "min_price": "2200",
       "max_price": "2500",
       "modal_price": "2300"
+    },
+    "23/07/2026": {
+      "min_price": 2500,
+      "max_price": 2530,
+      "modal_price": 2500
     }
   },
   "Kulthi(Horse Gram)|Hanagal APMC|Haveri": {
@@ -17848,9 +18378,9 @@
       "modal_price": "2200"
     },
     "22/07/2026": {
-      "min_price": "2200",
-      "max_price": "2410",
-      "modal_price": "2200"
+      "min_price": 2200,
+      "max_price": 2410,
+      "modal_price": 2200
     }
   },
   "Paddy(Common)|Hanagal APMC|Haveri": {
@@ -17883,6 +18413,11 @@
       "min_price": "2000",
       "max_price": "3200",
       "modal_price": "2400"
+    },
+    "23/07/2026": {
+      "min_price": 2300,
+      "max_price": 2400,
+      "modal_price": 2400
     }
   },
   "Maize|Haveri APMC|Haveri": {
@@ -17995,9 +18530,9 @@
       "modal_price": "2275"
     },
     "22/07/2026": {
-      "min_price": "2520",
-      "max_price": "2604",
-      "modal_price": "2562"
+      "min_price": 2520,
+      "max_price": 2604,
+      "modal_price": 2562
     },
     "19/07/2026": {
       "min_price": "2576",
@@ -18027,9 +18562,9 @@
   },
   "Tomato|Ranebennur APMC|Haveri": {
     "22/07/2026": {
-      "min_price": "500",
-      "max_price": "1800",
-      "modal_price": "1500"
+      "min_price": 500,
+      "max_price": 1800,
+      "modal_price": 1500
     },
     "16/07/2026": {
       "min_price": "500",
@@ -18250,9 +18785,9 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "1200",
-      "max_price": "2500",
-      "modal_price": "2000"
+      "min_price": 1200,
+      "max_price": 2500,
+      "modal_price": 2000
     }
   },
   "Ground Nut Seed|Ranebennur APMC|Haveri": {
@@ -18430,6 +18965,11 @@
       "min_price": "8000",
       "max_price": "8200",
       "modal_price": "8100"
+    },
+    "23/07/2026": {
+      "min_price": 8200,
+      "max_price": 8500,
+      "modal_price": 8300
     }
   },
   "Jowar(Sorghum)|Chittapur APMC|Kalaburagi": {
@@ -18605,9 +19145,9 @@
       "modal_price": "2655"
     },
     "22/07/2026": {
-      "min_price": "2400",
-      "max_price": "5400",
-      "modal_price": "4600"
+      "min_price": 2400,
+      "max_price": 5400,
+      "modal_price": 4600
     },
     "15/07/2026": {
       "min_price": "2200",
@@ -18632,9 +19172,9 @@
       "modal_price": "6675"
     },
     "22/07/2026": {
-      "min_price": "4450",
-      "max_price": "7225",
-      "modal_price": "6350"
+      "min_price": 4450,
+      "max_price": 7225,
+      "modal_price": 6350
     },
     "17/07/2026": {
       "min_price": "4600",
@@ -18684,9 +19224,9 @@
       "modal_price": "2650"
     },
     "22/07/2026": {
-      "min_price": "4100",
-      "max_price": "6250",
-      "modal_price": "5750"
+      "min_price": 4100,
+      "max_price": 6250,
+      "modal_price": 5750
     },
     "21/07/2026": {
       "min_price": "3100",
@@ -18807,9 +19347,9 @@
       "modal_price": "2650"
     },
     "22/07/2026": {
-      "min_price": "2300",
-      "max_price": "3100",
-      "modal_price": "2675"
+      "min_price": 2300,
+      "max_price": 3100,
+      "modal_price": 2675
     },
     "18/07/2026": {
       "min_price": "2200",
@@ -19141,9 +19681,9 @@
       "modal_price": "6200"
     },
     "22/07/2026": {
-      "min_price": "4300",
-      "max_price": "7470",
-      "modal_price": "6425"
+      "min_price": 4300,
+      "max_price": 7470,
+      "modal_price": 6425
     },
     "18/07/2026": {
       "min_price": "4200",
@@ -19412,9 +19952,14 @@
       "modal_price": "36000"
     },
     "22/07/2026": {
-      "min_price": "35006",
-      "max_price": "69000",
-      "modal_price": "45000"
+      "min_price": 35006,
+      "max_price": 69000,
+      "modal_price": 45000
+    },
+    "23/07/2026": {
+      "min_price": 35000,
+      "max_price": 69500,
+      "modal_price": 35000
     }
   },
   "Black pepper|Madikeri APMC|Kodagu": {
@@ -19489,9 +20034,9 @@
       "modal_price": "35000"
     },
     "22/07/2026": {
-      "min_price": "50000",
-      "max_price": "70000",
-      "modal_price": "70000"
+      "min_price": 50000,
+      "max_price": 70000,
+      "modal_price": 70000
     },
     "20/07/2026": {
       "min_price": "35000",
@@ -19540,9 +20085,9 @@
       "modal_price": "3500"
     },
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "3500",
-      "modal_price": "3000"
+      "min_price": 2500,
+      "max_price": 3500,
+      "modal_price": 3000
     },
     "18/07/2026": {
       "min_price": "3000",
@@ -19553,6 +20098,11 @@
       "min_price": "3000",
       "max_price": "3700",
       "modal_price": "3500"
+    },
+    "23/07/2026": {
+      "min_price": 3500,
+      "max_price": 4300,
+      "modal_price": 4000
     }
   },
   "Potato|Bangarpet APMC|Kolar": {
@@ -19567,9 +20117,9 @@
       "modal_price": "1500"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "2000",
-      "modal_price": "1500"
+      "min_price": 1000,
+      "max_price": 2000,
+      "modal_price": 1500
     },
     "15/07/2026": {
       "min_price": "1000",
@@ -19590,6 +20140,11 @@
       "min_price": "1200",
       "max_price": "1800",
       "modal_price": "1500"
+    },
+    "23/07/2026": {
+      "min_price": 1000,
+      "max_price": 2000,
+      "modal_price": 1500
     }
   },
   "Ridgeguard(Tori)|Bangarpet APMC|Kolar": {
@@ -19619,9 +20174,14 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "2800",
-      "modal_price": "2500"
+      "min_price": 2000,
+      "max_price": 2800,
+      "modal_price": 2500
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 2500,
+      "modal_price": 2300
     }
   },
   "Ginger(Green)|Bangarpet APMC|Kolar": {
@@ -19651,14 +20211,19 @@
       "modal_price": "10000"
     },
     "22/07/2026": {
-      "min_price": "10000",
-      "max_price": "11200",
-      "modal_price": "11000"
+      "min_price": 10000,
+      "max_price": 11200,
+      "modal_price": 11000
     },
     "21/07/2026": {
       "min_price": "9000",
       "max_price": "10300",
       "modal_price": "10000"
+    },
+    "23/07/2026": {
+      "min_price": 8000,
+      "max_price": 10300,
+      "modal_price": 10000
     }
   },
   "Chapparad Avare|Bangarpet APMC|Kolar": {
@@ -19690,9 +20255,9 @@
       "modal_price": "1000"
     },
     "22/07/2026": {
-      "min_price": "800",
-      "max_price": "1500",
-      "modal_price": "1000"
+      "min_price": 800,
+      "max_price": 1500,
+      "modal_price": 1000
     },
     "17/07/2026": {
       "min_price": "700",
@@ -19703,6 +20268,11 @@
       "min_price": "700",
       "max_price": "1500",
       "modal_price": "1000"
+    },
+    "23/07/2026": {
+      "min_price": 300,
+      "max_price": 1000,
+      "modal_price": 800
     }
   },
   "Carrot|Bangarpet APMC|Kolar": {
@@ -19717,9 +20287,9 @@
       "modal_price": "3500"
     },
     "22/07/2026": {
-      "min_price": "3000",
-      "max_price": "3700",
-      "modal_price": "3500"
+      "min_price": 3000,
+      "max_price": 3700,
+      "modal_price": 3500
     },
     "18/07/2026": {
       "min_price": "2500",
@@ -19735,6 +20305,11 @@
       "min_price": "3000",
       "max_price": "3700",
       "modal_price": "3500"
+    },
+    "23/07/2026": {
+      "min_price": 2500,
+      "max_price": 3500,
+      "modal_price": 3000
     }
   },
   "Cabbage|Bangarpet APMC|Kolar": {
@@ -19769,9 +20344,14 @@
       "modal_price": "900"
     },
     "22/07/2026": {
-      "min_price": "500",
-      "max_price": "1200",
-      "modal_price": "900"
+      "min_price": 500,
+      "max_price": 1200,
+      "modal_price": 900
+    },
+    "23/07/2026": {
+      "min_price": 500,
+      "max_price": 1000,
+      "modal_price": 700
     }
   },
   "Ladies Finger|Bangarpet APMC|Kolar": {
@@ -19818,14 +20398,19 @@
       "modal_price": "3200"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "2500",
-      "modal_price": "2000"
+      "min_price": 1500,
+      "max_price": 2500,
+      "modal_price": 2000
     },
     "18/07/2026": {
       "min_price": "3000",
       "max_price": "3700",
       "modal_price": "3500"
+    },
+    "23/07/2026": {
+      "min_price": 2500,
+      "max_price": 3200,
+      "modal_price": 3000
     }
   },
   "Bitter gourd|Bangarpet APMC|Kolar": {
@@ -19850,9 +20435,9 @@
       "modal_price": "3000"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3200",
-      "modal_price": "3000"
+      "min_price": 2000,
+      "max_price": 3200,
+      "modal_price": 3000
     }
   },
   "Cucumbar(Kheera)|Bangarpet APMC|Kolar": {
@@ -19882,14 +20467,19 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "2000",
-      "modal_price": "1500"
+      "min_price": 1000,
+      "max_price": 2000,
+      "modal_price": 1500
     },
     "15/07/2026": {
       "min_price": "1000",
       "max_price": "2000",
       "modal_price": "1500"
+    },
+    "23/07/2026": {
+      "min_price": 1000,
+      "max_price": 2000,
+      "modal_price": 1500
     }
   },
   "Chilly Capsicum|Bangarpet APMC|Kolar": {
@@ -19919,14 +20509,19 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "2500",
-      "modal_price": "2300"
+      "min_price": 2000,
+      "max_price": 2500,
+      "modal_price": 2300
     },
     "21/07/2026": {
       "min_price": "1000",
       "max_price": "2000",
       "modal_price": "1500"
+    },
+    "23/07/2026": {
+      "min_price": 3500,
+      "max_price": 4300,
+      "modal_price": 4000
     }
   },
   "Raddish|Bangarpet APMC|Kolar": {
@@ -19964,6 +20559,11 @@
       "min_price": "800",
       "max_price": "1300",
       "modal_price": "1000"
+    },
+    "23/07/2026": {
+      "min_price": 500,
+      "max_price": 1000,
+      "modal_price": 600
     }
   },
   "Beans|Bangarpet APMC|Kolar": {
@@ -19973,9 +20573,9 @@
       "modal_price": "6500"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3500",
-      "modal_price": "3000"
+      "min_price": 2000,
+      "max_price": 3500,
+      "modal_price": 3000
     },
     "15/07/2026": {
       "min_price": "6000",
@@ -20001,6 +20601,11 @@
       "min_price": "5000",
       "max_price": "6700",
       "modal_price": "6500"
+    },
+    "23/07/2026": {
+      "min_price": 2500,
+      "max_price": 3700,
+      "modal_price": 3500
     }
   },
   "Beetroot|Bangarpet APMC|Kolar": {
@@ -20025,9 +20630,9 @@
       "modal_price": "2300"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "2700",
-      "modal_price": "2500"
+      "min_price": 1500,
+      "max_price": 2700,
+      "modal_price": 2500
     },
     "21/07/2026": {
       "min_price": "2000",
@@ -20038,6 +20643,11 @@
       "min_price": "2000",
       "max_price": "2500",
       "modal_price": "2300"
+    },
+    "23/07/2026": {
+      "min_price": 1500,
+      "max_price": 2500,
+      "modal_price": 2300
     }
   },
   "Brinjal|Bangarpet APMC|Kolar": {
@@ -20047,9 +20657,9 @@
       "modal_price": "2300"
     },
     "22/07/2026": {
-      "min_price": "1000",
-      "max_price": "1700",
-      "modal_price": "1500"
+      "min_price": 1000,
+      "max_price": 1700,
+      "modal_price": 1500
     },
     "20/07/2026": {
       "min_price": "1000",
@@ -20075,6 +20685,11 @@
       "min_price": "2000",
       "max_price": "2500",
       "modal_price": "2300"
+    },
+    "23/07/2026": {
+      "min_price": 1000,
+      "max_price": 2000,
+      "modal_price": 1500
     }
   },
   "Cauliflower|Bangarpet APMC|Kolar": {
@@ -20084,9 +20699,9 @@
       "modal_price": "1100"
     },
     "22/07/2026": {
-      "min_price": "700",
-      "max_price": "1500",
-      "modal_price": "1000"
+      "min_price": 700,
+      "max_price": 1500,
+      "modal_price": 1000
     },
     "15/07/2026": {
       "min_price": "1000",
@@ -20097,13 +20712,18 @@
       "min_price": "1000",
       "max_price": "1500",
       "modal_price": "1200"
+    },
+    "23/07/2026": {
+      "min_price": 500,
+      "max_price": 1500,
+      "modal_price": 1000
     }
   },
   "Garlic|Bangarpet APMC|Kolar": {
     "22/07/2026": {
-      "min_price": "9000",
-      "max_price": "10300",
-      "modal_price": "10000"
+      "min_price": 9000,
+      "max_price": 10300,
+      "modal_price": 10000
     },
     "20/07/2026": {
       "min_price": "9000",
@@ -20129,13 +20749,18 @@
       "min_price": "7000",
       "max_price": "9300",
       "modal_price": "9000"
+    },
+    "23/07/2026": {
+      "min_price": 9000,
+      "max_price": 11500,
+      "modal_price": 11000
     }
   },
   "Onion|Bangarpet APMC|Kolar": {
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "2700",
-      "modal_price": "2500"
+      "min_price": 2000,
+      "max_price": 2700,
+      "modal_price": 2500
     },
     "18/07/2026": {
       "min_price": "2000",
@@ -20161,6 +20786,11 @@
       "min_price": "1500",
       "max_price": "2500",
       "modal_price": "2300"
+    },
+    "23/07/2026": {
+      "min_price": 1500,
+      "max_price": 2700,
+      "modal_price": 2500
     }
   },
   "Knool Khol|Bangarpet APMC|Kolar": {
@@ -20175,9 +20805,9 @@
       "modal_price": "1500"
     },
     "22/07/2026": {
-      "min_price": "900",
-      "max_price": "1500",
-      "modal_price": "1200"
+      "min_price": 900,
+      "max_price": 1500,
+      "modal_price": 1200
     },
     "15/07/2026": {
       "min_price": "1000",
@@ -20227,14 +20857,19 @@
       "modal_price": "3500"
     },
     "22/07/2026": {
-      "min_price": "4000",
-      "max_price": "4700",
-      "modal_price": "4500"
+      "min_price": 4000,
+      "max_price": 4700,
+      "modal_price": 4500
     },
     "21/07/2026": {
       "min_price": "1500",
       "max_price": "2300",
       "modal_price": "2000"
+    },
+    "23/07/2026": {
+      "min_price": 4000,
+      "max_price": 4700,
+      "modal_price": 4500
     }
   },
   "Rice|Bangarpet APMC|Kolar": {
@@ -20242,6 +20877,11 @@
       "min_price": "2000",
       "max_price": "2700",
       "modal_price": "2465"
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2504
     }
   },
   "Brinjal|Kolar APMC|Kolar": {
@@ -20777,6 +21417,11 @@
       "min_price": "4500",
       "max_price": "5500",
       "modal_price": "5000"
+    },
+    "23/07/2026": {
+      "min_price": 4500,
+      "max_price": 5500,
+      "modal_price": 5000
     }
   },
   "Beans|Malur APMC|Kolar": {
@@ -20786,9 +21431,9 @@
       "modal_price": "7000"
     },
     "22/07/2026": {
-      "min_price": "3500",
-      "max_price": "5500",
-      "modal_price": "4000"
+      "min_price": 3500,
+      "max_price": 5500,
+      "modal_price": 4000
     },
     "21/07/2026": {
       "min_price": "4000",
@@ -20809,6 +21454,11 @@
       "min_price": "5000",
       "max_price": "8000",
       "modal_price": "7184"
+    },
+    "23/07/2026": {
+      "min_price": 3000,
+      "max_price": 4500,
+      "modal_price": 4000
     }
   },
   "Rice|Malur APMC|Kolar": {
@@ -20998,9 +21648,9 @@
       "modal_price": "2240"
     },
     "22/07/2026": {
-      "min_price": "3300",
-      "max_price": "3600",
-      "modal_price": "3400"
+      "min_price": 2600,
+      "max_price": 3097,
+      "modal_price": 3000
     },
     "18/07/2026": {
       "min_price": "2895",
@@ -21093,9 +21743,14 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "2510",
-      "max_price": "2510",
-      "modal_price": "2510"
+      "min_price": 2510,
+      "max_price": 2510,
+      "modal_price": 2510
+    },
+    "23/07/2026": {
+      "min_price": 2300,
+      "max_price": 2650,
+      "modal_price": 2500
     }
   },
   "Foxtail Millet(Navane)|Kanakagiri APMC|Koppal": {
@@ -21103,6 +21758,11 @@
       "min_price": "3476",
       "max_price": "3476",
       "modal_price": "3476"
+    },
+    "23/07/2026": {
+      "min_price": 2200,
+      "max_price": 2200,
+      "modal_price": 2200
     }
   },
   "Maize|Kanakagiri APMC|Koppal": {
@@ -21112,9 +21772,9 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "2450",
-      "max_price": "2450",
-      "modal_price": "2450"
+      "min_price": 2450,
+      "max_price": 2450,
+      "modal_price": 2450
     }
   },
   "Sunflower/Sunflower Seed|Kanakagiri APMC|Koppal": {
@@ -21206,9 +21866,9 @@
       "modal_price": "2410"
     },
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "2500",
-      "modal_price": "2500"
+      "min_price": 2500,
+      "max_price": 2500,
+      "modal_price": 2500
     }
   },
   "Cowpea(Lobia/Karamani)|Koppal APMC|Koppal": {
@@ -21300,9 +21960,9 @@
   },
   "Sunflower/Sunflower Seed|Kustagi APMC|Koppal": {
     "22/07/2026": {
-      "min_price": "8000",
-      "max_price": "8000",
-      "modal_price": "8000"
+      "min_price": 8000,
+      "max_price": 8000,
+      "modal_price": 8000
     },
     "20/07/2026": {
       "min_price": "8000",
@@ -21325,6 +21985,11 @@
       "min_price": "8350",
       "max_price": "8350",
       "modal_price": "8350"
+    },
+    "23/07/2026": {
+      "min_price": 3500,
+      "max_price": 3500,
+      "modal_price": 3500
     }
   },
   "Cowpea(Lobia/Karamani)|Kustagi APMC|Koppal": {
@@ -21342,6 +22007,11 @@
       "min_price": "7200",
       "max_price": "7200",
       "modal_price": "7200"
+    },
+    "23/07/2026": {
+      "min_price": 7800,
+      "max_price": 7800,
+      "modal_price": 7800
     }
   },
   "Kulthi(Horse Gram)|Kustagi APMC|Koppal": {
@@ -21392,9 +22062,9 @@
       "modal_price": "1765"
     },
     "22/07/2026": {
-      "min_price": "800",
-      "max_price": "1890",
-      "modal_price": "1566"
+      "min_price": 800,
+      "max_price": 1890,
+      "modal_price": 1566
     },
     "20/07/2026": {
       "min_price": "800",
@@ -21405,6 +22075,11 @@
       "min_price": "800",
       "max_price": "1800",
       "modal_price": "1733"
+    },
+    "23/07/2026": {
+      "min_price": 1550,
+      "max_price": 1890,
+      "modal_price": 1738
     }
   },
   "Bajra(Pearl Millet/Cumbu)|Kustagi APMC|Koppal": {
@@ -21414,9 +22089,9 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "2651",
-      "max_price": "2651",
-      "modal_price": "2651"
+      "min_price": 2651,
+      "max_price": 2651,
+      "modal_price": 2651
     },
     "15/07/2026": {
       "min_price": "2370",
@@ -21913,9 +22588,9 @@
       "modal_price": "4300"
     },
     "22/07/2026": {
-      "min_price": "4300",
-      "max_price": "4770",
-      "modal_price": "4450"
+      "min_price": 4200,
+      "max_price": 5000,
+      "modal_price": 4500
     },
     "18/07/2026": {
       "min_price": "4250",
@@ -22172,9 +22847,9 @@
       "modal_price": "2250"
     },
     "22/07/2026": {
-      "min_price": "1800",
-      "max_price": "2200",
-      "modal_price": "1800"
+      "min_price": 1800,
+      "max_price": 2200,
+      "modal_price": 1800
     }
   },
   "Coconut|Srirangapattana APMC|Mandya": {
@@ -22206,9 +22881,9 @@
       "modal_price": "25000"
     },
     "22/07/2026": {
-      "min_price": "20000",
-      "max_price": "25000",
-      "modal_price": "25000"
+      "min_price": 20000,
+      "max_price": 25000,
+      "modal_price": 25000
     },
     "20/07/2026": {
       "min_price": "20000",
@@ -22228,9 +22903,9 @@
       "modal_price": "4000"
     },
     "22/07/2026": {
-      "min_price": "4200",
-      "max_price": "4250",
-      "modal_price": "4200"
+      "min_price": 4200,
+      "max_price": 4250,
+      "modal_price": 4200
     },
     "21/07/2026": {
       "min_price": "4000",
@@ -22473,9 +23148,9 @@
       "modal_price": "5900"
     },
     "22/07/2026": {
-      "min_price": "4800",
-      "max_price": "5000",
-      "modal_price": "4900"
+      "min_price": 4800,
+      "max_price": 5000,
+      "modal_price": 4900
     },
     "20/07/2026": {
       "min_price": "14000",
@@ -22500,9 +23175,9 @@
   },
   "Sweet Potato|Mysuru APMC|Mysuru": {
     "22/07/2026": {
-      "min_price": "2200",
-      "max_price": "2400",
-      "modal_price": "2300"
+      "min_price": 2200,
+      "max_price": 2400,
+      "modal_price": 2300
     },
     "20/07/2026": {
       "min_price": "2200",
@@ -22557,9 +23232,9 @@
       "modal_price": "1900"
     },
     "22/07/2026": {
-      "min_price": "1300",
-      "max_price": "1500",
-      "modal_price": "1400"
+      "min_price": 1300,
+      "max_price": 1500,
+      "modal_price": 1400
     },
     "19/07/2026": {
       "min_price": "1800",
@@ -22604,9 +23279,9 @@
       "modal_price": "14"
     },
     "22/07/2026": {
-      "min_price": "13",
-      "max_price": "15",
-      "modal_price": "14"
+      "min_price": 13,
+      "max_price": 15,
+      "modal_price": 14
     }
   },
   "Bengal Gram(Gram)(Whole)|Mysuru APMC|Mysuru": {
@@ -22652,9 +23327,9 @@
       "modal_price": "2700"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "2200",
-      "modal_price": "2100"
+      "min_price": 2000,
+      "max_price": 2200,
+      "modal_price": 2100
     },
     "17/07/2026": {
       "min_price": "2600",
@@ -22741,9 +23416,9 @@
       "modal_price": "6800"
     },
     "22/07/2026": {
-      "min_price": "6900",
-      "max_price": "6900",
-      "modal_price": "6900"
+      "min_price": 6900,
+      "max_price": 6900,
+      "modal_price": 6900
     },
     "16/07/2026": {
       "min_price": "6800",
@@ -22768,9 +23443,9 @@
       "modal_price": "2270"
     },
     "22/07/2026": {
-      "min_price": "2430",
-      "max_price": "2430",
-      "modal_price": "2430"
+      "min_price": 2430,
+      "max_price": 2430,
+      "modal_price": 2430
     },
     "16/07/2026": {
       "min_price": "2380",
@@ -22815,9 +23490,9 @@
       "modal_price": "2600"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "1700",
-      "modal_price": "1600"
+      "min_price": 1500,
+      "max_price": 1700,
+      "modal_price": 1600
     }
   },
   "Ragi(Finger Millet)|Mysuru APMC|Mysuru": {
@@ -22874,9 +23549,9 @@
       "modal_price": "2900"
     },
     "22/07/2026": {
-      "min_price": "2800",
-      "max_price": "3000",
-      "modal_price": "2900"
+      "min_price": 2800,
+      "max_price": 3000,
+      "modal_price": 2900
     },
     "19/07/2026": {
       "min_price": "6300",
@@ -22896,9 +23571,9 @@
       "modal_price": "500"
     },
     "22/07/2026": {
-      "min_price": "400",
-      "max_price": "600",
-      "modal_price": "500"
+      "min_price": 400,
+      "max_price": 600,
+      "modal_price": 500
     },
     "19/07/2026": {
       "min_price": "500",
@@ -23087,9 +23762,9 @@
       "modal_price": "5300"
     },
     "22/07/2026": {
-      "min_price": "4800",
-      "max_price": "5000",
-      "modal_price": "4900"
+      "min_price": 4800,
+      "max_price": 5000,
+      "modal_price": 4900
     },
     "19/07/2026": {
       "min_price": "5300",
@@ -23129,9 +23804,9 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "2200",
-      "max_price": "2500",
-      "modal_price": "2300"
+      "min_price": 2200,
+      "max_price": 2500,
+      "modal_price": 2300
     },
     "19/07/2026": {
       "min_price": "2000",
@@ -23151,9 +23826,9 @@
       "modal_price": "1900"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "2200",
-      "modal_price": "2100"
+      "min_price": 2000,
+      "max_price": 2200,
+      "modal_price": 2100
     },
     "21/07/2026": {
       "min_price": "2000",
@@ -23193,9 +23868,9 @@
       "modal_price": "2210"
     },
     "22/07/2026": {
-      "min_price": "2260",
-      "max_price": "2260",
-      "modal_price": "2260"
+      "min_price": 2260,
+      "max_price": 2260,
+      "modal_price": 2260
     }
   },
   "Pomegranate|Mysuru APMC|Mysuru": {
@@ -23411,9 +24086,9 @@
       "modal_price": "3400"
     },
     "22/07/2026": {
-      "min_price": "2800",
-      "max_price": "3000",
-      "modal_price": "2900"
+      "min_price": 2800,
+      "max_price": 3000,
+      "modal_price": 2900
     },
     "19/07/2026": {
       "min_price": "3300",
@@ -23532,9 +24207,9 @@
       "modal_price": "3900"
     },
     "22/07/2026": {
-      "min_price": "3300",
-      "max_price": "3500",
-      "modal_price": "3400"
+      "min_price": 3300,
+      "max_price": 3500,
+      "modal_price": 3400
     },
     "16/07/2026": {
       "min_price": "3600",
@@ -23569,9 +24244,9 @@
       "modal_price": "1500"
     },
     "22/07/2026": {
-      "min_price": "1800",
-      "max_price": "2000",
-      "modal_price": "1900"
+      "min_price": 1800,
+      "max_price": 2000,
+      "modal_price": 1900
     },
     "19/07/2026": {
       "min_price": "1600",
@@ -23654,9 +24329,9 @@
   },
   "Seemebadnekai|Mysuru APMC|Mysuru": {
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "2200",
-      "modal_price": "2100"
+      "min_price": 2000,
+      "max_price": 2200,
+      "modal_price": 2100
     },
     "20/07/2026": {
       "min_price": "2000",
@@ -23740,9 +24415,9 @@
       "modal_price": "6000"
     },
     "22/07/2026": {
-      "min_price": "4000",
-      "max_price": "6000",
-      "modal_price": "5000"
+      "min_price": 4000,
+      "max_price": 6000,
+      "modal_price": 5000
     },
     "15/07/2026": {
       "min_price": "5500",
@@ -23848,9 +24523,9 @@
       "modal_price": "2600"
     },
     "22/07/2026": {
-      "min_price": "2800",
-      "max_price": "3360",
-      "modal_price": "3090"
+      "min_price": 2800,
+      "max_price": 3360,
+      "modal_price": 3090
     },
     "17/07/2026": {
       "min_price": "2800",
@@ -23902,9 +24577,9 @@
       "modal_price": "1300"
     },
     "22/07/2026": {
-      "min_price": "1400",
-      "max_price": "1600",
-      "modal_price": "1500"
+      "min_price": 1400,
+      "max_price": 1600,
+      "modal_price": 1500
     },
     "16/07/2026": {
       "min_price": "1200",
@@ -23946,9 +24621,9 @@
       "modal_price": "3400"
     },
     "22/07/2026": {
-      "min_price": "2800",
-      "max_price": "3000",
-      "modal_price": "2900"
+      "min_price": 2800,
+      "max_price": 3000,
+      "modal_price": 2900
     },
     "20/07/2026": {
       "min_price": "2700",
@@ -24044,9 +24719,9 @@
       "modal_price": "2900"
     },
     "22/07/2026": {
-      "min_price": "4000",
-      "max_price": "4200",
-      "modal_price": "4100"
+      "min_price": 4000,
+      "max_price": 4200,
+      "modal_price": 4100
     },
     "20/07/2026": {
       "min_price": "3800",
@@ -24390,9 +25065,14 @@
       "modal_price": "3450"
     },
     "22/07/2026": {
-      "min_price": "3550",
-      "max_price": "3550",
-      "modal_price": "3550"
+      "min_price": 3550,
+      "max_price": 3550,
+      "modal_price": 3550
+    },
+    "23/07/2026": {
+      "min_price": 3550,
+      "max_price": 3550,
+      "modal_price": 3550
     }
   },
   "Ginger(Green)|Periyapatna APMC|Mysuru": {
@@ -24402,9 +25082,9 @@
       "modal_price": "1400"
     },
     "22/07/2026": {
-      "min_price": "1500",
-      "max_price": "1500",
-      "modal_price": "1500"
+      "min_price": 1500,
+      "max_price": 1500,
+      "modal_price": 1500
     }
   },
   "Cotton|Santhesargur APMC|Mysuru": {
@@ -24573,9 +25253,14 @@
       "modal_price": "2400"
     },
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "2900",
-      "modal_price": "2750"
+      "min_price": 2500,
+      "max_price": 2900,
+      "modal_price": 2750
+    },
+    "23/07/2026": {
+      "min_price": 2450,
+      "max_price": 2450,
+      "modal_price": 2450
     }
   },
   "Red gram/Arhar/Tur(whole)|Lingasugur APMC|Raichur": {
@@ -24608,6 +25293,11 @@
       "min_price": "8300",
       "max_price": "8500",
       "modal_price": "8300"
+    },
+    "23/07/2026": {
+      "min_price": 8200,
+      "max_price": 8200,
+      "modal_price": 8200
     }
   },
   "Maize|Lingasugur APMC|Raichur": {
@@ -24652,13 +25342,18 @@
       "min_price": "2550",
       "max_price": "2810",
       "modal_price": "2550"
+    },
+    "23/07/2026": {
+      "min_price": 2500,
+      "max_price": 2500,
+      "modal_price": 2500
     }
   },
   "Jowar(Sorghum)|Lingasugur APMC|Raichur": {
     "22/07/2026": {
-      "min_price": "2650",
-      "max_price": "2650",
-      "modal_price": "2650"
+      "min_price": 2650,
+      "max_price": 2650,
+      "modal_price": 2650
     }
   },
   "Rice|Manvi APMC|Raichur": {
@@ -24691,6 +25386,11 @@
       "min_price": "2600",
       "max_price": "2800",
       "modal_price": "2720"
+    },
+    "23/07/2026": {
+      "min_price": 2850,
+      "max_price": 2850,
+      "modal_price": 2850
     }
   },
   "Bajra(Pearl Millet/Cumbu)|Manvi APMC|Raichur": {
@@ -24730,6 +25430,11 @@
       "min_price": "1950",
       "max_price": "1950",
       "modal_price": "1950"
+    },
+    "23/07/2026": {
+      "min_price": 3350,
+      "max_price": 3350,
+      "modal_price": 3350
     }
   },
   "Paddy(Common)|Manvi APMC|Raichur": {
@@ -24767,6 +25472,11 @@
       "min_price": "3020",
       "max_price": "3500",
       "modal_price": "3330"
+    },
+    "23/07/2026": {
+      "min_price": 3200,
+      "max_price": 5471,
+      "modal_price": 4638
     }
   },
   "Wheat|Manvi APMC|Raichur": {
@@ -24791,6 +25501,11 @@
       "min_price": "5000",
       "max_price": "5000",
       "modal_price": "5000"
+    },
+    "23/07/2026": {
+      "min_price": 5000,
+      "max_price": 5000,
+      "modal_price": 5000
     }
   },
   "Cotton|Manvi APMC|Raichur": {
@@ -24817,9 +25532,9 @@
       "modal_price": "6209"
     },
     "22/07/2026": {
-      "min_price": "4699",
-      "max_price": "6699",
-      "modal_price": "5722"
+      "min_price": 4699,
+      "max_price": 6699,
+      "modal_price": 5722
     },
     "18/07/2026": {
       "min_price": "4169",
@@ -24881,9 +25596,9 @@
       "modal_price": "8700"
     },
     "22/07/2026": {
-      "min_price": "7000",
-      "max_price": "7000",
-      "modal_price": "7000"
+      "min_price": 7000,
+      "max_price": 7000,
+      "modal_price": 7000
     },
     "21/07/2026": {
       "min_price": "7100",
@@ -24935,9 +25650,9 @@
       "modal_price": "7369"
     },
     "22/07/2026": {
-      "min_price": "6419",
-      "max_price": "8316",
-      "modal_price": "8150"
+      "min_price": 6419,
+      "max_price": 8316,
+      "modal_price": 8150
     },
     "21/07/2026": {
       "min_price": "6600",
@@ -24972,9 +25687,9 @@
       "modal_price": "2729"
     },
     "22/07/2026": {
-      "min_price": "4765",
-      "max_price": "4765",
-      "modal_price": "4765"
+      "min_price": 4765,
+      "max_price": 4765,
+      "modal_price": 4765
     },
     "15/07/2026": {
       "min_price": "2260",
@@ -25003,9 +25718,9 @@
       "modal_price": "2923"
     },
     "22/07/2026": {
-      "min_price": "2650",
-      "max_price": "3800",
-      "modal_price": "3487"
+      "min_price": 2650,
+      "max_price": 3800,
+      "modal_price": 3487
     },
     "17/07/2026": {
       "min_price": "2100",
@@ -25031,6 +25746,11 @@
       "min_price": "2280",
       "max_price": "4005",
       "modal_price": "3059"
+    },
+    "23/07/2026": {
+      "min_price": 1850,
+      "max_price": 3000,
+      "modal_price": 2950
     }
   },
   "Foxtail Millet(Navane)|Sindhanur APMC|Raichur": {
@@ -25042,9 +25762,9 @@
   },
   "Jowar(Sorghum)|Sindhanur APMC|Raichur": {
     "22/07/2026": {
-      "min_price": "4400",
-      "max_price": "4400",
-      "modal_price": "4400"
+      "min_price": 4400,
+      "max_price": 4400,
+      "modal_price": 4400
     },
     "17/07/2026": {
       "min_price": "2810",
@@ -25074,9 +25794,14 @@
       "modal_price": "11500"
     },
     "22/07/2026": {
-      "min_price": "16500",
-      "max_price": "16500",
-      "modal_price": "16500"
+      "min_price": 16500,
+      "max_price": 16500,
+      "modal_price": 16500
+    },
+    "23/07/2026": {
+      "min_price": 15000,
+      "max_price": 15100,
+      "modal_price": 15033
     }
   },
   "Rice|Sindhanur APMC|Raichur": {
@@ -25086,9 +25811,9 @@
       "modal_price": "2350"
     },
     "22/07/2026": {
-      "min_price": "2610",
-      "max_price": "2660",
-      "modal_price": "2640"
+      "min_price": 2610,
+      "max_price": 2660,
+      "modal_price": 2640
     },
     "15/07/2026": {
       "min_price": "4000",
@@ -25099,6 +25824,11 @@
       "min_price": "5600",
       "max_price": "5600",
       "modal_price": "5600"
+    },
+    "23/07/2026": {
+      "min_price": 4900,
+      "max_price": 4900,
+      "modal_price": 4900
     }
   },
   "Bengal Gram(Gram)(Whole)|Sindhanur APMC|Raichur": {
@@ -25117,9 +25847,9 @@
   },
   "Sunflower/Sunflower Seed|Sindhanur APMC|Raichur": {
     "22/07/2026": {
-      "min_price": "8090",
-      "max_price": "8300",
-      "modal_price": "8138"
+      "min_price": 8090,
+      "max_price": 8300,
+      "modal_price": 8138
     }
   },
   "Arecanut(Betelnut/Supari)|APMC THIRTHAHALLI|Shivamogga": {
@@ -25144,9 +25874,9 @@
       "modal_price": "29500"
     },
     "22/07/2026": {
-      "min_price": "26884",
-      "max_price": "38305",
-      "modal_price": "38305"
+      "min_price": 26884,
+      "max_price": 38305,
+      "modal_price": 38305
     },
     "15/07/2026": {
       "min_price": "14000",
@@ -25157,6 +25887,11 @@
       "min_price": "47647",
       "max_price": "47647",
       "modal_price": "47647"
+    },
+    "23/07/2026": {
+      "min_price": 14000,
+      "max_price": 14000,
+      "modal_price": 14000
     }
   },
   "Rice|APMC THIRTHAHALLI|Shivamogga": {
@@ -25179,6 +25914,11 @@
       "min_price": "2400",
       "max_price": "2400",
       "modal_price": "2400"
+    },
+    "23/07/2026": {
+      "min_price": 2500,
+      "max_price": 2500,
+      "modal_price": 2500
     }
   },
   "Black pepper|APMC THIRTHAHALLI|Shivamogga": {
@@ -25188,9 +25928,9 @@
       "modal_price": "60000"
     },
     "22/07/2026": {
-      "min_price": "30000",
-      "max_price": "49000",
-      "modal_price": "35000"
+      "min_price": 30000,
+      "max_price": 49000,
+      "modal_price": 35000
     },
     "17/07/2026": {
       "min_price": "30000",
@@ -25242,6 +25982,11 @@
       "min_price": "12625",
       "max_price": "13706",
       "modal_price": "13706"
+    },
+    "23/07/2026": {
+      "min_price": 13800,
+      "max_price": 13800,
+      "modal_price": 13800
     }
   },
   "Arecanut(Betelnut/Supari)|Bhadravathi APMC|Shivamogga": {
@@ -25276,9 +26021,9 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "27000",
-      "max_price": "27000",
-      "modal_price": "27000"
+      "min_price": 27000,
+      "max_price": 27000,
+      "modal_price": 27000
     }
   },
   "Gur(Jaggery)|Bhadravathi APMC|Shivamogga": {
@@ -25436,6 +26181,11 @@
       "min_price": "46581",
       "max_price": "46581",
       "modal_price": "46581"
+    },
+    "23/07/2026": {
+      "min_price": 46278,
+      "max_price": 57908,
+      "modal_price": 50001
     }
   },
   "Maize|Shikaripura APMC|Shivamogga": {
@@ -25473,6 +26223,11 @@
       "min_price": "2280",
       "max_price": "2450",
       "modal_price": "2380"
+    },
+    "23/07/2026": {
+      "min_price": 2350,
+      "max_price": 2610,
+      "modal_price": 2452
     }
   },
   "Paddy(Common)|Shikaripura APMC|Shivamogga": {
@@ -25502,14 +26257,19 @@
       "modal_price": "2644"
     },
     "22/07/2026": {
-      "min_price": "2852",
-      "max_price": "2852",
-      "modal_price": "2852"
+      "min_price": 2852,
+      "max_price": 2852,
+      "modal_price": 2852
     },
     "21/07/2026": {
       "min_price": "3500",
       "max_price": "3500",
       "modal_price": "3500"
+    },
+    "23/07/2026": {
+      "min_price": 2500,
+      "max_price": 3300,
+      "modal_price": 2747
     }
   },
   "Rice|Shikaripura APMC|Shivamogga": {
@@ -25527,6 +26287,11 @@
       "min_price": "2200",
       "max_price": "2200",
       "modal_price": "2200"
+    },
+    "23/07/2026": {
+      "min_price": 6500,
+      "max_price": 6500,
+      "modal_price": 6500
     }
   },
   "Ginger(Dry)|Shikaripura APMC|Shivamogga": {
@@ -25543,9 +26308,9 @@
   },
   "Drumstick|Shimoga APMC|Shivamogga": {
     "22/07/2026": {
-      "min_price": "4000",
-      "max_price": "5000",
-      "modal_price": "4500"
+      "min_price": 4000,
+      "max_price": 5000,
+      "modal_price": 4500
     },
     "15/07/2026": {
       "min_price": "4000",
@@ -25576,6 +26341,11 @@
       "min_price": "6000",
       "max_price": "7000",
       "modal_price": "6500"
+    },
+    "23/07/2026": {
+      "min_price": 4000,
+      "max_price": 5000,
+      "modal_price": 4500
     }
   },
   "Arecanut(Betelnut/Supari)|Shimoga APMC|Shivamogga": {
@@ -25617,9 +26387,9 @@
   },
   "Onion|Shimoga APMC|Shivamogga": {
     "22/07/2026": {
-      "min_price": "2400",
-      "max_price": "3600",
-      "modal_price": "3000"
+      "min_price": 2400,
+      "max_price": 3600,
+      "modal_price": 3000
     },
     "15/07/2026": {
       "min_price": "2200",
@@ -25650,6 +26420,11 @@
       "min_price": "2400",
       "max_price": "3600",
       "modal_price": "3000"
+    },
+    "23/07/2026": {
+      "min_price": 2400,
+      "max_price": 3600,
+      "modal_price": 3000
     }
   },
   "Rice|Shimoga APMC|Shivamogga": {
@@ -25696,9 +26471,9 @@
       "modal_price": "15000"
     },
     "22/07/2026": {
-      "min_price": "10000",
-      "max_price": "18000",
-      "modal_price": "14000"
+      "min_price": 10000,
+      "max_price": 18000,
+      "modal_price": 14000
     },
     "19/07/2026": {
       "min_price": "10000",
@@ -25724,6 +26499,11 @@
       "min_price": "10000",
       "max_price": "18000",
       "modal_price": "15000"
+    },
+    "23/07/2026": {
+      "min_price": 10000,
+      "max_price": 18000,
+      "modal_price": 14000
     }
   },
   "Potato|Shimoga APMC|Shivamogga": {
@@ -25758,9 +26538,14 @@
       "modal_price": "2000"
     },
     "22/07/2026": {
-      "min_price": "1700",
-      "max_price": "2200",
-      "modal_price": "2000"
+      "min_price": 1700,
+      "max_price": 2200,
+      "modal_price": 2000
+    },
+    "23/07/2026": {
+      "min_price": 1700,
+      "max_price": 2200,
+      "modal_price": 2000
     }
   },
   "Ridgeguard(Tori)|Shimoga APMC|Shivamogga": {
@@ -25798,6 +26583,11 @@
       "min_price": "2000",
       "max_price": "2600",
       "modal_price": "2300"
+    },
+    "23/07/2026": {
+      "min_price": 1500,
+      "max_price": 2000,
+      "modal_price": 1750
     }
   },
   "Cauliflower|Shimoga APMC|Shivamogga": {
@@ -25832,9 +26622,14 @@
       "modal_price": "2250"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "2500",
-      "modal_price": "2250"
+      "min_price": 2000,
+      "max_price": 2500,
+      "modal_price": 2250
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 2500,
+      "modal_price": 2250
     }
   },
   "Maize|Shimoga APMC|Shivamogga": {
@@ -25871,9 +26666,9 @@
       "modal_price": "1000"
     },
     "22/07/2026": {
-      "min_price": "400",
-      "max_price": "1000",
-      "modal_price": "700"
+      "min_price": 400,
+      "max_price": 1000,
+      "modal_price": 700
     },
     "21/07/2026": {
       "min_price": "600",
@@ -25894,6 +26689,11 @@
       "min_price": "400",
       "max_price": "1000",
       "modal_price": "700"
+    },
+    "23/07/2026": {
+      "min_price": 400,
+      "max_price": 1000,
+      "modal_price": 700
     }
   },
   "Bunch Beans|Shimoga APMC|Shivamogga": {
@@ -25923,14 +26723,19 @@
       "modal_price": "3500"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3000",
-      "modal_price": "2500"
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
     },
     "21/07/2026": {
       "min_price": "3000",
       "max_price": "4000",
       "modal_price": "3500"
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
     }
   },
   "Thondekai|Shimoga APMC|Shivamogga": {
@@ -25968,6 +26773,11 @@
       "min_price": "3000",
       "max_price": "4000",
       "modal_price": "3500"
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
     }
   },
   "Raddish|Shimoga APMC|Shivamogga": {
@@ -26005,6 +26815,11 @@
       "min_price": "2000",
       "max_price": "3000",
       "modal_price": "2500"
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
     }
   },
   "Ladies Finger|Shimoga APMC|Shivamogga": {
@@ -26024,9 +26839,9 @@
       "modal_price": "1750"
     },
     "22/07/2026": {
-      "min_price": "1600",
-      "max_price": "2000",
-      "modal_price": "1800"
+      "min_price": 1600,
+      "max_price": 2000,
+      "modal_price": 1800
     },
     "19/07/2026": {
       "min_price": "2400",
@@ -26042,6 +26857,11 @@
       "min_price": "2000",
       "max_price": "2600",
       "modal_price": "2300"
+    },
+    "23/07/2026": {
+      "min_price": 1500,
+      "max_price": 2000,
+      "modal_price": 1750
     }
   },
   "Beans|Shimoga APMC|Shivamogga": {
@@ -26056,9 +26876,9 @@
       "modal_price": "7000"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "2600",
-      "modal_price": "2300"
+      "min_price": 2000,
+      "max_price": 2600,
+      "modal_price": 2300
     },
     "19/07/2026": {
       "min_price": "3000",
@@ -26079,13 +26899,18 @@
       "min_price": "6000",
       "max_price": "7000",
       "modal_price": "6500"
+    },
+    "23/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
     }
   },
   "Green Chilli|Shimoga APMC|Shivamogga": {
     "22/07/2026": {
-      "min_price": "1600",
-      "max_price": "4000",
-      "modal_price": "2500"
+      "min_price": 1600,
+      "max_price": 4000,
+      "modal_price": 2500
     },
     "21/07/2026": {
       "min_price": "2000",
@@ -26116,6 +26941,11 @@
       "min_price": "1600",
       "max_price": "4000",
       "modal_price": "2500"
+    },
+    "23/07/2026": {
+      "min_price": 2400,
+      "max_price": 4000,
+      "modal_price": 3000
     }
   },
   "Cucumbar(Kheera)|Shimoga APMC|Shivamogga": {
@@ -26130,9 +26960,9 @@
       "modal_price": "1750"
     },
     "22/07/2026": {
-      "min_price": "800",
-      "max_price": "1000",
-      "modal_price": "900"
+      "min_price": 800,
+      "max_price": 1000,
+      "modal_price": 900
     },
     "21/07/2026": {
       "min_price": "1000",
@@ -26153,6 +26983,11 @@
       "min_price": "2000",
       "max_price": "2400",
       "modal_price": "2200"
+    },
+    "23/07/2026": {
+      "min_price": 600,
+      "max_price": 1000,
+      "modal_price": 800
     }
   },
   "Beetroot|Shimoga APMC|Shivamogga": {
@@ -26190,6 +27025,11 @@
       "min_price": "2600",
       "max_price": "3000",
       "modal_price": "2800"
+    },
+    "23/07/2026": {
+      "min_price": 1500,
+      "max_price": 2000,
+      "modal_price": 1750
     }
   },
   "Brinjal|Shimoga APMC|Shivamogga": {
@@ -26214,9 +27054,9 @@
       "modal_price": "1400"
     },
     "22/07/2026": {
-      "min_price": "1600",
-      "max_price": "2000",
-      "modal_price": "1800"
+      "min_price": 1600,
+      "max_price": 2000,
+      "modal_price": 1800
     },
     "21/07/2026": {
       "min_price": "1600",
@@ -26227,6 +27067,11 @@
       "min_price": "1600",
       "max_price": "2000",
       "modal_price": "1800"
+    },
+    "23/07/2026": {
+      "min_price": 1600,
+      "max_price": 2000,
+      "modal_price": 1800
     }
   },
   "Ragi(Finger Millet)|Shimoga APMC|Shivamogga": {
@@ -26255,9 +27100,9 @@
       "modal_price": "12500"
     },
     "22/07/2026": {
-      "min_price": "10000",
-      "max_price": "14000",
-      "modal_price": "12000"
+      "min_price": 10000,
+      "max_price": 14000,
+      "modal_price": 12000
     },
     "21/07/2026": {
       "min_price": "10000",
@@ -26305,6 +27150,11 @@
       "min_price": "6000",
       "max_price": "8000",
       "modal_price": "7000"
+    },
+    "23/07/2026": {
+      "min_price": 5000,
+      "max_price": 7000,
+      "modal_price": 6000
     }
   },
   "Sweet Pumpkin|Shimoga APMC|Shivamogga": {
@@ -26342,6 +27192,11 @@
       "min_price": "600",
       "max_price": "1200",
       "modal_price": "900"
+    },
+    "23/07/2026": {
+      "min_price": 600,
+      "max_price": 1200,
+      "modal_price": 900
     }
   },
   "Knool Khol|Shimoga APMC|Shivamogga": {
@@ -26371,14 +27226,19 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "3000",
-      "max_price": "4000",
-      "modal_price": "3500"
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3500
     },
     "21/07/2026": {
       "min_price": "3500",
       "max_price": "4500",
       "modal_price": "4000"
+    },
+    "23/07/2026": {
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3500
     }
   },
   "Bitter gourd|Shimoga APMC|Shivamogga": {
@@ -26413,9 +27273,14 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "2000",
-      "max_price": "3000",
-      "modal_price": "2500"
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
+    },
+    "23/07/2026": {
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3500
     }
   },
   "Paddy(Common)|Shimoga APMC|Shivamogga": {
@@ -26457,9 +27322,9 @@
       "modal_price": "3250"
     },
     "22/07/2026": {
-      "min_price": "2500",
-      "max_price": "3500",
-      "modal_price": "3000"
+      "min_price": 2500,
+      "max_price": 3500,
+      "modal_price": 3000
     },
     "15/07/2026": {
       "min_price": "3000",
@@ -26470,6 +27335,11 @@
       "min_price": "3000",
       "max_price": "4000",
       "modal_price": "3500"
+    },
+    "23/07/2026": {
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3500
     }
   },
   "Cabbage|Shimoga APMC|Shivamogga": {
@@ -26504,9 +27374,14 @@
       "modal_price": "1000"
     },
     "22/07/2026": {
-      "min_price": "1200",
-      "max_price": "1600",
-      "modal_price": "1400"
+      "min_price": 1200,
+      "max_price": 1600,
+      "modal_price": 1400
+    },
+    "23/07/2026": {
+      "min_price": 1000,
+      "max_price": 1600,
+      "modal_price": 1300
     }
   },
   "Green Gram Dal(Moong Dal)|Shimoga APMC|Shivamogga": {
@@ -26559,6 +27434,11 @@
       "min_price": "5000",
       "max_price": "10000",
       "modal_price": "7500"
+    },
+    "23/07/2026": {
+      "min_price": 5000,
+      "max_price": 10000,
+      "modal_price": 7500
     }
   },
   "Green Gram(Moong)(Whole)|Shimoga APMC|Shivamogga": {
@@ -27243,6 +28123,11 @@
       "min_price": "2000",
       "max_price": "3500",
       "modal_price": "2500"
+    },
+    "23/07/2026": {
+      "min_price": 1800,
+      "max_price": 3800,
+      "modal_price": 2200
     }
   },
   "Maize|Haliyala APMC|Uttara Kannada": {
@@ -27252,9 +28137,14 @@
       "modal_price": "2500"
     },
     "22/07/2026": {
-      "min_price": "2530",
-      "max_price": "2530",
-      "modal_price": "2530"
+      "min_price": 2530,
+      "max_price": 2530,
+      "modal_price": 2530
+    },
+    "23/07/2026": {
+      "min_price": 2450,
+      "max_price": 2450,
+      "modal_price": 2450
     }
   },
   "Paddy(Common)|Haliyala APMC|Uttara Kannada": {
@@ -27287,6 +28177,11 @@
       "min_price": "2400",
       "max_price": "2400",
       "modal_price": "2400"
+    },
+    "23/07/2026": {
+      "min_price": 2200,
+      "max_price": 2360,
+      "modal_price": 2360
     }
   },
   "Kulthi(Horse Gram)|Haliyala APMC|Uttara Kannada": {
@@ -27298,9 +28193,9 @@
   },
   "Arecanut(Betelnut/Supari)|Haliyala APMC|Uttara Kannada": {
     "22/07/2026": {
-      "min_price": "30391",
-      "max_price": "30391",
-      "modal_price": "30391"
+      "min_price": 30391,
+      "max_price": 30391,
+      "modal_price": 30391
     },
     "17/07/2026": {
       "min_price": "28311",
@@ -27340,9 +28235,9 @@
       "modal_price": "38000"
     },
     "22/07/2026": {
-      "min_price": "37000",
-      "max_price": "39000",
-      "modal_price": "38000"
+      "min_price": 37000,
+      "max_price": 39000,
+      "modal_price": 38000
     }
   },
   "Paddy(Common)|Karwar APMC|Uttara Kannada": {
@@ -27369,9 +28264,9 @@
       "modal_price": "43869"
     },
     "22/07/2026": {
-      "min_price": "30189",
-      "max_price": "33029",
-      "modal_price": "31379"
+      "min_price": 30189,
+      "max_price": 33029,
+      "modal_price": 31379
     },
     "18/07/2026": {
       "min_price": "31783",
@@ -27542,9 +28437,9 @@
       "modal_price": "30550"
     },
     "22/07/2026": {
-      "min_price": "49209",
-      "max_price": "52399",
-      "modal_price": "52104"
+      "min_price": 49209,
+      "max_price": 52399,
+      "modal_price": 52104
     },
     "18/07/2026": {
       "min_price": "50791",
@@ -27559,9 +28454,9 @@
       "modal_price": "4960"
     },
     "22/07/2026": {
-      "min_price": "4357",
-      "max_price": "5731",
-      "modal_price": "5075"
+      "min_price": 4357,
+      "max_price": 5731,
+      "modal_price": 5075
     },
     "21/07/2026": {
       "min_price": "4362",
@@ -27586,9 +28481,9 @@
       "modal_price": "67573"
     },
     "22/07/2026": {
-      "min_price": "66576",
-      "max_price": "70096",
-      "modal_price": "67551"
+      "min_price": 66576,
+      "max_price": 70096,
+      "modal_price": 67551
     },
     "21/07/2026": {
       "min_price": "62099",
@@ -27714,6 +28609,11 @@
       "min_price": "6800",
       "max_price": "7800",
       "modal_price": "7800"
+    },
+    "23/07/2026": {
+      "min_price": 7950,
+      "max_price": 7950,
+      "modal_price": 7950
     }
   },
   "Maize|H.B. Halli APMC|Vijayanagara": {
@@ -28218,9 +29118,9 @@
   },
   "Wheat|Talikot APMC|Vijayapura": {
     "22/07/2026": {
-      "min_price": "2451",
-      "max_price": "2501",
-      "modal_price": "2471"
+      "min_price": 2451,
+      "max_price": 2501,
+      "modal_price": 2471
     },
     "15/07/2026": {
       "min_price": "2525",
@@ -28231,6 +29131,11 @@
       "min_price": "2525",
       "max_price": "2525",
       "modal_price": "2525"
+    },
+    "23/07/2026": {
+      "min_price": 2550,
+      "max_price": 2550,
+      "modal_price": 2550
     }
   },
   "Bengal Gram(Gram)(Whole)|Talikot APMC|Vijayapura": {
@@ -28265,6 +29170,11 @@
       "min_price": "2625",
       "max_price": "2625",
       "modal_price": "2625"
+    },
+    "23/07/2026": {
+      "min_price": 1900,
+      "max_price": 1900,
+      "modal_price": 1900
     }
   },
   "Red gram/Arhar/Tur(whole)|Talikot APMC|Vijayapura": {
@@ -28297,6 +29207,11 @@
       "min_price": "7328",
       "max_price": "8011",
       "modal_price": "7814"
+    },
+    "23/07/2026": {
+      "min_price": 7300,
+      "max_price": 8089,
+      "modal_price": 7803
     }
   },
   "Groundnut|Vijayapura APMC|Vijayapura": {
@@ -28720,6 +29635,11 @@
       "min_price": "7253",
       "max_price": "8391",
       "modal_price": "7872"
+    },
+    "23/07/2026": {
+      "min_price": 6001,
+      "max_price": 8401,
+      "modal_price": 7669
     }
   },
   "Green Gram(Moong)(Whole)|Yadgir APMC|Yadgir": {
@@ -28727,6 +29647,76 @@
       "min_price": "4804",
       "max_price": "4804",
       "modal_price": "4804"
+    }
+  },
+  "Tamarind Fruit|Hiriyur APMC|Chitradurga": {
+    "23/07/2026": {
+      "min_price": 4800,
+      "max_price": 4800,
+      "modal_price": 4800
+    }
+  },
+  "Groundnut|Hiriyur APMC|Chitradurga": {
+    "23/07/2026": {
+      "min_price": 9000,
+      "max_price": 9000,
+      "modal_price": 9000
+    }
+  },
+  "Jowar(Sorghum)|Gundlupet APMC|Chamarajanagar": {
+    "23/07/2026": {
+      "min_price": 1600,
+      "max_price": 1600,
+      "modal_price": 1600
+    }
+  },
+  "Cotton|Sindhanur APMC|Raichur": {
+    "23/07/2026": {
+      "min_price": 9325,
+      "max_price": 9325,
+      "modal_price": 9325
+    }
+  },
+  "Grapes|Malur APMC|Kolar": {
+    "23/07/2026": {
+      "min_price": 2500,
+      "max_price": 3000,
+      "modal_price": 2800
+    }
+  },
+  "Lime|Malur APMC|Kolar": {
+    "23/07/2026": {
+      "min_price": 4500,
+      "max_price": 5500,
+      "modal_price": 5000
+    }
+  },
+  "Brinjal|Santhesargur APMC|Mysuru": {
+    "23/07/2026": {
+      "min_price": 1383,
+      "max_price": 1383,
+      "modal_price": 1383
+    }
+  },
+  "Green Chilli|Santhesargur APMC|Mysuru": {
+    "23/07/2026": {
+      "min_price": 1660,
+      "max_price": 1660,
+      "modal_price": 1660
+    }
+  },
+  "Maize|Harihara APMC|Davangere": {
+    "23/07/2026": {
+      "min_price": 2530,
+      "max_price": 2530,
+      "modal_price": 2530
+    }
+  },
+  "Maize|Talikot APMC|Vijayapura": {
+    "23/07/2026": {
+      "min_price": 2500,
+      "max_price": 2500,
+      "modal_price": 2500
     }
   }
 }
