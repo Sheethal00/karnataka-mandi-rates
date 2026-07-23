@@ -167,11 +167,38 @@
   .trend-link:hover{color:var(--turmeric-dim);}
   .trend-link:focus-visible{outline:2px solid var(--brick); outline-offset:2px;}
 
+  .commodity-card{cursor:pointer; transition:box-shadow 0.15s ease, border-color 0.15s ease;}
+  .commodity-card:hover{border-left-color:var(--brick); box-shadow:0 2px 10px rgba(0,0,0,0.08);}
+  .commodity-card:focus-visible{outline:2px solid var(--brick); outline-offset:2px;}
+
+  .commodity-panel{max-width:920px;}
+  .trend-stat{position:relative;}
+  .trend-stat .stat-note{
+    display:block; font-family:'Hind',sans-serif; font-size:10.5px;
+    color:var(--lcd-fg-dim); margin-top:3px;
+  }
+  .market-table{display:flex; flex-direction:column; gap:8px; margin-top:4px;}
+  .market-row{
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--rule);
+    border-radius:4px; padding:10px 14px; display:grid;
+    grid-template-columns: 1.6fr 0.8fr 0.8fr 0.8fr auto; gap:10px; align-items:center;
+  }
+  .market-row.highest{border-left-color:var(--brick);}
+  .market-row.lowest{border-left-color:var(--turmeric);}
+  .market-row .badge{
+    font-family:'Space Mono',monospace; font-size:8.5px; letter-spacing:0.5px;
+    text-transform:uppercase; padding:2px 6px; border-radius:3px; margin-left:6px;
+  }
+  .market-row .badge.high{background:rgba(168,67,43,0.12); color:var(--brick);}
+  .market-row .badge.low{background:rgba(217,164,65,0.2); color:var(--turmeric-dim);}
+  .market-row .trend-link{margin-top:0; white-space:nowrap; justify-self:end;}
+
   .trend-overlay{
     position:fixed; inset:0; background:rgba(11,20,13,0.72); display:flex;
     align-items:center; justify-content:center; padding:20px; z-index:50;
   }
   .trend-overlay[hidden]{display:none;}
+  .commodity-overlay{z-index:40;}
   .trend-panel{
     background:var(--paper); border:1px solid var(--ink); border-radius:6px;
     max-width:720px; width:100%; max-height:88vh; overflow:auto;
@@ -253,6 +280,15 @@
     .row-card .lcd:nth-of-type(3){grid-area:max;}
     .trend-stats{gap:8px;}
     .trend-stat{min-width:84px; padding:7px 10px;}
+    .market-row{
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "name name" "min modal" "max max" "trend trend";
+    }
+    .market-row .market-cell{grid-area:name;}
+    .market-row .lcd:nth-of-type(1){grid-area:min;}
+    .market-row .lcd:nth-of-type(2){grid-area:modal;}
+    .market-row .lcd:nth-of-type(3){grid-area:max;}
+    .market-row .trend-link{grid-area:trend; justify-self:start; margin-top:4px;}
   }
   @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
 </style>
@@ -306,10 +342,10 @@
 
   <div class="col-headers" id="colHeaders">
     <button data-sort="commodity">Commodity <span class="arrow" id="arrow-commodity"></span></button>
-    <button data-sort="market">Market <span class="arrow" id="arrow-market"></span></button>
-    <button data-sort="min_price">Min ₹/qtl <span class="arrow" id="arrow-min_price"></span></button>
-    <button data-sort="modal_price">Modal ₹/qtl <span class="arrow" id="arrow-modal_price"></span></button>
-    <button data-sort="max_price">Max ₹/qtl <span class="arrow" id="arrow-max_price"></span></button>
+    <button data-sort="market">Markets <span class="arrow" id="arrow-market"></span></button>
+    <button data-sort="min_price">Low ₹/qtl <span class="arrow" id="arrow-min_price"></span></button>
+    <button data-sort="modal_price">Avg Modal ₹/qtl <span class="arrow" id="arrow-modal_price"></span></button>
+    <button data-sort="max_price">High ₹/qtl <span class="arrow" id="arrow-max_price"></span></button>
   </div>
   <div class="rows" id="rows"></div>
 </main>
@@ -329,6 +365,19 @@
       <button class="trend-close" id="trendClose" type="button" aria-label="Close trend">✕ Close</button>
     </div>
     <div class="trend-body" id="trendBody"></div>
+  </div>
+</div>
+
+<div class="trend-overlay commodity-overlay" id="commodityOverlay" hidden>
+  <div class="trend-panel commodity-panel" role="dialog" aria-modal="true" aria-labelledby="commodityTitle">
+    <div class="trend-head">
+      <div>
+        <div class="trend-title" id="commodityTitle">—</div>
+        <div class="trend-sub" id="commoditySub">—</div>
+      </div>
+      <button class="trend-close" id="commodityClose" type="button" aria-label="Close commodity detail">✕ Close</button>
+    </div>
+    <div class="trend-body" id="commodityBody"></div>
   </div>
 </div>
 
@@ -356,6 +405,11 @@
     trendSub: document.getElementById('trendSub'),
     trendBody: document.getElementById('trendBody'),
     trendClose: document.getElementById('trendClose'),
+    commodityOverlay: document.getElementById('commodityOverlay'),
+    commodityTitle: document.getElementById('commodityTitle'),
+    commoditySub: document.getElementById('commoditySub'),
+    commodityBody: document.getElementById('commodityBody'),
+    commodityClose: document.getElementById('commodityClose'),
   };
 
   let allRecords = [];
@@ -433,6 +487,36 @@
     return (s||'').toString().replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   }
 
+  function groupByCommodity(records){
+    const map = new Map();
+    records.forEach(r => {
+      const key = r.commodity;
+      if(!map.has(key)) map.set(key, []);
+      map.get(key).push(r);
+    });
+    return [...map.entries()].map(([commodity, recs]) => {
+      const mins = recs.map(r => num(r.min_price)).filter(v => v !== null);
+      const maxs = recs.map(r => num(r.max_price)).filter(v => v !== null);
+      const modals = recs.map(r => num(r.modal_price)).filter(v => v !== null);
+      let highest = null, lowest = null;
+      recs.forEach(r => {
+        const m = num(r.modal_price);
+        if(m === null) return;
+        if(!highest || m > num(highest.modal_price)) highest = r;
+        if(!lowest || m < num(lowest.modal_price)) lowest = r;
+      });
+      return {
+        commodity, records: recs,
+        count: recs.length,
+        marketCount: new Set(recs.map(r => r.market)).size,
+        minPrice: mins.length ? Math.min(...mins) : null,
+        maxPrice: maxs.length ? Math.max(...maxs) : null,
+        avgModal: modals.length ? modals.reduce((a,b) => a+b, 0) / modals.length : null,
+        highest, lowest,
+      };
+    });
+  }
+
   function applyFiltersAndRender(){
     const q = els.search.value.trim().toLowerCase();
     const district = els.district.value;
@@ -448,11 +532,15 @@
       return true;
     });
 
-    filtered.sort((a,b) => {
+    let groups = groupByCommodity(filtered);
+
+    groups.sort((a,b) => {
       let va, vb;
       if(sortKey === 'commodity'){ va = (a.commodity||'').toLowerCase(); vb = (b.commodity||'').toLowerCase(); }
-      else if(sortKey === 'market'){ va = (a.market||'').toLowerCase(); vb = (b.market||'').toLowerCase(); }
-      else { va = num(a[sortKey]) ?? -Infinity; vb = num(b[sortKey]) ?? -Infinity; }
+      else if(sortKey === 'market'){ va = a.marketCount; vb = b.marketCount; }
+      else if(sortKey === 'min_price'){ va = a.minPrice ?? -Infinity; vb = b.minPrice ?? -Infinity; }
+      else if(sortKey === 'modal_price'){ va = a.avgModal ?? -Infinity; vb = b.avgModal ?? -Infinity; }
+      else { va = a.maxPrice ?? -Infinity; vb = b.maxPrice ?? -Infinity; }
       if(va < vb) return -1*sortDir;
       if(va > vb) return 1*sortDir;
       return 0;
@@ -463,47 +551,43 @@
       el.textContent = (k === sortKey) ? (sortDir === 1 ? '▲' : '▼') : '';
     });
 
-    if(filtered.length === 0){
+    if(groups.length === 0){
       showState('empty');
-      setStatus(`<strong>0</strong> listings match your filters (out of ${allRecords.length} loaded)`);
+      setStatus(`<strong>0</strong> commodities match your filters (out of ${allRecords.length} listings loaded)`);
       return;
     }
 
     els.colHeaders.style.display = 'grid';
-    els.rows.innerHTML = filtered.map(rowHtml).join('');
+    els.rows.innerHTML = groups.map(commodityCardHtml).join('');
 
     const marketsCount = new Set(filtered.map(r=>r.market)).size;
-    setStatus(`<strong>${filtered.length}</strong> listings across ${marketsCount} market${marketsCount!==1?'s':''}`);
+    setStatus(`<strong>${groups.length}</strong> commodities · ${filtered.length} listings across ${marketsCount} market${marketsCount!==1?'s':''}`);
   }
 
-  function rowHtml(r){
-    const min = num(r.min_price), max = num(r.max_price), modal = num(r.modal_price);
+  function commodityCardHtml(g){
     const fmt = v => v === null ? '—' : Math.round(v).toLocaleString('en-IN');
     return `
-      <div class="row-card">
+      <div class="row-card commodity-card" tabindex="0" role="button"
+        aria-label="View details for ${esc(g.commodity)}" data-commodity="${esc(g.commodity)}">
         <div class="commodity-cell">
-          <div class="name">${esc(r.commodity)}</div>
-          <div class="variety">${esc(r.variety || 'General')}${r.grade && r.grade !== '-' ? ' · ' + esc(r.grade) : ''}</div>
-          <button class="trend-link" type="button"
-            data-commodity="${esc(r.commodity)}"
-            data-market="${esc(r.market)}"
-            data-district="${esc(r.district)}">View price trend →</button>
+          <div class="name">${esc(g.commodity)}</div>
+          <div class="variety">${g.count} listing${g.count!==1?'s':''} · ${g.marketCount} market${g.marketCount!==1?'s':''} — view details →</div>
         </div>
         <div class="market-cell">
-          <div class="market-name">${esc(r.market)}</div>
-          <div class="district-name">${esc(r.district)} district</div>
+          <div class="market-name">↑ ${esc(g.highest ? g.highest.market : '—')}</div>
+          <div class="district-name">↓ ${esc(g.lowest ? g.lowest.market : '—')}</div>
         </div>
         <div class="lcd">
-          <span class="lcd-label">MIN</span>
-          <span class="lcd-value">₹${fmt(min)}</span>
+          <span class="lcd-label">LOW</span>
+          <span class="lcd-value">₹${fmt(g.minPrice)}</span>
         </div>
         <div class="lcd modal">
-          <span class="lcd-label">MODAL</span>
-          <span class="lcd-value">₹${fmt(modal)}</span>
+          <span class="lcd-label">AVG MODAL</span>
+          <span class="lcd-value">₹${fmt(g.avgModal)}</span>
         </div>
         <div class="lcd">
-          <span class="lcd-label">MAX</span>
-          <span class="lcd-value">₹${fmt(max)}</span>
+          <span class="lcd-label">HIGH</span>
+          <span class="lcd-value">₹${fmt(g.maxPrice)}</span>
         </div>
       </div>`;
   }
@@ -607,9 +691,29 @@
     if(e.target === els.trendOverlay) closeTrend();
   });
   document.addEventListener('keydown', e => {
-    if(e.key === 'Escape' && !els.trendOverlay.hidden) closeTrend();
+    if(e.key !== 'Escape') return;
+    if(!els.trendOverlay.hidden) closeTrend();
+    else if(!els.commodityOverlay.hidden) closeCommodityDetail();
   });
+
   els.rows.addEventListener('click', e => {
+    const card = e.target.closest('.commodity-card');
+    if(!card) return;
+    openCommodityDetail(card.dataset.commodity);
+  });
+  els.rows.addEventListener('keydown', e => {
+    if(e.key !== 'Enter' && e.key !== ' ') return;
+    const card = e.target.closest('.commodity-card');
+    if(!card) return;
+    e.preventDefault();
+    openCommodityDetail(card.dataset.commodity);
+  });
+
+  els.commodityClose.addEventListener('click', closeCommodityDetail);
+  els.commodityOverlay.addEventListener('click', e => {
+    if(e.target === els.commodityOverlay) closeCommodityDetail();
+  });
+  els.commodityBody.addEventListener('click', e => {
     const btn = e.target.closest('.trend-link');
     if(!btn) return;
     openTrend(btn.dataset.commodity, btn.dataset.market, btn.dataset.district);
@@ -743,6 +847,129 @@
         ${markers}
         ${xLabels}
       </svg>`;
+  }
+
+  /* ================= Commodity detail (grouped homepage → per-commodity view) ================= */
+
+  function openCommodityDetail(commodity){
+    const recs = allRecords.filter(r => r.commodity === commodity);
+    const marketCount = new Set(recs.map(r => r.market)).size;
+
+    els.commodityTitle.textContent = commodity;
+    els.commoditySub.textContent = `${recs.length} listing${recs.length!==1?'s':''} across ${marketCount} market${marketCount!==1?'s':''} in Karnataka`;
+    els.commodityBody.innerHTML = renderCommodityBody(recs);
+    els.commodityOverlay.hidden = false;
+    document.body.style.overflow = 'hidden';
+
+    loadCommodityTrend(commodity).then(points => {
+      const wrap = document.getElementById('commodityTrendWrap');
+      if(!wrap) return;
+      wrap.innerHTML = points.length
+        ? buildTrendSvg(points)
+        : '<p class="trend-note">Not enough saved history yet to chart a statewide trend.</p>';
+    }).catch(() => {
+      const wrap = document.getElementById('commodityTrendWrap');
+      if(wrap) wrap.innerHTML = '<p class="trend-note">Could not load price history. Try again in a moment.</p>';
+    });
+  }
+
+  function closeCommodityDetail(){
+    els.commodityOverlay.hidden = true;
+    document.body.style.overflow = '';
+  }
+
+  function renderCommodityBody(recs){
+    const fmt = v => v === null || v === undefined ? '—' : Math.round(v).toLocaleString('en-IN');
+
+    const withModal = recs.map(r => ({...r, modalNum: num(r.modal_price)})).filter(r => r.modalNum !== null);
+    const sorted = [...withModal].sort((a,b) => b.modalNum - a.modalNum);
+    const highest = sorted[0] || null;
+    const lowest = sorted.length ? sorted[sorted.length-1] : null;
+
+    const mins = recs.map(r => num(r.min_price)).filter(v => v !== null);
+    const maxs = recs.map(r => num(r.max_price)).filter(v => v !== null);
+    const avgModal = withModal.length ? withModal.reduce((a,r) => a+r.modalNum, 0) / withModal.length : null;
+
+    const statsHtml = `
+      <div class="trend-stats">
+        <div class="trend-stat">
+          <span class="k">Highest price</span>
+          <span class="v up">₹${fmt(highest ? highest.modalNum : null)}</span>
+          <span class="stat-note">${highest ? esc(highest.market) + ' · ' + esc(highest.district) : '—'}</span>
+        </div>
+        <div class="trend-stat">
+          <span class="k">Lowest price</span>
+          <span class="v down">₹${fmt(lowest ? lowest.modalNum : null)}</span>
+          <span class="stat-note">${lowest ? esc(lowest.market) + ' · ' + esc(lowest.district) : '—'}</span>
+        </div>
+        <div class="trend-stat">
+          <span class="k">Average modal</span>
+          <span class="v">₹${fmt(avgModal)}</span>
+        </div>
+        <div class="trend-stat">
+          <span class="k">Statewide range</span>
+          <span class="v" style="font-size:13px">₹${fmt(mins.length ? Math.min(...mins) : null)}–${fmt(maxs.length ? Math.max(...maxs) : null)}</span>
+        </div>
+      </div>`;
+
+    const rowsHtml = sorted.map(r => {
+      const cls = r === highest ? 'highest' : (r === lowest ? 'lowest' : '');
+      const badge = r === highest ? '<span class="badge high">Highest</span>' : (r === lowest ? '<span class="badge low">Lowest</span>' : '');
+      return `
+        <div class="market-row ${cls}">
+          <div class="market-cell">
+            <div class="market-name">${esc(r.market)}${badge}</div>
+            <div class="district-name">${esc(r.district)} district${r.variety && r.variety !== '-' ? ' · ' + esc(r.variety) : ''}</div>
+          </div>
+          <div class="lcd">
+            <span class="lcd-label">MIN</span>
+            <span class="lcd-value">₹${fmt(num(r.min_price))}</span>
+          </div>
+          <div class="lcd modal">
+            <span class="lcd-label">MODAL</span>
+            <span class="lcd-value">₹${fmt(r.modalNum)}</span>
+          </div>
+          <div class="lcd">
+            <span class="lcd-label">MAX</span>
+            <span class="lcd-value">₹${fmt(num(r.max_price))}</span>
+          </div>
+          <button class="trend-link" type="button"
+            data-commodity="${esc(r.commodity)}" data-market="${esc(r.market)}" data-district="${esc(r.district)}">Trend →</button>
+        </div>`;
+    }).join('');
+
+    return `
+      ${statsHtml}
+      <div class="trend-chart-wrap" id="commodityTrendWrap">
+        <p class="trend-note">Loading statewide price trend…</p>
+      </div>
+      <p class="trend-note" style="margin-bottom:14px;">Shaded band shows the daily spread across all reporting markets; the line tracks the average modal price statewide, per quintal.</p>
+      <div class="market-table">${rowsHtml || '<p class="trend-note">No market rows for this commodity.</p>'}</div>
+    `;
+  }
+
+  async function loadCommodityTrend(commodity){
+    const history = await ensureHistoryLoaded();
+    const byDate = {};
+    Object.keys(history).forEach(key => {
+      if(key.split('|')[0] !== commodity) return;
+      Object.entries(history[key]).forEach(([dateStr, v]) => {
+        byDate[dateStr] = byDate[dateStr] || {mins: [], maxs: [], modals: []};
+        const mn = num(v.min_price), mx = num(v.max_price), md = num(v.modal_price);
+        if(mn !== null) byDate[dateStr].mins.push(mn);
+        if(mx !== null) byDate[dateStr].maxs.push(mx);
+        if(md !== null) byDate[dateStr].modals.push(md);
+      });
+    });
+
+    return Object.entries(byDate).map(([dateStr, agg]) => ({
+      date: parseHistDate(dateStr),
+      min: agg.mins.length ? Math.min(...agg.mins) : null,
+      max: agg.maxs.length ? Math.max(...agg.maxs) : null,
+      modal: agg.modals.length ? agg.modals.reduce((a,b) => a+b, 0) / agg.modals.length : null,
+    })).filter(p => p.date && p.modal !== null)
+      .sort((a,b) => a.date - b.date)
+      .slice(-TREND_DAYS);
   }
 
   load();

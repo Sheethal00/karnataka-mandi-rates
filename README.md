@@ -45,6 +45,7 @@ Rather than calling the government API directly from the browser (which exposes 
 ├── index.html                  # frontend (static, no build step)
 ├── scripts/
 │   ├── fetch_data.py            # pulls current + historical data, writes data/*.json
+│   ├── backfill_history.py      # one-time seed of data/history.json from manually downloaded CSVs
 │   └── report_stats.py          # prints size/growth stats for data/history.json
 ├── data/
 │   ├── latest.json              # current snapshot consumed by index.html
@@ -79,6 +80,11 @@ pip install requests
 export DATA_GOV_API_KEY=your_key_here
 python scripts/fetch_data.py     # generates data/latest.json and data/history.json
 python scripts/report_stats.py   # check file sizes / combo counts
+```
+
+To seed `data/history.json` from a folder of manually downloaded per-district CSVs (same columns as the historical API — useful for bootstrapping trend history faster than the per-run bootstrap cap allows):
+```bash
+python scripts/backfill_history.py /path/to/csv/dir
 ```
 
 Then open `index.html` directly, or serve it locally:
