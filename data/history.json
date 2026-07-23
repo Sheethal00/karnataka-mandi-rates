@@ -1,0 +1,2284 @@
+{
+  "Rice|Bidar APMC|Bidar": {
+    "22/07/2026": {
+      "min_price": 4800,
+      "max_price": 5600,
+      "modal_price": 5100
+    }
+  },
+  "Maize|Hanagal APMC|Haveri": {
+    "22/07/2026": {
+      "min_price": 2400,
+      "max_price": 2500,
+      "modal_price": 2400
+    }
+  },
+  "Potato|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 2500,
+      "modal_price": 2000
+    }
+  },
+  "Potato|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 1800,
+      "max_price": 2100,
+      "modal_price": 1900
+    }
+  },
+  "Bajra(Pearl Millet/Cumbu)|Kanakagiri APMC|Koppal": {
+    "22/07/2026": {
+      "min_price": 2510,
+      "max_price": 2510,
+      "modal_price": 2510
+    }
+  },
+  "Paddy(Common)|Gangavathi APMC|Koppal": {
+    "22/07/2026": {
+      "min_price": 2600,
+      "max_price": 3097,
+      "modal_price": 3000
+    }
+  },
+  "Wheat|Gadag APMC|Gadag": {
+    "22/07/2026": {
+      "min_price": 2219,
+      "max_price": 6412,
+      "modal_price": 3371
+    }
+  },
+  "Apple|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 8000,
+      "max_price": 16000,
+      "modal_price": 13000
+    }
+  },
+  "Apple|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 10000,
+      "max_price": 20000,
+      "modal_price": 15000
+    }
+  },
+  "Maize|Haliyala APMC|Uttara Kannada": {
+    "22/07/2026": {
+      "min_price": 2530,
+      "max_price": 2530,
+      "modal_price": 2530
+    }
+  },
+  "Ridgeguard(Tori)|Honnali APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 1600,
+      "modal_price": 1550
+    }
+  },
+  "Arecanut(Betelnut/Supari)|Haliyala APMC|Uttara Kannada": {
+    "22/07/2026": {
+      "min_price": 30391,
+      "max_price": 30391,
+      "modal_price": 30391
+    }
+  },
+  "Arecanut(Betelnut/Supari)|Arasikere APMC|Hassan": {
+    "22/07/2026": {
+      "min_price": 21000,
+      "max_price": 21000,
+      "modal_price": 21000
+    }
+  },
+  "Arecanut(Betelnut/Supari)|Holalkere APMC|Chitradurga": {
+    "22/07/2026": {
+      "min_price": 23881,
+      "max_price": 26200,
+      "modal_price": 25795
+    }
+  },
+  "Arecanut(Betelnut/Supari)|Honnavar APMC|Uttara Kannada": {
+    "22/07/2026": {
+      "min_price": 37000,
+      "max_price": 39000,
+      "modal_price": 38000
+    }
+  },
+  "Coconut|Arasikere APMC|Hassan": {
+    "22/07/2026": {
+      "min_price": 24000,
+      "max_price": 36500,
+      "modal_price": 24000
+    }
+  },
+  "Coconut|Gundlupet APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 20000,
+      "max_price": 23000,
+      "modal_price": 20000
+    }
+  },
+  "Coconut|Sulya APMC|Dakshina Kannada": {
+    "22/07/2026": {
+      "min_price": 18000,
+      "max_price": 25000,
+      "modal_price": 21500
+    }
+  },
+  "Drumstick|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 3200,
+      "modal_price": 2200
+    }
+  },
+  "Drumstick|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 3500,
+      "modal_price": 3000
+    }
+  },
+  "Arecanut(Betelnut/Supari)|Sirsi APMC|Uttara Kannada": {
+    "22/07/2026": {
+      "min_price": 49209,
+      "max_price": 52399,
+      "modal_price": 52104
+    }
+  },
+  "Arecanut(Betelnut/Supari)|Honnali APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 51099,
+      "max_price": 51099,
+      "modal_price": 51099
+    }
+  },
+  "Seemebadnekai|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 1300,
+      "max_price": 3600,
+      "modal_price": 2500
+    }
+  },
+  "Knool Khol|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 1400,
+      "max_price": 3800,
+      "modal_price": 2800
+    }
+  },
+  "Knool Khol|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 900,
+      "max_price": 1500,
+      "modal_price": 1200
+    }
+  },
+  "Bottle gourd|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 1800,
+      "max_price": 2000,
+      "modal_price": 1900
+    }
+  },
+  "Chilly Capsicum|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 4000,
+      "max_price": 6000,
+      "modal_price": 5000
+    }
+  },
+  "Brinjal|Chamarajanagar APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 1200,
+      "modal_price": 1100
+    }
+  },
+  "Bitter gourd|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 2700,
+      "modal_price": 2600
+    }
+  },
+  "Cauliflower|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 2400,
+      "modal_price": 2000
+    }
+  },
+  "Brinjal|Bagepalli APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 1100,
+      "max_price": 2500,
+      "modal_price": 2000
+    }
+  },
+  "Brinjal|Channapatna APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 3000,
+      "modal_price": 2700
+    }
+  },
+  "Brinjal|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 1600,
+      "max_price": 2000,
+      "modal_price": 1800
+    }
+  },
+  "Brinjal|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
+    }
+  },
+  "Mataki|Bagalkot APMC|Bagalkot": {
+    "22/07/2026": {
+      "min_price": 8100,
+      "max_price": 8100,
+      "modal_price": 8100
+    }
+  },
+  "Beans|Bagepalli APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 3500,
+      "max_price": 5000,
+      "modal_price": 4000
+    }
+  },
+  "Beans|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 3500,
+      "modal_price": 3000
+    }
+  },
+  "Beans|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 2600,
+      "modal_price": 2300
+    }
+  },
+  "Tomato|Gundlupet APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 1000,
+      "modal_price": 1000
+    }
+  },
+  "Gur(Jaggery)|Mandya APMC|Mandya": {
+    "22/07/2026": {
+      "min_price": 4200,
+      "max_price": 5000,
+      "modal_price": 4500
+    }
+  },
+  "Capsicum|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 6000,
+      "max_price": 8000,
+      "modal_price": 7000
+    }
+  },
+  "Potato|Belgaum APMC|Belagavi": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 1800,
+      "modal_price": 1300
+    }
+  },
+  "Tomato|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 1700,
+      "modal_price": 1600
+    }
+  },
+  "Tomato|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 800,
+      "max_price": 1500,
+      "modal_price": 1000
+    }
+  },
+  "Tomato|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 400,
+      "max_price": 1000,
+      "modal_price": 700
+    }
+  },
+  "Paddy(Common)|Shikaripura APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 2852,
+      "max_price": 2852,
+      "modal_price": 2852
+    }
+  },
+  "Black Gram(Urd Beans)(Whole)|Bidar APMC|Bidar": {
+    "22/07/2026": {
+      "min_price": 7022,
+      "max_price": 8830,
+      "modal_price": 8074
+    }
+  },
+  "Black Gram(Urd Beans)(Whole)|Kalaburagi APMC|Kalaburagi": {
+    "22/07/2026": {
+      "min_price": 4300,
+      "max_price": 7470,
+      "modal_price": 6425
+    }
+  },
+  "Tender Coconut|Srirangapattana APMC|Mandya": {
+    "22/07/2026": {
+      "min_price": 20000,
+      "max_price": 25000,
+      "modal_price": 25000
+    }
+  },
+  "Tender Coconut|Chamarajanagar APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 20000,
+      "max_price": 25000,
+      "modal_price": 23000
+    }
+  },
+  "Cucumbar(Kheera)|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 2400,
+      "modal_price": 2200
+    }
+  },
+  "Jowar(Sorghum)|Raichur APMC|Raichur": {
+    "22/07/2026": {
+      "min_price": 4765,
+      "max_price": 4765,
+      "modal_price": 4765
+    }
+  },
+  "Jowar(Sorghum)|Lingasugur APMC|Raichur": {
+    "22/07/2026": {
+      "min_price": 2650,
+      "max_price": 2650,
+      "modal_price": 2650
+    }
+  },
+  "Beetroot|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 2600,
+      "max_price": 3000,
+      "modal_price": 2800
+    }
+  },
+  "Beetroot|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 2800,
+      "max_price": 3000,
+      "modal_price": 2900
+    }
+  },
+  "Beetroot|Honnali APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 2200,
+      "max_price": 2400,
+      "modal_price": 2300
+    }
+  },
+  "Snakeguard|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 1800,
+      "max_price": 2000,
+      "modal_price": 1900
+    }
+  },
+  "Snakeguard|Bagepalli APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 2000,
+      "modal_price": 1700
+    }
+  },
+  "Dry Chillies|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 20000,
+      "max_price": 28000,
+      "modal_price": 24000
+    }
+  },
+  "Ladies Finger|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 2800,
+      "modal_price": 2700
+    }
+  },
+  "Ladies Finger|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 1400,
+      "max_price": 1600,
+      "modal_price": 1500
+    }
+  },
+  "Ladies Finger|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 1600,
+      "max_price": 2000,
+      "modal_price": 1800
+    }
+  },
+  "White Pumpkin|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 1200,
+      "max_price": 1400,
+      "modal_price": 1300
+    }
+  },
+  "Carrot|Bagepalli APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2100
+    }
+  },
+  "Green Gram Dal(Moong Dal)|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 8800,
+      "max_price": 10800,
+      "modal_price": 9800
+    }
+  },
+  "Black Gram Dal(Urd Dal)|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 9000,
+      "max_price": 15000,
+      "modal_price": 12000
+    }
+  },
+  "Ground Nut Seed|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 16000,
+      "max_price": 18000,
+      "modal_price": 17000
+    }
+  },
+  "Bengal Gram Dal(Chana Dal)|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 7000,
+      "max_price": 8500,
+      "modal_price": 7750
+    }
+  },
+  "Elephant Yam(Suran)/Amorphophallus|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 700,
+      "max_price": 1900,
+      "modal_price": 1400
+    }
+  },
+  "Chennangi Dal|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 7000,
+      "max_price": 8000,
+      "modal_price": 7500
+    }
+  },
+  "Onion|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3200,
+      "modal_price": 2600
+    }
+  },
+  "Cauliflower|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 2200,
+      "max_price": 2600,
+      "modal_price": 2400
+    }
+  },
+  "Cauliflower|Honnali APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2800
+    }
+  },
+  "Cauliflower|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 600,
+      "max_price": 2400,
+      "modal_price": 1300
+    }
+  },
+  "Cauliflower|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 2500,
+      "modal_price": 2250
+    }
+  },
+  "Ragi(Finger Millet)|Gundlupet APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 3200,
+      "max_price": 3200,
+      "modal_price": 3200
+    }
+  },
+  "Brinjal|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 1600,
+      "max_price": 2400,
+      "modal_price": 2000
+    }
+  },
+  "Arecanut(Betelnut/Supari)|Kumta APMC|Uttara Kannada": {
+    "22/07/2026": {
+      "min_price": 30189,
+      "max_price": 33029,
+      "modal_price": 31379
+    }
+  },
+  "Coconut|Holalkere APMC|Chitradurga": {
+    "22/07/2026": {
+      "min_price": 18000,
+      "max_price": 18000,
+      "modal_price": 18000
+    }
+  },
+  "Ashgourd|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 13,
+      "max_price": 15,
+      "modal_price": 14
+    }
+  },
+  "Mousambi(Sweet Lime)|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 2300,
+      "max_price": 3800,
+      "modal_price": 3400
+    }
+  },
+  "Gur(Jaggery)|Srirangapattana APMC|Mandya": {
+    "22/07/2026": {
+      "min_price": 4200,
+      "max_price": 4250,
+      "modal_price": 4200
+    }
+  },
+  "Water Melon|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 2000,
+      "modal_price": 1500
+    }
+  },
+  "Knool Khol|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 2800,
+      "max_price": 3000,
+      "modal_price": 2900
+    }
+  },
+  "Alsandikai|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 2600,
+      "max_price": 3000,
+      "modal_price": 2900
+    }
+  },
+  "Sweet Potato|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 800,
+      "max_price": 2300,
+      "modal_price": 1000
+    }
+  },
+  "Sweet Potato|Belgaum APMC|Belagavi": {
+    "22/07/2026": {
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3500
+    }
+  },
+  "Arecanut(Betelnut/Supari)|APMC THIRTHAHALLI|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 26884,
+      "max_price": 38305,
+      "modal_price": 38305
+    }
+  },
+  "Coconut|Chamarajanagar APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 13000,
+      "max_price": 25500,
+      "modal_price": 25000
+    }
+  },
+  "Coconut|Sirsi APMC|Uttara Kannada": {
+    "22/07/2026": {
+      "min_price": 4357,
+      "max_price": 5731,
+      "modal_price": 5075
+    }
+  },
+  "Groundnut|Challakere APMC|Chitradurga": {
+    "22/07/2026": {
+      "min_price": 6111,
+      "max_price": 8569,
+      "modal_price": 7689
+    }
+  },
+  "Onion|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 2400,
+      "max_price": 3600,
+      "modal_price": 3000
+    }
+  },
+  "Potato|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 800,
+      "max_price": 2100,
+      "modal_price": 1400
+    }
+  },
+  "Cauliflower|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 2500,
+      "modal_price": 2000
+    }
+  },
+  "Ragi(Finger Millet)|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 4300,
+      "max_price": 4800,
+      "modal_price": 4550
+    }
+  },
+  "Ragi(Finger Millet)|Honnali APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 3360,
+      "max_price": 3360,
+      "modal_price": 3360
+    }
+  },
+  "Seemebadnekai|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 1300,
+      "max_price": 1500,
+      "modal_price": 1400
+    }
+  },
+  "Knool Khol|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 3500,
+      "max_price": 5000,
+      "modal_price": 4000
+    }
+  },
+  "Knool Khol|Chamarajanagar APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 3000,
+      "modal_price": 2300
+    }
+  },
+  "Sweet Pumpkin|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 400,
+      "max_price": 600,
+      "modal_price": 500
+    }
+  },
+  "Chapparad Avare|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 3600,
+      "max_price": 4000,
+      "modal_price": 3800
+    }
+  },
+  "Chapparad Avare|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 2500,
+      "modal_price": 2000
+    }
+  },
+  "Tomato|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 600,
+      "max_price": 2400,
+      "modal_price": 900
+    }
+  },
+  "Tomato|Chamarajanagar APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 400,
+      "max_price": 1000,
+      "modal_price": 700
+    }
+  },
+  "Tomato|Ranebennur APMC|Haveri": {
+    "22/07/2026": {
+      "min_price": 500,
+      "max_price": 1800,
+      "modal_price": 1500
+    }
+  },
+  "Tomato|Channapatna APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 500,
+      "max_price": 1500,
+      "modal_price": 1000
+    }
+  },
+  "Red gram/Arhar/Tur(whole)|Bidar APMC|Bidar": {
+    "22/07/2026": {
+      "min_price": 3011,
+      "max_price": 8525,
+      "modal_price": 8185
+    }
+  },
+  "Garlic|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 9000,
+      "max_price": 25000,
+      "modal_price": 14000
+    }
+  },
+  "Garlic|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 10000,
+      "max_price": 18000,
+      "modal_price": 14000
+    }
+  },
+  "Paddy(Common)|Lingasugur APMC|Raichur": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 2900,
+      "modal_price": 2750
+    }
+  },
+  "Bitter gourd|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 3500,
+      "modal_price": 3000
+    }
+  },
+  "Raddish|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 2400,
+      "modal_price": 2300
+    }
+  },
+  "Thondekai|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 1200,
+      "max_price": 3400,
+      "modal_price": 2600
+    }
+  },
+  "Thondekai|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
+    }
+  },
+  "Neem Seed|Kustagi APMC|Koppal": {
+    "22/07/2026": {
+      "min_price": 800,
+      "max_price": 1890,
+      "modal_price": 1566
+    }
+  },
+  "Ladies Finger|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
+    }
+  },
+  "Chilly Capsicum|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 2500,
+      "modal_price": 2300
+    }
+  },
+  "Bunch Beans|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 600,
+      "max_price": 2400,
+      "modal_price": 1400
+    }
+  },
+  "Bunch Beans|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
+    }
+  },
+  "Ground Nut Seed|Hiriyur APMC|Chitradurga": {
+    "22/07/2026": {
+      "min_price": 11000,
+      "max_price": 12761,
+      "modal_price": 11812
+    }
+  },
+  "Green Gram(Moong)(Whole)|Ramdurga APMC|Belagavi": {
+    "22/07/2026": {
+      "min_price": 7160,
+      "max_price": 7200,
+      "modal_price": 7180
+    }
+  },
+  "Sunflower/Sunflower Seed|Kustagi APMC|Koppal": {
+    "22/07/2026": {
+      "min_price": 8000,
+      "max_price": 8000,
+      "modal_price": 8000
+    }
+  },
+  "Wheat|Talikot APMC|Vijayapura": {
+    "22/07/2026": {
+      "min_price": 2451,
+      "max_price": 2501,
+      "modal_price": 2471
+    }
+  },
+  "Black pepper|APMC THIRTHAHALLI|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 30000,
+      "max_price": 49000,
+      "modal_price": 35000
+    }
+  },
+  "Black pepper|Chikkamagaluru APMC|Chikkamagaluru": {
+    "22/07/2026": {
+      "min_price": 25000,
+      "max_price": 36000,
+      "modal_price": 30500
+    }
+  },
+  "Black pepper|Somvarpet APMC|Kodagu": {
+    "22/07/2026": {
+      "min_price": 50000,
+      "max_price": 70000,
+      "modal_price": 70000
+    }
+  },
+  "Black pepper|Sirsi APMC|Uttara Kannada": {
+    "22/07/2026": {
+      "min_price": 66576,
+      "max_price": 70096,
+      "modal_price": 67551
+    }
+  },
+  "Turmeric|Gundlupet APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 13700,
+      "max_price": 14700,
+      "modal_price": 14500
+    }
+  },
+  "Turmeric|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 18000,
+      "max_price": 22000,
+      "modal_price": 20000
+    }
+  },
+  "Wheat|Kalaburagi APMC|Kalaburagi": {
+    "22/07/2026": {
+      "min_price": 2300,
+      "max_price": 3100,
+      "modal_price": 2675
+    }
+  },
+  "Cabbage|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 800,
+      "max_price": 1500,
+      "modal_price": 1300
+    }
+  },
+  "Ladies Finger|Honnali APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 2200,
+      "modal_price": 2100
+    }
+  },
+  "Green Chilli|Bagepalli APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3200
+    }
+  },
+  "Green Chilli|Gundlupet APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 2100,
+      "max_price": 2200,
+      "modal_price": 2100
+    }
+  },
+  "Green Chilli|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 3500,
+      "max_price": 4500,
+      "modal_price": 4000
+    }
+  },
+  "Green Chilli|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 2200,
+      "modal_price": 2100
+    }
+  },
+  "Green Chilli|Channapatna APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 4500,
+      "max_price": 5000,
+      "modal_price": 4700
+    }
+  },
+  "Green Chilli|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 2400,
+      "max_price": 4500,
+      "modal_price": 3000
+    }
+  },
+  "Green Chilli|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 1600,
+      "max_price": 4000,
+      "modal_price": 2500
+    }
+  },
+  "Karbuja(Musk Melon)|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 2000,
+      "modal_price": 1500
+    }
+  },
+  "Ladies Finger|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 2800,
+      "modal_price": 2500
+    }
+  },
+  "Bitter gourd|Bagepalli APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 3000,
+      "modal_price": 2600
+    }
+  },
+  "Chilly Capsicum|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 5000,
+      "max_price": 7000,
+      "modal_price": 6000
+    }
+  },
+  "Bottle gourd|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 2500,
+      "modal_price": 2000
+    }
+  },
+  "Thondekai|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 2800,
+      "max_price": 3000,
+      "modal_price": 2900
+    }
+  },
+  "Raddish|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 700,
+      "max_price": 2400,
+      "modal_price": 1400
+    }
+  },
+  "Raddish|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 1600,
+      "max_price": 2800,
+      "modal_price": 2200
+    }
+  },
+  "Tamarind Fruit|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 7000,
+      "max_price": 13000,
+      "modal_price": 10000
+    }
+  },
+  "Red gram split/Arhar dal/Tur dal|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 8000,
+      "max_price": 12500,
+      "modal_price": 10250
+    }
+  },
+  "Cucumbar(Kheera)|Bagepalli APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 1500,
+      "modal_price": 1200
+    }
+  },
+  "Carrot|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 3500,
+      "modal_price": 3000
+    }
+  },
+  "Carrot|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 4800,
+      "max_price": 5000,
+      "modal_price": 4900
+    }
+  },
+  "Carrot|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 4000,
+      "max_price": 6500,
+      "modal_price": 5000
+    }
+  },
+  "Suvarna Gadde|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 3800,
+      "max_price": 4000,
+      "modal_price": 3900
+    }
+  },
+  "Brinjal|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 1300,
+      "max_price": 1500,
+      "modal_price": 1400
+    }
+  },
+  "Brinjal|Honnali APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 800,
+      "max_price": 1000,
+      "modal_price": 900
+    }
+  },
+  "Brinjal|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 1700,
+      "modal_price": 1500
+    }
+  },
+  "Potato|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 2000,
+      "modal_price": 1500
+    }
+  },
+  "Onion|Belgaum APMC|Belagavi": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 2800,
+      "modal_price": 2400
+    }
+  },
+  "Ridgeguard(Tori)|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 2200,
+      "modal_price": 2100
+    }
+  },
+  "Groundnut|Bagalkot APMC|Bagalkot": {
+    "22/07/2026": {
+      "min_price": 6070,
+      "max_price": 9053,
+      "modal_price": 7633
+    }
+  },
+  "Mango|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3500
+    }
+  },
+  "Arecanut(Betelnut/Supari)|Sulya APMC|Dakshina Kannada": {
+    "22/07/2026": {
+      "min_price": 20000,
+      "max_price": 34000,
+      "modal_price": 27000
+    }
+  },
+  "Foxtail Millet(Navane)|Gadag APMC|Gadag": {
+    "22/07/2026": {
+      "min_price": 5400,
+      "max_price": 5400,
+      "modal_price": 5400
+    }
+  },
+  "Cauliflower|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 700,
+      "max_price": 1500,
+      "modal_price": 1000
+    }
+  },
+  "Onion|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 2700,
+      "modal_price": 2500
+    }
+  },
+  "Gur(Jaggery)|Gadag APMC|Gadag": {
+    "22/07/2026": {
+      "min_price": 4947,
+      "max_price": 4947,
+      "modal_price": 4947
+    }
+  },
+  "Ginger(Green)|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 10000,
+      "max_price": 14000,
+      "modal_price": 12000
+    }
+  },
+  "Seemebadnekai|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 2200,
+      "modal_price": 2100
+    }
+  },
+  "Drumstick|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 4800,
+      "max_price": 5000,
+      "modal_price": 4900
+    }
+  },
+  "Drumstick|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 6000,
+      "max_price": 8000,
+      "modal_price": 7000
+    }
+  },
+  "Sweet Pumpkin|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 800,
+      "max_price": 1000,
+      "modal_price": 900
+    }
+  },
+  "Sweet Pumpkin|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 800,
+      "max_price": 2300,
+      "modal_price": 1000
+    }
+  },
+  "Bengal Gram(Gram)(Whole)|Gadag APMC|Gadag": {
+    "22/07/2026": {
+      "min_price": 4800,
+      "max_price": 6517,
+      "modal_price": 6296
+    }
+  },
+  "Bengal Gram(Gram)(Whole)|Rona APMC|Gadag": {
+    "22/07/2026": {
+      "min_price": 6400,
+      "max_price": 6400,
+      "modal_price": 6400
+    }
+  },
+  "Bitter gourd|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 700,
+      "max_price": 2400,
+      "modal_price": 1500
+    }
+  },
+  "Pineapple|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 2430,
+      "max_price": 2430,
+      "modal_price": 2430
+    }
+  },
+  "Mango|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 800,
+      "max_price": 1200,
+      "modal_price": 1000
+    }
+  },
+  "Grapes|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3500
+    }
+  },
+  "Jowar(Sorghum)|Laxmeshwar APMC|Gadag": {
+    "22/07/2026": {
+      "min_price": 2186,
+      "max_price": 3160,
+      "modal_price": 2250
+    }
+  },
+  "Jowar(Sorghum)|Kalaburagi APMC|Kalaburagi": {
+    "22/07/2026": {
+      "min_price": 2400,
+      "max_price": 5400,
+      "modal_price": 4600
+    }
+  },
+  "Jowar(Sorghum)|Sindhanur APMC|Raichur": {
+    "22/07/2026": {
+      "min_price": 4400,
+      "max_price": 4400,
+      "modal_price": 4400
+    }
+  },
+  "Rice|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 3100,
+      "max_price": 3300,
+      "modal_price": 3200
+    }
+  },
+  "Mango|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 2800,
+      "max_price": 3360,
+      "modal_price": 3090
+    }
+  },
+  "Cotton|Raichur APMC|Raichur": {
+    "22/07/2026": {
+      "min_price": 7000,
+      "max_price": 7000,
+      "modal_price": 7000
+    }
+  },
+  "Cotton|Ramdurga APMC|Belagavi": {
+    "22/07/2026": {
+      "min_price": 8900,
+      "max_price": 9000,
+      "modal_price": 8950
+    }
+  },
+  "Red gram/Arhar/Tur(whole)|Bagalkot APMC|Bagalkot": {
+    "22/07/2026": {
+      "min_price": 7000,
+      "max_price": 7000,
+      "modal_price": 7000
+    }
+  },
+  "Green Gram(Moong)(Whole)|Kalaburagi APMC|Kalaburagi": {
+    "22/07/2026": {
+      "min_price": 4450,
+      "max_price": 7225,
+      "modal_price": 6350
+    }
+  },
+  "Cabbage|Chamarajanagar APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 1800,
+      "max_price": 2400,
+      "modal_price": 2100
+    }
+  },
+  "Cabbage|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 2200,
+      "max_price": 2500,
+      "modal_price": 2300
+    }
+  },
+  "Maize|Kanakagiri APMC|Koppal": {
+    "22/07/2026": {
+      "min_price": 2450,
+      "max_price": 2450,
+      "modal_price": 2450
+    }
+  },
+  "Green Chilli|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3500
+    }
+  },
+  "Green Chilli|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 2500,
+      "modal_price": 2000
+    }
+  },
+  "Lime|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 5000,
+      "max_price": 6000,
+      "modal_price": 5500
+    }
+  },
+  "Beetroot|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 800,
+      "max_price": 2300,
+      "modal_price": 1300
+    }
+  },
+  "Beetroot|Chamarajanagar APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 1600,
+      "max_price": 3000,
+      "modal_price": 2300
+    }
+  },
+  "Beetroot|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 2700,
+      "modal_price": 2500
+    }
+  },
+  "Cowpea(Veg)|Honnali APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 3000,
+      "modal_price": 2800
+    }
+  },
+  "Beans|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 4000,
+      "max_price": 5000,
+      "modal_price": 4500
+    }
+  },
+  "Beans|Chikkamagaluru APMC|Chikkamagaluru": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 2800,
+      "modal_price": 2650
+    }
+  },
+  "Beans|Malur APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 3500,
+      "max_price": 5500,
+      "modal_price": 4000
+    }
+  },
+  "Beans|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3500,
+      "modal_price": 3000
+    }
+  },
+  "Beans|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 3000,
+      "max_price": 5000,
+      "modal_price": 4000
+    }
+  },
+  "Cucumbar(Kheera)|Chamarajanagar APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 1800,
+      "modal_price": 1400
+    }
+  },
+  "Cucumbar(Kheera)|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 2000,
+      "modal_price": 1500
+    }
+  },
+  "Karbuja(Musk Melon)|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 1600,
+      "modal_price": 1400
+    }
+  },
+  "Pomegranate|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 4000,
+      "max_price": 6000,
+      "modal_price": 5000
+    }
+  },
+  "Sweet Potato|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 2200,
+      "max_price": 2400,
+      "modal_price": 2300
+    }
+  },
+  "Drumstick|Bagepalli APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 2200,
+      "modal_price": 2100
+    }
+  },
+  "Drumstick|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 4000,
+      "max_price": 5000,
+      "modal_price": 4500
+    }
+  },
+  "Coconut|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 20000,
+      "max_price": 30000,
+      "modal_price": 25000
+    }
+  },
+  "Lime|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 3500,
+      "max_price": 4500,
+      "modal_price": 4000
+    }
+  },
+  "Snakeguard|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 2000,
+      "modal_price": 1800
+    }
+  },
+  "Ridgeguard(Tori)|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 2700,
+      "modal_price": 2600
+    }
+  },
+  "Onion|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
+    }
+  },
+  "Jowar(Sorghum)|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 3000,
+      "max_price": 3500,
+      "modal_price": 3250
+    }
+  },
+  "Green Gram(Moong)(Whole)|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 8000,
+      "max_price": 12000,
+      "modal_price": 10000
+    }
+  },
+  "Green Gram(Moong)(Whole)|Rona APMC|Gadag": {
+    "22/07/2026": {
+      "min_price": 8109,
+      "max_price": 9117,
+      "modal_price": 8397
+    }
+  },
+  "Wheat|Ramdurga APMC|Belagavi": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 2500,
+      "modal_price": 2500
+    }
+  },
+  "Maize|Ranebennur APMC|Haveri": {
+    "22/07/2026": {
+      "min_price": 2520,
+      "max_price": 2604,
+      "modal_price": 2562
+    }
+  },
+  "Paddy(Common)|Kampli APMC|Bellary": {
+    "22/07/2026": {
+      "min_price": 2973,
+      "max_price": 3785,
+      "modal_price": 3379
+    }
+  },
+  "Maize|Honnali APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 2650,
+      "modal_price": 2590
+    }
+  },
+  "Rice|Kalaburagi APMC|Kalaburagi": {
+    "22/07/2026": {
+      "min_price": 4100,
+      "max_price": 6250,
+      "modal_price": 5750
+    }
+  },
+  "Rice|Kampli APMC|Bellary": {
+    "22/07/2026": {
+      "min_price": 2570,
+      "max_price": 2570,
+      "modal_price": 2570
+    }
+  },
+  "Black Gram(Urd Beans)(Whole)|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 11500,
+      "max_price": 13000,
+      "modal_price": 12250
+    }
+  },
+  "Paddy(Common)|Sindhanur APMC|Raichur": {
+    "22/07/2026": {
+      "min_price": 2650,
+      "max_price": 3800,
+      "modal_price": 3487
+    }
+  },
+  "Kulthi(Horse Gram)|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 5800,
+      "max_price": 6500,
+      "modal_price": 6150
+    }
+  },
+  "Ridgeguard(Tori)|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 800,
+      "max_price": 2200,
+      "modal_price": 1500
+    }
+  },
+  "Ridgeguard(Tori)|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 2500,
+      "modal_price": 2000
+    }
+  },
+  "Ridgeguard(Tori)|Chamarajanagar APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 2400,
+      "modal_price": 2000
+    }
+  },
+  "Beans|Gundlupet APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 2300,
+      "max_price": 2300,
+      "modal_price": 2300
+    }
+  },
+  "Beans|Chamarajanagar APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 1600,
+      "max_price": 4500,
+      "modal_price": 3000
+    }
+  },
+  "Turmeric|Chamarajanagar APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 11543,
+      "max_price": 11543,
+      "modal_price": 11543
+    }
+  },
+  "Chikoos(Sapota)|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 3500,
+      "modal_price": 3000
+    }
+  },
+  "Red gram/Arhar/Tur(whole)|Raichur APMC|Raichur": {
+    "22/07/2026": {
+      "min_price": 6419,
+      "max_price": 8316,
+      "modal_price": 8150
+    }
+  },
+  "Bunch Beans|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 4000,
+      "max_price": 5000,
+      "modal_price": 4500
+    }
+  },
+  "Cucumbar(Kheera)|Channapatna APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 1200,
+      "max_price": 2000,
+      "modal_price": 1600
+    }
+  },
+  "Cucumbar(Kheera)|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 800,
+      "max_price": 1000,
+      "modal_price": 900
+    }
+  },
+  "Garlic|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 9000,
+      "max_price": 10300,
+      "modal_price": 10000
+    }
+  },
+  "Bajra(Pearl Millet/Cumbu)|Kustagi APMC|Koppal": {
+    "22/07/2026": {
+      "min_price": 2651,
+      "max_price": 2651,
+      "modal_price": 2651
+    }
+  },
+  "Pineapple|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
+    }
+  },
+  "Grapes|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 6900,
+      "max_price": 6900,
+      "modal_price": 6900
+    }
+  },
+  "Groundnut|Gadag APMC|Gadag": {
+    "22/07/2026": {
+      "min_price": 6253,
+      "max_price": 7669,
+      "modal_price": 7399
+    }
+  },
+  "Groundnut|Raichur APMC|Raichur": {
+    "22/07/2026": {
+      "min_price": 4699,
+      "max_price": 6699,
+      "modal_price": 5722
+    }
+  },
+  "Tomato|Chintamani APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 300,
+      "max_price": 1333,
+      "modal_price": 933
+    }
+  },
+  "Tomato|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 1800,
+      "modal_price": 1500
+    }
+  },
+  "Green Chilli|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 800,
+      "max_price": 2300,
+      "modal_price": 1300
+    }
+  },
+  "Green Chilli|Chikkamagaluru APMC|Chikkamagaluru": {
+    "22/07/2026": {
+      "min_price": 1200,
+      "max_price": 1400,
+      "modal_price": 1300
+    }
+  },
+  "Banana - Green|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 2200,
+      "max_price": 2400,
+      "modal_price": 2300
+    }
+  },
+  "Carrot|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
+    }
+  },
+  "Carrot|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 3000,
+      "max_price": 3700,
+      "modal_price": 3500
+    }
+  },
+  "Cabbage|Honnali APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 1200,
+      "max_price": 1400,
+      "modal_price": 1300
+    }
+  },
+  "Cabbage|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2400
+    }
+  },
+  "Beetroot|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 2500,
+      "modal_price": 2000
+    }
+  },
+  "Mousambi(Sweet Lime)|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 4000,
+      "max_price": 5000,
+      "modal_price": 4500
+    }
+  },
+  "Ginger(Green)|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 5000,
+      "max_price": 12000,
+      "modal_price": 10000
+    }
+  },
+  "Ginger(Green)|Periyapatna APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 1500,
+      "modal_price": 1500
+    }
+  },
+  "Ginger(Green)|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 10000,
+      "max_price": 11200,
+      "modal_price": 11000
+    }
+  },
+  "Capsicum|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 4400,
+      "modal_price": 3700
+    }
+  },
+  "Capsicum|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 4000,
+      "max_price": 4700,
+      "modal_price": 4500
+    }
+  },
+  "Knool Khol|Bagepalli APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 1800,
+      "max_price": 2400,
+      "modal_price": 2000
+    }
+  },
+  "Knool Khol|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
+    }
+  },
+  "Knool Khol|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 3000,
+      "max_price": 4000,
+      "modal_price": 3500
+    }
+  },
+  "Alsandikai|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 3500,
+      "max_price": 4200,
+      "modal_price": 4000
+    }
+  },
+  "Ragi(Finger Millet)|Periyapatna APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 3550,
+      "max_price": 3550,
+      "modal_price": 3550
+    }
+  },
+  "Brinjal|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 700,
+      "max_price": 2100,
+      "modal_price": 1300
+    }
+  },
+  "Potato|Chikkamagaluru APMC|Chikkamagaluru": {
+    "22/07/2026": {
+      "min_price": 1900,
+      "max_price": 1900,
+      "modal_price": 1900
+    }
+  },
+  "Onion|Chikkamagaluru APMC|Chikkamagaluru": {
+    "22/07/2026": {
+      "min_price": 2600,
+      "max_price": 2800,
+      "modal_price": 2700
+    }
+  },
+  "Gur(Jaggery)|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 5200,
+      "max_price": 5400,
+      "modal_price": 5300
+    }
+  },
+  "Gur(Jaggery)|Belgaum APMC|Belagavi": {
+    "22/07/2026": {
+      "min_price": 4000,
+      "max_price": 4500,
+      "modal_price": 4200
+    }
+  },
+  "Potato|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 1700,
+      "max_price": 2200,
+      "modal_price": 2000
+    }
+  },
+  "Bengal Gram(Gram)(Whole)|Bagalkot APMC|Bagalkot": {
+    "22/07/2026": {
+      "min_price": 5189,
+      "max_price": 5189,
+      "modal_price": 5189
+    }
+  },
+  "Pineapple|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
+    }
+  },
+  "Cauliflower|Bagepalli APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 800,
+      "max_price": 1500,
+      "modal_price": 1000
+    }
+  },
+  "Cauliflower|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 1700,
+      "modal_price": 1600
+    }
+  },
+  "Cauliflower|Chikkamagaluru APMC|Chikkamagaluru": {
+    "22/07/2026": {
+      "min_price": 1500,
+      "max_price": 1500,
+      "modal_price": 1500
+    }
+  },
+  "Mustard|Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 9800,
+      "max_price": 11500,
+      "modal_price": 10650
+    }
+  },
+  "Rice|Hanagal APMC|Haveri": {
+    "22/07/2026": {
+      "min_price": 2200,
+      "max_price": 2410,
+      "modal_price": 2200
+    }
+  },
+  "Rice|Sindhanur APMC|Raichur": {
+    "22/07/2026": {
+      "min_price": 2610,
+      "max_price": 2660,
+      "modal_price": 2640
+    }
+  },
+  "Paddy(Common)|Srirangapattana APMC|Mandya": {
+    "22/07/2026": {
+      "min_price": 1800,
+      "max_price": 2200,
+      "modal_price": 1800
+    }
+  },
+  "Maize|Bagalkot APMC|Bagalkot": {
+    "22/07/2026": {
+      "min_price": 2475,
+      "max_price": 2549,
+      "modal_price": 2529
+    }
+  },
+  "Maize|Sankeshwar APMC|Belagavi": {
+    "22/07/2026": {
+      "min_price": 2100,
+      "max_price": 2100,
+      "modal_price": 2100
+    }
+  },
+  "Arecanut(Betelnut/Supari)|Bhadravathi APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 27000,
+      "max_price": 27000,
+      "modal_price": 27000
+    }
+  },
+  "Ridgeguard(Tori)|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 2800,
+      "modal_price": 2500
+    }
+  },
+  "Coconut|Honnali APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 20000,
+      "max_price": 33000,
+      "modal_price": 27290
+    }
+  },
+  "Bottle gourd|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 1100,
+      "max_price": 1600,
+      "modal_price": 1500
+    }
+  },
+  "Jowar(Sorghum)|Gadag APMC|Gadag": {
+    "22/07/2026": {
+      "min_price": 3357,
+      "max_price": 5413,
+      "modal_price": 4290
+    }
+  },
+  "Paddy(Common)|Chamarajanagar APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 2000,
+      "modal_price": 2000
+    }
+  },
+  "Tomato|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 700,
+      "max_price": 1300,
+      "modal_price": 1000
+    }
+  },
+  "Tomato|Bagepalli APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 300,
+      "max_price": 1590,
+      "modal_price": 1400
+    }
+  },
+  "Lime|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 2400,
+      "modal_price": 1600
+    }
+  },
+  "Karbuja(Musk Melon)|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 2260,
+      "max_price": 2260,
+      "modal_price": 2260
+    }
+  },
+  "Beetroot|Bagepalli APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 1800,
+      "max_price": 2400,
+      "modal_price": 200
+    }
+  },
+  "Sunflower/Sunflower Seed|Kampli APMC|Bellary": {
+    "22/07/2026": {
+      "min_price": 8000,
+      "max_price": 8000,
+      "modal_price": 8000
+    }
+  },
+  "Sunflower/Sunflower Seed|Sindhanur APMC|Raichur": {
+    "22/07/2026": {
+      "min_price": 8090,
+      "max_price": 8300,
+      "modal_price": 8138
+    }
+  },
+  "Banana|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 7100,
+      "modal_price": 1050
+    }
+  },
+  "Black pepper|Gonikappal APMC|Kodagu": {
+    "22/07/2026": {
+      "min_price": 35006,
+      "max_price": 69000,
+      "modal_price": 45000
+    }
+  },
+  "Paddy(Common)|Koppal APMC|Koppal": {
+    "22/07/2026": {
+      "min_price": 2500,
+      "max_price": 2500,
+      "modal_price": 2500
+    }
+  },
+  "Cotton|Gadag APMC|Gadag": {
+    "22/07/2026": {
+      "min_price": 8450,
+      "max_price": 8450,
+      "modal_price": 8450
+    }
+  },
+  "Marigold(Calcutta)|Chickkaballapura APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 1000,
+      "max_price": 2500,
+      "modal_price": 1750
+    }
+  },
+  "Rose(Loose))|Chickkaballapura APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 3000,
+      "max_price": 6000,
+      "modal_price": 4500
+    }
+  },
+  "Black Gram Dal(Urd Dal)|Gadag APMC|Gadag": {
+    "22/07/2026": {
+      "min_price": 15200,
+      "max_price": 15200,
+      "modal_price": 15200
+    }
+  },
+  "Green Chilli|Honnali APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 1600,
+      "max_price": 1800,
+      "modal_price": 1700
+    }
+  },
+  "Green Chilli|Chamarajanagar APMC|Chamarajanagar": {
+    "22/07/2026": {
+      "min_price": 1400,
+      "max_price": 2300,
+      "modal_price": 1900
+    }
+  },
+  "Carrot|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 5500,
+      "max_price": 6500,
+      "modal_price": 6000
+    }
+  },
+  "Carrot|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 700,
+      "max_price": 3000,
+      "modal_price": 1800
+    }
+  },
+  "Dry Chillies|Sindhanur APMC|Raichur": {
+    "22/07/2026": {
+      "min_price": 16500,
+      "max_price": 16500,
+      "modal_price": 16500
+    }
+  },
+  "Ladies Finger|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 900,
+      "max_price": 2500,
+      "modal_price": 1400
+    }
+  },
+  "Ladies Finger|Channapatna APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 2500,
+      "modal_price": 2300
+    }
+  },
+  "Raddish|Gauribidanur APMC|Chikkaballapur": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
+    }
+  },
+  "Bitter gourd|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 4000,
+      "max_price": 4200,
+      "modal_price": 4100
+    }
+  },
+  "Bitter gourd|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3200,
+      "modal_price": 3000
+    }
+  },
+  "Bitter gourd|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 4000,
+      "max_price": 5000,
+      "modal_price": 4500
+    }
+  },
+  "Bitter gourd|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 2000,
+      "max_price": 3000,
+      "modal_price": 2500
+    }
+  },
+  "Pomegranate|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 10000,
+      "max_price": 18000,
+      "modal_price": 14000
+    }
+  },
+  "Cabbage|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 1600,
+      "max_price": 1800,
+      "modal_price": 1700
+    }
+  },
+  "Cabbage|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 800,
+      "max_price": 2500,
+      "modal_price": 1600
+    }
+  },
+  "Cabbage|Chikkamagaluru APMC|Chikkamagaluru": {
+    "22/07/2026": {
+      "min_price": 1800,
+      "max_price": 1800,
+      "modal_price": 1800
+    }
+  },
+  "Cabbage|Shimoga APMC|Shivamogga": {
+    "22/07/2026": {
+      "min_price": 1200,
+      "max_price": 1600,
+      "modal_price": 1400
+    }
+  },
+  "Cabbage|Bangarpet APMC|Kolar": {
+    "22/07/2026": {
+      "min_price": 500,
+      "max_price": 1200,
+      "modal_price": 900
+    }
+  },
+  "Suvarna Gadde|Davangere APMC|Davangere": {
+    "22/07/2026": {
+      "min_price": 700,
+      "max_price": 1900,
+      "modal_price": 1400
+    }
+  },
+  "Suvarna Gadde|Mysuru APMC|Mysuru": {
+    "22/07/2026": {
+      "min_price": 3300,
+      "max_price": 3500,
+      "modal_price": 3400
+    }
+  },
+  "Peas Wet|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 12000,
+      "max_price": 14000,
+      "modal_price": 13000
+    }
+  },
+  "Snakeguard|Ramanagara APMC|Bengaluru South": {
+    "22/07/2026": {
+      "min_price": 1600,
+      "max_price": 2400,
+      "modal_price": 2000
+    }
+  },
+  "Green Chilli|Ranebennur APMC|Haveri": {
+    "22/07/2026": {
+      "min_price": 1200,
+      "max_price": 2500,
+      "modal_price": 2000
+    }
+  },
+  "Elephant Yam(Suran)/Amorphophallus|Binny Mill (FF&V) Bengaluru APMC|Bengaluru": {
+    "22/07/2026": {
+      "min_price": 3800,
+      "max_price": 4000,
+      "modal_price": 3900
+    }
+  }
+}
