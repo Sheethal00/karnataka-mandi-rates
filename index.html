@@ -22,6 +22,8 @@
     --lcd-fg:#6FFF9E;
     --lcd-fg-dim:#3E8F5C;
     --rule: rgba(42,33,24,0.18);
+    --warn-bg:#F6E4C6;
+    --warn-border:#D9A441;
   }
   *{box-sizing:border-box;}
   html,body{margin:0;padding:0;}
@@ -32,426 +34,217 @@
     -webkit-font-smoothing:antialiased;
   }
   ::selection{background:var(--turmeric); color:var(--ink);}
-
   a{color:inherit;}
 
-  /* ---------- Masthead ---------- */
   header.masthead{
     background:var(--paper);
     border-bottom:3px solid var(--ink);
     padding:28px clamp(16px,4vw,48px) 18px;
   }
   .masthead-row{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-end;
-    flex-wrap:wrap;
-    gap:12px;
-    max-width:1180px;
-    margin:0 auto;
+    display:flex; justify-content:space-between; align-items:flex-end;
+    flex-wrap:wrap; gap:12px; max-width:1180px; margin:0 auto;
   }
   .masthead-title{
-    font-family:'Rajdhani',sans-serif;
-    font-weight:700;
-    font-size:clamp(32px,6vw,52px);
-    letter-spacing:0.5px;
-    line-height:0.95;
-    margin:0;
-    text-transform:uppercase;
+    font-family:'Rajdhani',sans-serif; font-weight:700;
+    font-size:clamp(32px,6vw,52px); letter-spacing:0.5px; line-height:0.95;
+    margin:0; text-transform:uppercase;
   }
   .masthead-title .accent{color:var(--brick);}
   .masthead-kannada{
-    font-family:'Noto Sans Kannada',sans-serif;
-    font-weight:700;
-    font-size:15px;
-    color:var(--ink-soft);
-    letter-spacing:0.3px;
-    margin:2px 0 0;
+    font-family:'Noto Sans Kannada',sans-serif; font-weight:700; font-size:15px;
+    color:var(--ink-soft); letter-spacing:0.3px; margin:2px 0 0;
   }
   .masthead-meta{
-    text-align:right;
-    font-family:'Space Mono',monospace;
-    font-size:12px;
-    color:var(--ink-soft);
-    line-height:1.5;
+    text-align:right; font-family:'Space Mono',monospace; font-size:12px;
+    color:var(--ink-soft); line-height:1.5;
   }
   .masthead-meta strong{color:var(--ink); font-weight:700;}
   .masthead-sub{
-    max-width:1180px;
-    margin:10px auto 0;
-    font-size:14px;
-    color:var(--ink-soft);
-    border-top:1px solid var(--rule);
-    padding-top:10px;
+    max-width:1180px; margin:10px auto 0; font-size:14px; color:var(--ink-soft);
+    border-top:1px solid var(--rule); padding-top:10px;
   }
 
-  /* ---------- Controls ---------- */
-  .controls-wrap{
-    background:var(--board);
-    padding:18px clamp(16px,4vw,48px);
-  }
+  .controls-wrap{ background:var(--board); padding:18px clamp(16px,4vw,48px); }
   .controls{
-    max-width:1180px;
-    margin:0 auto;
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
-    align-items:flex-end;
+    max-width:1180px; margin:0 auto; display:flex; flex-wrap:wrap;
+    gap:12px; align-items:flex-end;
   }
-  .field{
-    display:flex;
-    flex-direction:column;
-    gap:5px;
-  }
+  .field{ display:flex; flex-direction:column; gap:5px; }
   .field label{
-    font-family:'Space Mono',monospace;
-    font-size:10px;
-    letter-spacing:1.2px;
-    text-transform:uppercase;
-    color:var(--turmeric);
+    font-family:'Space Mono',monospace; font-size:10px; letter-spacing:1.2px;
+    text-transform:uppercase; color:var(--turmeric);
   }
   .field input, .field select{
-    background:var(--board-2);
-    border:1px solid rgba(217,164,65,0.35);
-    color:var(--paper);
-    font-family:'Hind',sans-serif;
-    font-size:14px;
-    font-weight:500;
-    padding:9px 11px;
-    border-radius:3px;
-    min-width:160px;
-    outline:none;
+    background:var(--board-2); border:1px solid rgba(217,164,65,0.35);
+    color:var(--paper); font-family:'Hind',sans-serif; font-size:14px;
+    font-weight:500; padding:9px 11px; border-radius:3px; min-width:160px; outline:none;
   }
   .field select{cursor:pointer;}
   .field input::placeholder{color:rgba(243,236,221,0.4);}
   .field input:focus, .field select:focus{
-    border-color:var(--turmeric);
-    box-shadow:0 0 0 2px rgba(217,164,65,0.25);
+    border-color:var(--turmeric); box-shadow:0 0 0 2px rgba(217,164,65,0.25);
   }
   .field.grow{flex:1; min-width:200px;}
   .btn-refresh{
-    background:var(--turmeric);
-    color:var(--board);
-    border:none;
-    font-family:'Rajdhani',sans-serif;
-    font-weight:700;
-    font-size:15px;
-    letter-spacing:0.5px;
-    text-transform:uppercase;
-    padding:10px 20px;
-    border-radius:3px;
-    cursor:pointer;
-    transition:background 0.15s ease;
+    background:var(--turmeric); color:var(--board); border:none;
+    font-family:'Rajdhani',sans-serif; font-weight:700; font-size:15px;
+    letter-spacing:0.5px; text-transform:uppercase; padding:10px 20px;
+    border-radius:3px; cursor:pointer; transition:background 0.15s ease;
   }
   .btn-refresh:hover{background:#EAB863;}
   .btn-refresh:focus-visible{outline:2px solid var(--paper); outline-offset:2px;}
   .btn-refresh:disabled{opacity:0.5; cursor:progress;}
 
-  /* ---------- Status line ---------- */
   .status-wrap{
-    background:var(--paper-dim);
-    border-bottom:1px solid var(--rule);
+    background:var(--paper-dim); border-bottom:1px solid var(--rule);
     padding:10px clamp(16px,4vw,48px);
   }
   .status{
-    max-width:1180px;
-    margin:0 auto;
-    font-family:'Space Mono',monospace;
-    font-size:12px;
-    color:var(--ink-soft);
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    gap:8px;
+    max-width:1180px; margin:0 auto; font-family:'Space Mono',monospace;
+    font-size:12px; color:var(--ink-soft); display:flex;
+    justify-content:space-between; flex-wrap:wrap; gap:8px;
   }
   .status .count strong{color:var(--brick);}
 
-  /* ---------- Main ---------- */
-  main{
-    max-width:1180px;
-    margin:0 auto;
-    padding:24px clamp(16px,4vw,48px) 60px;
+  .stale-banner{
+    max-width:1180px; margin:14px auto 0; background:var(--warn-bg);
+    border:1px solid var(--warn-border); border-radius:4px;
+    padding:10px 16px; font-size:13px; color:var(--ink);
+    display:flex; align-items:center; gap:8px;
   }
+  .stale-banner[hidden]{display:none;}
+  .stale-banner .glyph{font-size:16px;}
+
+  main{ max-width:1180px; margin:0 auto; padding:24px clamp(16px,4vw,48px) 60px; }
 
   .col-headers{
-    display:grid;
-    grid-template-columns: 1.6fr 1.1fr 0.9fr 0.9fr 0.9fr;
-    gap:10px;
-    padding:0 18px 8px;
-    font-family:'Space Mono',monospace;
-    font-size:10px;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    color:var(--ink-soft);
+    display:grid; grid-template-columns: 1.6fr 1.1fr 0.9fr 0.9fr 0.9fr;
+    gap:10px; padding:0 18px 8px; font-family:'Space Mono',monospace;
+    font-size:10px; letter-spacing:1px; text-transform:uppercase; color:var(--ink-soft);
   }
   .col-headers button{
-    background:none;
-    border:none;
-    font:inherit;
-    color:inherit;
-    cursor:pointer;
-    padding:0;
-    text-align:left;
-    display:flex;
-    align-items:center;
-    gap:4px;
+    background:none; border:none; font:inherit; color:inherit; cursor:pointer;
+    padding:0; text-align:left; display:flex; align-items:center; gap:4px;
   }
   .col-headers button:hover{color:var(--brick);}
   .col-headers .arrow{font-size:9px; opacity:0.7;}
 
-  .rows{
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-  }
+  .rows{ display:flex; flex-direction:column; gap:8px; }
   .row-card{
-    background:#fff;
-    border:1px solid var(--rule);
-    border-left:4px solid var(--turmeric-dim);
-    border-radius:4px;
-    padding:14px 18px;
-    display:grid;
-    grid-template-columns: 1.6fr 1.1fr 0.9fr 0.9fr 0.9fr;
-    gap:10px;
-    align-items:center;
+    background:#fff; border:1px solid var(--rule); border-left:4px solid var(--turmeric-dim);
+    border-radius:4px; padding:14px 18px; display:grid;
+    grid-template-columns: 1.6fr 1.1fr 0.9fr 0.9fr 0.9fr; gap:10px; align-items:center;
   }
   .commodity-cell .name{
-    font-family:'Rajdhani',sans-serif;
-    font-weight:700;
-    font-size:19px;
-    line-height:1.1;
+    font-family:'Rajdhani',sans-serif; font-weight:700; font-size:19px; line-height:1.1;
   }
-  .commodity-cell .variety{
-    font-size:12.5px;
-    color:var(--ink-soft);
-    margin-top:2px;
-  }
-  .market-cell{
-    font-size:13px;
-    line-height:1.35;
-  }
+  .commodity-cell .variety{ font-size:12.5px; color:var(--ink-soft); margin-top:2px; }
+  .market-cell{ font-size:13px; line-height:1.35; }
   .market-cell .market-name{font-weight:600;}
   .market-cell .district-name{color:var(--ink-soft); font-size:12px;}
 
   .lcd{
-    background:var(--lcd-bg);
-    border-radius:4px;
-    padding:7px 8px;
-    text-align:right;
+    background:var(--lcd-bg); border-radius:4px; padding:7px 8px; text-align:right;
     box-shadow:inset 0 0 0 1px rgba(255,255,255,0.04);
   }
   .lcd .lcd-label{
-    font-family:'Space Mono',monospace;
-    font-size:8.5px;
-    letter-spacing:1px;
-    color:var(--lcd-fg-dim);
-    display:block;
+    font-family:'Space Mono',monospace; font-size:8.5px; letter-spacing:1px;
+    color:var(--lcd-fg-dim); display:block;
   }
   .lcd .lcd-value{
-    font-family:'Space Mono',monospace;
-    font-weight:700;
-    font-size:16px;
-    color:var(--lcd-fg);
-    text-shadow:0 0 6px rgba(111,255,158,0.45);
-    letter-spacing:0.5px;
+    font-family:'Space Mono',monospace; font-weight:700; font-size:16px;
+    color:var(--lcd-fg); text-shadow:0 0 6px rgba(111,255,158,0.45); letter-spacing:0.5px;
   }
-  .lcd.modal{
-    background:#0B140D;
-    border:1px solid rgba(111,255,158,0.25);
-  }
+  .lcd.modal{ background:#0B140D; border:1px solid rgba(111,255,158,0.25); }
   .lcd.modal .lcd-value{font-size:18px;}
 
-  /* ---------- Trend link (opens historical chart) ---------- */
   .trend-link{
-    display:inline-block;
-    margin-top:7px;
-    background:none;
-    border:none;
-    padding:0;
-    font-family:'Space Mono',monospace;
-    font-size:10.5px;
-    letter-spacing:0.3px;
-    color:var(--brick);
-    cursor:pointer;
-    text-decoration:underline;
-    text-underline-offset:2px;
+    display:inline-block; margin-top:7px; background:none; border:none; padding:0;
+    font-family:'Space Mono',monospace; font-size:10.5px; letter-spacing:0.3px;
+    color:var(--brick); cursor:pointer; text-decoration:underline; text-underline-offset:2px;
   }
   .trend-link:hover{color:var(--turmeric-dim);}
   .trend-link:focus-visible{outline:2px solid var(--brick); outline-offset:2px;}
 
-  /* ---------- Trend overlay / modal ---------- */
   .trend-overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(11,20,13,0.72);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    z-index:50;
+    position:fixed; inset:0; background:rgba(11,20,13,0.72); display:flex;
+    align-items:center; justify-content:center; padding:20px; z-index:50;
   }
   .trend-overlay[hidden]{display:none;}
   .trend-panel{
-    background:var(--paper);
-    border:1px solid var(--ink);
-    border-radius:6px;
-    max-width:720px;
-    width:100%;
-    max-height:88vh;
-    overflow:auto;
+    background:var(--paper); border:1px solid var(--ink); border-radius:6px;
+    max-width:720px; width:100%; max-height:88vh; overflow:auto;
     box-shadow:0 16px 44px rgba(0,0,0,0.35);
   }
   .trend-head{
-    background:var(--board);
-    color:var(--paper);
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:12px;
-    padding:16px 20px;
-    position:sticky;
-    top:0;
-    z-index:1;
+    background:var(--board); color:var(--paper); display:flex; justify-content:space-between;
+    align-items:flex-start; gap:12px; padding:16px 20px; position:sticky; top:0; z-index:1;
   }
   .trend-title{
-    font-family:'Rajdhani',sans-serif;
-    font-weight:700;
-    font-size:22px;
-    text-transform:uppercase;
-    letter-spacing:0.3px;
+    font-family:'Rajdhani',sans-serif; font-weight:700; font-size:22px;
+    text-transform:uppercase; letter-spacing:0.3px;
   }
-  .trend-sub{
-    font-family:'Space Mono',monospace;
-    font-size:11px;
-    color:var(--turmeric);
-    margin-top:4px;
-  }
+  .trend-sub{ font-family:'Space Mono',monospace; font-size:11px; color:var(--turmeric); margin-top:4px; }
   .trend-close{
-    background:none;
-    border:1px solid rgba(243,236,221,0.3);
-    border-radius:3px;
-    color:var(--paper);
-    font-size:15px;
-    line-height:1;
-    padding:6px 10px;
-    cursor:pointer;
-    flex-shrink:0;
+    background:none; border:1px solid rgba(243,236,221,0.3); border-radius:3px;
+    color:var(--paper); font-size:15px; line-height:1; padding:6px 10px;
+    cursor:pointer; flex-shrink:0;
   }
   .trend-close:hover{border-color:var(--turmeric); color:var(--turmeric);}
-
   .trend-body{padding:20px;}
-
-  .trend-stats{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-    margin-bottom:16px;
-  }
-  .trend-stat{
-    background:var(--lcd-bg);
-    border-radius:4px;
-    padding:8px 14px;
-    min-width:96px;
-  }
+  .trend-stats{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:16px; }
+  .trend-stat{ background:var(--lcd-bg); border-radius:4px; padding:8px 14px; min-width:96px; }
   .trend-stat .k{
-    font-family:'Space Mono',monospace;
-    font-size:9px;
-    letter-spacing:1px;
-    text-transform:uppercase;
-    color:var(--lcd-fg-dim);
-    display:block;
+    font-family:'Space Mono',monospace; font-size:9px; letter-spacing:1px;
+    text-transform:uppercase; color:var(--lcd-fg-dim); display:block;
   }
   .trend-stat .v{
-    font-family:'Space Mono',monospace;
-    font-weight:700;
-    font-size:17px;
-    color:var(--lcd-fg);
-    text-shadow:0 0 6px rgba(111,255,158,0.4);
+    font-family:'Space Mono',monospace; font-weight:700; font-size:17px;
+    color:var(--lcd-fg); text-shadow:0 0 6px rgba(111,255,158,0.4);
   }
   .trend-stat .v.up{color:#8FE38A; text-shadow:0 0 6px rgba(143,227,138,0.4);}
   .trend-stat .v.down{color:#E38A8A; text-shadow:0 0 6px rgba(227,138,138,0.4);}
-
   .trend-chart-wrap{
-    background:#fff;
-    border:1px solid var(--rule);
-    border-radius:4px;
-    padding:10px 12px 4px;
+    background:#fff; border:1px solid var(--rule); border-radius:4px; padding:10px 12px 4px;
   }
   svg.trend-svg{width:100%; height:auto; display:block;}
   .trend-grid{stroke:var(--rule); stroke-width:1;}
-  .trend-axis-label{
-    font-family:'Space Mono',monospace;
-    font-size:10px;
-    fill:var(--ink-soft);
-  }
+  .trend-axis-label{ font-family:'Space Mono',monospace; font-size:10px; fill:var(--ink-soft); }
   .trend-band{fill:rgba(217,164,65,0.28);}
   .trend-modal-line{fill:none; stroke:var(--brick); stroke-width:2.25;}
   .trend-point{fill:var(--brick);}
-  .trend-note{
-    margin-top:10px;
-    font-size:12px;
-    color:var(--ink-soft);
-  }
+  .trend-note{ margin-top:10px; font-size:12px; color:var(--ink-soft); }
 
-  /* ---------- Empty / error / loading ---------- */
-  .state-panel{
-    text-align:center;
-    padding:56px 20px;
-    color:var(--ink-soft);
-  }
+  .state-panel{ text-align:center; padding:56px 20px; color:var(--ink-soft); }
   .state-panel .glyph{
-    font-family:'Rajdhani',sans-serif;
-    font-weight:700;
-    font-size:42px;
-    color:var(--turmeric-dim);
-    margin-bottom:6px;
+    font-family:'Rajdhani',sans-serif; font-weight:700; font-size:42px;
+    color:var(--turmeric-dim); margin-bottom:6px;
   }
   .state-panel h3{
-    font-family:'Rajdhani',sans-serif;
-    font-size:20px;
-    margin:0 0 6px;
-    color:var(--ink);
-    text-transform:uppercase;
-    letter-spacing:0.5px;
+    font-family:'Rajdhani',sans-serif; font-size:20px; margin:0 0 6px;
+    color:var(--ink); text-transform:uppercase; letter-spacing:0.5px;
   }
   .state-panel p{margin:0; font-size:14px; max-width:420px; margin:0 auto;}
   .state-panel .retry{
-    margin-top:16px;
-    display:inline-block;
-    background:var(--ink);
-    color:var(--paper);
-    font-family:'Rajdhani',sans-serif;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:0.5px;
-    padding:9px 18px;
-    border:none;
-    border-radius:3px;
-    cursor:pointer;
+    margin-top:16px; display:inline-block; background:var(--ink); color:var(--paper);
+    font-family:'Rajdhani',sans-serif; font-weight:700; text-transform:uppercase;
+    letter-spacing:0.5px; padding:9px 18px; border:none; border-radius:3px; cursor:pointer;
   }
 
-  /* ---------- Footer ---------- */
   footer{
-    background:var(--ink);
-    color:rgba(243,236,221,0.65);
-    font-size:12px;
-    padding:22px clamp(16px,4vw,48px);
-    text-align:center;
+    background:var(--ink); color:rgba(243,236,221,0.65); font-size:12px;
+    padding:22px clamp(16px,4vw,48px); text-align:center;
   }
   footer a{color:var(--turmeric); text-decoration:none;}
   footer a:hover{text-decoration:underline;}
   footer p{max-width:720px; margin:6px auto;}
 
-  /* ---------- Responsive ---------- */
   @media (max-width: 760px){
     .col-headers{display:none;}
     .row-card{
       grid-template-columns: 1fr 1fr;
-      grid-template-areas:
-        "name name"
-        "market market"
-        "min modal"
-        "max max";
+      grid-template-areas: "name name" "market market" "min modal" "max max";
     }
     .commodity-cell{grid-area:name;}
     .market-cell{grid-area:market;}
@@ -461,10 +254,7 @@
     .trend-stats{gap:8px;}
     .trend-stat{min-width:84px; padding:7px 10px;}
   }
-
-  @media (prefers-reduced-motion: reduce){
-    *{transition:none !important;}
-  }
+  @media (prefers-reduced-motion: reduce){ *{transition:none !important;} }
 </style>
 </head>
 <body>
@@ -497,10 +287,6 @@
       <label for="marketSelect">Market</label>
       <select id="marketSelect"><option value="">All markets</option></select>
     </div>
-    <!-- <div class="field">
-      <label for="dateInput">Arrival date</label>
-      <input type="date" id="dateInput">
-    </div> -->
     <button class="btn-refresh" id="refreshBtn" type="button">Check rates</button>
   </div>
 </div>
@@ -513,6 +299,11 @@
 </div>
 
 <main>
+  <div class="stale-banner" id="staleBanner" hidden>
+    <span class="glyph">⚠</span>
+    <span id="staleBannerText"></span>
+  </div>
+
   <div class="col-headers" id="colHeaders">
     <button data-sort="commodity">Commodity <span class="arrow" id="arrow-commodity"></span></button>
     <button data-sort="market">Market <span class="arrow" id="arrow-market"></span></button>
@@ -524,11 +315,10 @@
 </main>
 
 <footer>
-  <p>Live rates from the Ministry of Agriculture &amp; Farmers Welfare's <a href="https://www.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070" target="_blank" rel="noopener">Variety-wise Daily Market Prices</a> dataset via data.gov.in. Prices are as reported by market committees and may lag actual trading by a day. Rates are per quintal (100&nbsp;kg).</p>
-  <p>Price trends use the same ministry's <a href="https://www.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24" target="_blank" rel="noopener">historical daily prices</a> resource.</p>
+  <p>Rates from the Ministry of Agriculture &amp; Farmers Welfare's <a href="https://www.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070" target="_blank" rel="noopener">Variety-wise Daily Market Prices</a> dataset via data.gov.in, fetched hourly and served as static data. Prices are as reported by market committees and may lag actual trading by a day. Rates are per quintal (100&nbsp;kg).</p>
+  <p>Price trends are built from the same ministry's <a href="https://www.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24" target="_blank" rel="noopener">historical daily prices</a> resource.</p>
 </footer>
 
-<!-- Trend overlay -->
 <div class="trend-overlay" id="trendOverlay" hidden>
   <div class="trend-panel" role="dialog" aria-modal="true" aria-labelledby="trendTitle">
     <div class="trend-head">
@@ -544,12 +334,11 @@
 
 <script>
 (function(){
-  const API_BASE = "https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070";
-  const API_KEY = "579b464db66ec23bdd0000010cd27d3e5a454e487978c56932e5a38e";
-
-  const HIST_API_BASE = "https://api.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24";
-  const HIST_API_KEY = "579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b";
-  const TREND_DAYS = 7; // most recent reported days shown on the chart
+  // Static data files generated by scripts/fetch_data.py via the hourly
+  // GitHub Actions workflow — no API key or live API calls in the browser.
+  const LATEST_DATA_URL = 'data/latest.json';
+  const HISTORY_DATA_URL = 'data/history.json';
+  const TREND_DAYS = 7;
 
   const els = {
     search: document.getElementById('searchInput'),
@@ -558,6 +347,8 @@
     refresh: document.getElementById('refreshBtn'),
     statusCount: document.getElementById('statusCount'),
     statusUpdated: document.getElementById('statusUpdated'),
+    staleBanner: document.getElementById('staleBanner'),
+    staleBannerText: document.getElementById('staleBannerText'),
     rows: document.getElementById('rows'),
     colHeaders: document.getElementById('colHeaders'),
     trendOverlay: document.getElementById('trendOverlay'),
@@ -567,28 +358,36 @@
     trendClose: document.getElementById('trendClose'),
   };
 
-  let allRecords = [];   // records for the selected date, straight from the API
+  let allRecords = [];
   let sortKey = 'commodity';
   let sortDir = 1;
+  let historyCache = null;
 
   function setStatus(text, updated){
     els.statusCount.innerHTML = text;
     els.statusUpdated.textContent = updated || '';
   }
 
+  function showStale(text){
+    els.staleBannerText.textContent = text;
+    els.staleBanner.hidden = false;
+  }
+  function hideStale(){
+    els.staleBanner.hidden = true;
+  }
+
   function showState(kind, opts){
-    // kind: 'loading' | 'empty' | 'error'
     els.colHeaders.style.display = 'none';
     const glyphs = {loading:'···', empty:'—', error:'!'};
     const titles = {
       loading:'Fetching the ledger…',
-      empty:'No rates chalked for this date',
+      empty:'Rates not chalked in yet',
       error:"Couldn't reach the mandi ledger"
     };
     const bodies = {
-      loading:'Pulling the latest arrivals and prices from data.gov.in.',
-      empty:'Try a nearby date, or clear the district / market filters — this combination has nothing reported yet.',
-      error: (opts && opts.detail) || 'The connection to data.gov.in failed. Check your network and try again.'
+      loading:'Pulling the latest saved rates.',
+      empty:'Markets typically report prices later in the morning. Check back in a bit, or tap refresh.',
+      error: (opts && opts.detail) || 'Could not load the data file. Check your network and try again.'
     };
     els.rows.innerHTML = `
       <div class="state-panel">
@@ -666,7 +465,7 @@
 
     if(filtered.length === 0){
       showState('empty');
-      setStatus(`<strong>0</strong> listings match your filters (out of ${allRecords.length} for this date)`);
+      setStatus(`<strong>0</strong> listings match your filters (out of ${allRecords.length} loaded)`);
       return;
     }
 
@@ -713,37 +512,43 @@
     els.refresh.disabled = true;
     showState('loading');
     setStatus('Loading…');
-
-    const url =
-      `${API_BASE}?api-key=${API_KEY}`
-      + `&format=json`
-      + `&filters[state]=Karnataka`
-      + `&limit=2000`;
+    hideStale();
+    historyCache = null; // force fresh trend data on manual refresh
 
     try{
-      const res = await fetch(url);
-      if(!res.ok) throw new Error(`Server responded with ${res.status}`);
+      const res = await fetch(LATEST_DATA_URL + '?_=' + Date.now());
+      if(!res.ok) throw new Error(`Could not load data file (${res.status})`);
       const data = await res.json();
       allRecords = Array.isArray(data.records) ? data.records : [];
 
-      const updatedAt = new Date().toLocaleTimeString('en-IN', {hour:'2-digit', minute:'2-digit'});      
-      setStatus(`<strong>${allRecords.length}</strong> latest listings`,`Updated at ${updatedAt}`);
+      const fetchedAt = data.fetched_at
+        ? new Date(data.fetched_at).toLocaleString('en-IN', {day:'numeric', month:'short', hour:'2-digit', minute:'2-digit'})
+        : '';
 
-      refreshFilterOptions();
       if(allRecords.length === 0){
         showState('empty');
-      } else {
-        applyFiltersAndRender();
+        setStatus('0 listings');
+        return;
       }
+
+      if(data.source === 'historical_fallback'){
+        showStale(`Today's rates aren't chalked in yet — showing the most recent available data, from ${data.fallback_date}.`);
+        setStatus(`<strong>${allRecords.length}</strong> listings (last available)`, `Updated ${fetchedAt}`);
+      } else {
+        setStatus(`<strong>${allRecords.length}</strong> latest listings`, `Updated ${fetchedAt}`);
+      }
+
+      refreshFilterOptions();
+      applyFiltersAndRender();
     }catch(err){
-      showState('error', {detail: `${err.message}. If this keeps happening, data.gov.in may be rate-limiting requests — wait a moment and try again.`});
-      setStatus('Couldn\'t load rates');
+      showState('error', {detail: `${err.message}. Try refreshing the page in a moment.`});
+      setStatus("Couldn't load rates");
     }finally{
       els.refresh.disabled = false;
     }
   }
 
-  els.refresh.addEventListener('click', load);  
+  els.refresh.addEventListener('click', load);
   els.district.addEventListener('change', () => { refreshFilterOptions(); applyFiltersAndRender(); });
   els.market.addEventListener('change', applyFiltersAndRender);
   els.search.addEventListener('input', applyFiltersAndRender);
@@ -755,10 +560,9 @@
     applyFiltersAndRender();
   });
 
-  /* ================= Price trend (historical API) ================= */
+  /* ================= Price trend (reads static history.json) ================= */
 
   function parseHistDate(s){
-    // format from this resource: "DD/MM/YYYY"
     const [d,m,y] = (s||'').split('/').map(Number);
     if(!d || !m || !y) return null;
     return new Date(y, m-1, d);
@@ -767,14 +571,14 @@
   function trendStateHtml(kind, detail){
     const glyphs = {loading:'···', empty:'—', error:'!'};
     const titles = {
-      loading:'Pulling the historical ledger…',
+      loading:'Loading price history…',
       empty:'No historical rows for this listing',
-      error:"Couldn't reach the historical ledger"
+      error:"Couldn't load price history"
     };
     const bodies = {
-      loading:'Fetching daily prices reported for this commodity and market.',
-      empty:'This exact commodity / market / district combination has no rows in the historical dataset yet.',
-      error: detail || 'The connection to data.gov.in failed. Check your network and try again.'
+      loading:'Reading the saved price history for this commodity and market.',
+      empty:'This exact commodity / market / district combination has no saved history yet — check back after a few daily updates.',
+      error: detail || 'Could not load the history file. Check your network and try again.'
     };
     return `
       <div class="state-panel">
@@ -811,147 +615,45 @@
     openTrend(btn.dataset.commodity, btn.dataset.market, btn.dataset.district);
   });
 
-  async function fetchRecentHistoricalRecords(commodity, market, district, daysNeeded = TREND_DAYS) {
-  const pageSize = 10; // hard cap enforced by data.gov.in on this resource
-  const baseFilters =
-    `filters[State]=Karnataka`
-    + `&filters[District]=${encodeURIComponent(district)}`
-    + `&filters[Commodity]=${encodeURIComponent(commodity)}`
-    + `&filters[Market]=${encodeURIComponent(market)}`;
-
-  // Step 1: find out how many rows exist in total (single lightweight call)
-  const countUrl =
-    `${HIST_API_BASE}?api-key=${HIST_API_KEY}&format=json`
-    + `&${baseFilters}`
-    + `&sort[Arrival_Date]=asc`
-    + `&limit=1&offset=0`;
-
-  const countRes = await fetch(countUrl);
-  if (!countRes.ok) throw new Error(`Server responded with ${countRes.status}`);
-  const countData = await countRes.json();
-  const total = Number(countData.total || 0);
-
-  if (total === 0) return [];
-
-  // Step 2: walk backward from the end, one page at a time, until we've
-  // collected enough distinct reported days (or run out of history)
-  let collected = [];
-  let offset = Math.max(0, total - pageSize);
-  let uniqueDays = new Set();
-
-  while (true) {
-    const url =
-      `${HIST_API_BASE}?api-key=${HIST_API_KEY}&format=json`
-      + `&${baseFilters}`
-      + `&sort[Arrival_Date]=asc`
-      + `&limit=${pageSize}`
-      + `&offset=${offset}`;
-
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`Server responded with ${res.status}`);
-    const data = await res.json();
-    const rows = Array.isArray(data.records) ? data.records : [];
-
-    // Prepend, since we're walking backward toward offset 0
-    collected = [...rows, ...collected];
-    rows.forEach(r => uniqueDays.add(r.Arrival_Date));
-
-    // Stop once we have enough distinct days, or we've hit the very start
-    if (uniqueDays.size >= daysNeeded || offset === 0) break;
-
-    offset = Math.max(0, offset - pageSize);
+  async function ensureHistoryLoaded(){
+    if(historyCache) return historyCache;
+    const res = await fetch(HISTORY_DATA_URL + '?_=' + Date.now());
+    if(!res.ok) throw new Error(`Could not load history file (${res.status})`);
+    historyCache = await res.json();
+    return historyCache;
   }
 
-  console.log(`Fetched ${collected.length} rows across ${uniqueDays.size} days (backward pagination)`);
-  return collected;
-}
+  async function loadTrend(commodity, market, district){
+    try{
+      const history = await ensureHistoryLoaded();
+      const key = `${commodity}|${market}|${district}`;
+      const byDate = history[key];
 
-  async function loadTrend(commodity, market, district) {
-
-  try {
-
-    const raw = await fetchRecentHistoricalRecords(
-      commodity,
-      market,
-      district
-    );
-
-    if (raw.length === 0) {
-      els.trendBody.innerHTML = trendStateHtml('empty');
-      return;
-    }
-
-    // Group rows by Arrival_Date
-    const byDate = new Map();
-
-    raw.forEach(rec => {
-
-      const dt = parseHistDate(rec.Arrival_Date);
-
-      if (!dt) return;
-
-      const key = dt.getTime();
-
-      const min = num(rec.Min_Price);
-      const max = num(rec.Max_Price);
-      const modal = num(rec.Modal_Price);
-
-      if (!byDate.has(key)) {
-        byDate.set(key, {
-          date: dt,
-          min: [],
-          max: [],
-          modal: []
-        });
+      if(!byDate || Object.keys(byDate).length === 0){
+        els.trendBody.innerHTML = trendStateHtml('empty');
+        return;
       }
 
-      const bucket = byDate.get(key);
+      let points = Object.entries(byDate).map(([dateStr, v]) => ({
+        date: parseHistDate(dateStr),
+        min: num(v.min_price),
+        max: num(v.max_price),
+        modal: num(v.modal_price),
+      })).filter(p => p.date && p.modal !== null)
+        .sort((a,b) => a.date - b.date);
 
-      if (min !== null) bucket.min.push(min);
-      if (max !== null) bucket.max.push(max);
-      if (modal !== null) bucket.modal.push(modal);
+      if(points.length === 0){
+        els.trendBody.innerHTML = trendStateHtml('empty');
+        return;
+      }
 
-    });
+      points = points.slice(-TREND_DAYS);
+      renderTrend(points, {commodity, market, district, totalRows: points.length});
 
-    const avg = arr =>
-      arr.length
-        ? arr.reduce((a, b) => a + b, 0) / arr.length
-        : null;
-
-    let points = [...byDate.values()]
-      .map(b => ({
-        date: b.date,
-        min: avg(b.min),
-        max: avg(b.max),
-        modal: avg(b.modal)
-      }))
-      .filter(p => p.modal !== null)
-      .sort((a, b) => a.date - b.date);
-
-    if (points.length === 0) {
-      els.trendBody.innerHTML = trendStateHtml('empty');
-      return;
+    }catch(err){
+      els.trendBody.innerHTML = trendStateHtml('error', `${err.message}. Try again in a moment.`);
     }
-
-    // Show only the latest 7 reported days
-    points = points.slice(-TREND_DAYS);
-
-    renderTrend(points, {
-      commodity,
-      market,
-      district,
-      totalRows: raw.length
-    });
-
-  } catch (err) {
-
-    els.trendBody.innerHTML = trendStateHtml(
-      'error',
-      `${err.message}. If this keeps happening, data.gov.in may be rate-limiting requests — wait a moment and try again.`
-    );
-
   }
-}
 
   function renderTrend(points, meta){
     const fmt = v => v === null || v === undefined ? '—' : Math.round(v).toLocaleString('en-IN');
@@ -963,8 +665,8 @@
 
     const dateLabel = d => d.toLocaleDateString('en-IN', {day:'numeric', month:'short'});
     const spanLabel = `${dateLabel(points[0].date)} – ${dateLabel(points[points.length-1].date)}`;
-    
-    els.trendSub.textContent = `${meta.market} · ${meta.district} district · Last ${points.length} reported day${points.length !== 1 ? 's' : ''} (${spanLabel})`;
+
+    els.trendSub.textContent = `${meta.market} · ${meta.district} district · Last ${points.length} reported day${points.length!==1?'s':''} (${spanLabel})`;
 
     els.trendBody.innerHTML = `
       <div class="trend-stats">
@@ -984,7 +686,7 @@
       <div class="trend-chart-wrap">
         ${buildTrendSvg(points)}
       </div>
-      <p class="trend-note">Shaded band shows the daily min–max range; the line tracks the modal (most common) price, per quintal. Source: ministry's historical daily prices dataset for Karnataka.</p>
+      <p class="trend-note">Shaded band shows the daily min–max range; the line tracks the modal (most common) price, per quintal.</p>
     `;
   }
 
@@ -1007,7 +709,6 @@
     const xFor = i => padL + (n <= 1 ? innerW/2 : (i/(n-1)) * innerW);
     const yFor = v => padT + innerH - ((v-lo)/(hi-lo)) * innerH;
 
-    // Band path (min below, max above), falling back to modal where a value is missing
     const topPts = points.map((p,i) => [xFor(i), yFor(p.max ?? p.modal)]);
     const botPts = points.map((p,i) => [xFor(i), yFor(p.min ?? p.modal)]).reverse();
     const bandPath = 'M ' + topPts.map(pt=>pt.join(',')).join(' L ')
@@ -1015,12 +716,10 @@
 
     const linePath = 'M ' + points.map((p,i) => `${xFor(i)},${yFor(p.modal)}`).join(' L ');
 
-    // Show markers sparingly if there are many points
     const markerStep = n > 30 ? Math.ceil(n/20) : 1;
     const markers = points.map((p,i) => (i % markerStep === 0 || i === n-1)
       ? `<circle class="trend-point" cx="${xFor(i)}" cy="${yFor(p.modal)}" r="2.6"></circle>` : '').join('');
 
-    // Y gridlines (4 bands) with price labels
     const gridCount = 4;
     let grid = '';
     for(let g=0; g<=gridCount; g++){
@@ -1030,7 +729,6 @@
       grid += `<text class="trend-axis-label" x="${padL-8}" y="${y+3}" text-anchor="end">₹${Math.round(v).toLocaleString('en-IN')}</text>`;
     }
 
-    // X labels: first, middle, last date
     const idxs = n > 1 ? [0, Math.floor((n-1)/2), n-1] : [0];
     const xLabels = [...new Set(idxs)].map(i => {
       const label = points[i].date.toLocaleDateString('en-IN', {day:'numeric', month:'short'});
