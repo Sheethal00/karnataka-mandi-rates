@@ -249,6 +249,10 @@
   .trend-band{fill:rgba(217,164,65,0.28);}
   .trend-modal-line{fill:none; stroke:var(--brick); stroke-width:2.25;}
   .trend-point{fill:var(--brick);}
+  .trend-delta-bg{fill:#fff; stroke:var(--rule); stroke-width:1;}
+  .trend-delta-label{ font-family:'Space Mono',monospace; font-size:11px; font-weight:700; }
+  .trend-delta-label.up{fill:#1F7A3D;}
+  .trend-delta-label.down{fill:var(--brick);}
   .trend-note{ margin-top:10px; font-size:12px; color:var(--ink-soft); }
 
   .state-panel{ text-align:center; padding:56px 20px; color:var(--ink-soft); }
@@ -985,6 +989,23 @@
       return `<text class="trend-axis-label" x="${xFor(i)}" y="${H-padB+18}" text-anchor="middle">${label}</text>`;
     }).join('');
 
+    let deltaLabelSvg = '';
+    if(n > 1 && points[0].modal !== null && points[n-1].modal !== null){
+      const delta = points[n-1].modal - points[0].modal;
+      const cls = delta > 0 ? 'up' : (delta < 0 ? 'down' : '');
+      const arrow = delta > 0 ? '▲' : (delta < 0 ? '▼' : '—');
+      const amount = delta === 0 ? '₹0' : `${delta > 0 ? '+' : '-'}₹${Math.round(Math.abs(delta)).toLocaleString('en-IN')}`;
+      const labelText = `${arrow} ${amount}`;
+      const lastX = xFor(n-1), lastY = yFor(points[n-1].modal);
+      const above = lastY > padT + 24;
+      const labelY = above ? lastY - 14 : lastY + 22;
+      const boxW = 26 + labelText.length * 6.5;
+      const boxX = Math.min(lastX + 6, W - padR - boxW);
+      deltaLabelSvg = `
+        <rect class="trend-delta-bg" x="${boxX}" y="${labelY-14}" width="${boxW}" height="20" rx="4"></rect>
+        <text class="trend-delta-label ${cls}" x="${boxX+8}" y="${labelY}" text-anchor="start">${labelText}</text>`;
+    }
+
     return `
       <svg class="trend-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Price trend chart">
         ${grid}
@@ -992,6 +1013,7 @@
         <path class="trend-modal-line" d="${linePath}"></path>
         ${markers}
         ${xLabels}
+        ${deltaLabelSvg}
       </svg>`;
   }
 
