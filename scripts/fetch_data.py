@@ -1,6 +1,22 @@
 """
-Fetches Karnataka mandi price data from data.gov.in and writes it to
-data/latest.json (current snapshot) and data/history.json (rolling trend history).
+Fetches Karnataka mandi price data from data.gov.in's "current daily price"
+resource and writes it to data/live.json (today's snapshot) and
+data/history.json (a rolling 7-day window, keyed by ISO date, each holding
+that day's full list of records).
+
+The historical-price resource is intentionally never called here: it caps
+responses at 10 records/request, so reconstructing one full day (~500+
+records for Karnataka) would take dozens of paginated calls and risk the
+API's rate limiter. Instead, history.json is built up incrementally, one day
+at a time, purely from this daily current-price pull. If older days are ever
+missing, backfilling is a manual/offline step (see backfill_history.py) --
+not something this script does automatically.
+
+The API's own `count` field is the signal for whether today's data has been
+published yet. count == 0 means "not published" -- in that case this script
+does nothing and leaves live.json / history.json exactly as they are, so the
+site keeps serving the last successfully fetched day indefinitely until the
+next real update arrives.
 
 Run via GitHub Actions on a schedule (see .github/workflows/update-data.yml),
 or locally with:
@@ -12,8 +28,9 @@ or locally with:
 import json
 import os
 import sys
-from datetime import datetime, timezone, date
+import tempfile
 import time
+from datetime import date, datetime, timezone
 
 import requests
 
@@ -23,73 +40,44 @@ if not API_KEY:
     sys.exit(1)
 
 CURRENT_URL = "https://api.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070"
-HIST_URL = "https://api.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24"
+
+# Some gov-hosted APIs silently stall requests without a browser-like
+# User-Agent instead of rejecting them cleanly -- this header avoids that.
+HEADERS = {"User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:152.0) Gecko/20100101 Firefox/152.0"}
 
 DATA_DIR = "data"
-LATEST_FILE = os.path.join(DATA_DIR, "latest.json")
+LIVE_FILE = os.path.join(DATA_DIR, "live.json")
 HISTORY_FILE = os.path.join(DATA_DIR, "history.json")
 
-TREND_DAYS_KEPT = 14       # keep a bit more than 7 so the frontend has slicing headroom
-MAX_NEW_COMBOS_PER_RUN = 30  # cap backfill work per cron run to stay within rate limits
-
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:152.0) Gecko/20100101 Firefox/152.0"
-}
+HISTORY_DAYS = 7
 
 session = requests.Session()
 session.headers.update(HEADERS)
 
+
 def fetch_current(retries=3):
+    """Returns (records, count). `count` is the API's own explicit signal
+    for whether today's data has been published -- trusted over an empty
+    records list, since that's the field the API actually uses to mean it."""
     params = {
         "api-key": API_KEY,
         "format": "json",
         "filters[state]": "Karnataka",
-        "limit": 500,
+        "limit": 2000,
     }
     for attempt in range(retries):
         try:
-            resp = session.get(CURRENT_URL, params=params, timeout=45)            
+            resp = session.get(CURRENT_URL, params=params, timeout=45)
             resp.raise_for_status()
-            return resp.json().get("records", [])
+            data = resp.json()
+            count = int(data.get("count", data.get("total", 0)) or 0)
+            return data.get("records", []), count
         except requests.exceptions.RequestException as e:
             print(f"fetch_current attempt {attempt+1} failed: {e}")
             if attempt < retries - 1:
                 time.sleep(5 * (attempt + 1))
-    print("fetch_current: all retries failed, returning empty list")
-    return []
-
-
-def fetch_historical_paginated(filters, sort_field=None, max_pages=50):
-    """Paginate through the historical resource (hard-capped at 10 records/request)."""
-    records = []
-    offset = 0
-    page_size = 10
-
-    while offset < max_pages * page_size:
-        params = {
-            "api-key": API_KEY,
-            "format": "json",
-            "limit": page_size,
-            "offset": offset,
-            **filters,
-        }
-        if sort_field:
-            params[f"sort[{sort_field}]"] = "desc"
-
-        resp = session.get(HIST_URL, params=params, timeout=45)  # <-- added headers here
-        resp.raise_for_status()
-        data = resp.json()
-        rows = data.get("records", [])
-        if not rows:
-            break
-
-        records.extend(rows)
-        total = int(data.get("total", len(rows)))
-        offset += len(rows)
-        if offset >= total:
-            break
-
-    return records
+    print("fetch_current: all retries failed, treating as not-yet-published")
+    return [], 0
 
 
 def normalize_current(r):
@@ -107,144 +95,76 @@ def normalize_current(r):
     }
 
 
-def normalize_hist(r):
-    return {
-        "state": r.get("State"),
-        "district": r.get("District"),
-        "market": r.get("Market"),
-        "commodity": r.get("Commodity"),
-        "variety": r.get("Variety"),
-        "grade": r.get("Grade"),
-        "arrival_date": r.get("Arrival_Date"),
-        "min_price": r.get("Min_Price"),
-        "max_price": r.get("Max_Price"),
-        "modal_price": r.get("Modal_Price"),
-    }
-
-
-def combo_key(r):
-    return f"{r['commodity']}|{r['market']}|{r['district']}"
-
-
-def load_history():
-    if os.path.exists(HISTORY_FILE):
-        with open(HISTORY_FILE) as f:
-            return json.load(f)
-    return {}
-
-
-def save_history(history):
-    with open(HISTORY_FILE, "w") as f:
-        json.dump(history, f, indent=2)
-
-
 def parse_ddmmyyyy(ds):
     d, m, y = ds.split("/")
     return date(int(y), int(m), int(d))
 
 
-def append_snapshot_to_history(history, records):
-    for r in records:
-        if not r.get("commodity") or not r.get("market") or not r.get("district"):
-            continue
-        key = combo_key(r)
-        history.setdefault(key, {})
-        history[key][r["arrival_date"]] = {
-            "min_price": r["min_price"],
-            "max_price": r["max_price"],
-            "modal_price": r["modal_price"],
-        }
-        if len(history[key]) > TREND_DAYS_KEPT:
-            sorted_dates = sorted(history[key].keys(), key=parse_ddmmyyyy)
-            for old_date in sorted_dates[:-TREND_DAYS_KEPT]:
-                del history[key][old_date]
-    return history
+def to_iso(ddmmyyyy):
+    return parse_ddmmyyyy(ddmmyyyy).isoformat()
 
 
-def bootstrap_missing_combos(history, current_records, max_new_combos=MAX_NEW_COMBOS_PER_RUN):
-    """For combos with no history yet, backfill a few recent days from the historical API.
-    Capped per run so a large batch of brand-new combos doesn't blow the rate limit."""
-    new_count = 0
-    for r in current_records:
-        if not r.get("commodity") or not r.get("market") or not r.get("district"):
-            continue
-        key = combo_key(r)
-        if key in history:
-            continue
-        if new_count >= max_new_combos:
-            break
+def load_json(path):
+    if os.path.exists(path):
+        with open(path) as f:
+            return json.load(f)
+    return None
 
-        rows = fetch_historical_paginated(
-            {
-                "filters[State]": "Karnataka",
-                "filters[District]": r["district"],
-                "filters[Commodity]": r["commodity"],
-                "filters[Market]": r["market"],
-            },
-            sort_field="Arrival_Date",
-            max_pages=3,
-        )
-        if rows:
-            history.setdefault(key, {})
-            for row in rows:
-                nr = normalize_hist(row)
-                history[key][nr["arrival_date"]] = {
-                    "min_price": nr["min_price"],
-                    "max_price": nr["max_price"],
-                    "modal_price": nr["modal_price"],
-                }
-        new_count += 1
 
-    print(f"Bootstrapped history for {new_count} new combo(s)")
-    return history
+def atomic_write(path, obj):
+    """Write via a temp file + rename so a crash mid-write can never leave a
+    truncated/corrupt JSON file in place."""
+    dir_name = os.path.dirname(path) or "."
+    fd, tmp_path = tempfile.mkstemp(dir=dir_name, prefix=".tmp-", suffix=".json")
+    try:
+        with os.fdopen(fd, "w") as f:
+            json.dump(obj, f, indent=2)
+        os.replace(tmp_path, path)
+    except Exception:
+        if os.path.exists(tmp_path):
+            os.remove(tmp_path)
+        raise
+
+
+def trim_to_last_n_days(history, n=HISTORY_DAYS):
+    if len(history) <= n:
+        return history
+    keep = sorted(history.keys())[-n:]
+    return {d: history[d] for d in keep}
 
 
 def main():
     os.makedirs(DATA_DIR, exist_ok=True)
-    history = load_history()
 
-    current_raw = fetch_current()
+    raw_records, count = fetch_current()
 
-    if current_raw:
-        current = [normalize_current(r) for r in current_raw]
-        payload = {
-            "records": current,
-            "source": "current",
-            "fetched_at": datetime.now(timezone.utc).isoformat(),
-        }
-        history = append_snapshot_to_history(history, current)
-        history = bootstrap_missing_combos(history, current)
+    if count == 0:
+        print("Current resource has not published today's data yet (count=0) -- leaving live.json and history.json untouched")
+        return
 
-    else:
-        print("Current resource returned no rows — falling back to historical latest date")
-        latest = fetch_historical_paginated(
-            {"filters[State]": "Karnataka"}, sort_field="Arrival_Date", max_pages=1
-        )
-        if not latest:
-            print("No fallback data available either — leaving existing data/*.json unchanged")
-            sys.exit(0)
+    day_records = [normalize_current(r) for r in raw_records]
+    dated_records = [r for r in day_records if r.get("arrival_date")]
+    if not dated_records:
+        print("Current resource reported count>0 but returned no usable records -- leaving live.json and history.json untouched")
+        return
 
-        latest_date = latest[0]["Arrival_Date"]
-        full_day_raw = fetch_historical_paginated(
-            {"filters[State]": "Karnataka", "filters[Arrival_Date]": latest_date},
-            max_pages=100,
-        )
-        full_day = [normalize_hist(r) for r in full_day_raw]
+    arrival_date_iso = to_iso(dated_records[0]["arrival_date"])
 
-        payload = {
-            "records": full_day,
-            "source": "historical_fallback",
-            "fallback_date": latest_date,
-            "fetched_at": datetime.now(timezone.utc).isoformat(),
-        }
-        history = append_snapshot_to_history(history, full_day)
+    live_payload = {
+        "records": day_records,
+        "source": "current",
+        "arrival_date": arrival_date_iso,
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
+    }
+    atomic_write(LIVE_FILE, live_payload)
 
-    with open(LATEST_FILE, "w") as f:
-        json.dump(payload, f, indent=2)
-    save_history(history)
+    history = load_json(HISTORY_FILE) or {}
+    history[arrival_date_iso] = dated_records
+    history = trim_to_last_n_days(history)
+    atomic_write(HISTORY_FILE, history)
 
-    print(f"Wrote {len(payload['records'])} records (source: {payload['source']})")
-    print(f"history.json now tracks {len(history)} commodity/market/district combos")
+    print(f"Wrote {len(day_records)} records for {arrival_date_iso} to live.json")
+    print(f"history.json now holds {len(history)} day(s): {', '.join(sorted(history.keys()))}")
 
 
 if __name__ == "__main__":

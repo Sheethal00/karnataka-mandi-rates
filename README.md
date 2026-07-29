@@ -10,13 +10,13 @@ Rather than calling the government API directly from the browser (which exposes 
 
 ```
 ┌─────────────────────┐     hourly cron      ┌──────────────────┐
-│  data.gov.in APIs    │ ───────────────────► │  GitHub Actions   │
-│  (current + hist.)   │                      │  fetch_data.py    │
+│  data.gov.in API     │ ───────────────────► │  GitHub Actions   │
+│  (current price)     │                      │  fetch_data.py    │
 └─────────────────────┘                      └────────┬─────────┘
                                                         │ commits
                                                         ▼
                                               ┌──────────────────┐
-                                              │  data/latest.json │
+                                              │  data/live.json   │
                                               │  data/history.json│
                                               └────────┬─────────┘
                                                         │ served via
@@ -28,15 +28,16 @@ Rather than calling the government API directly from the browser (which exposes 
                                               └──────────────────┘
 ```
 
-### Data sources
-- **Current daily prices**: [`9ef84268-d588-465a-a308-a864a43d0070`](https://www.data.gov.in/resource/current-daily-price-various-commodities-various-markets-mandi) — near-real-time snapshot, refreshed by the ministry through the day. Does *not* retain history; if queried during the morning refresh gap it can return zero rows.
-- **Historical daily prices**: [`35985678-0d79-46b4-9ed6-6f13308a1d24`](https://www.data.gov.in/resource/35985678-0d79-46b4-9ed6-6f13308a1d24) — used for (a) falling back to the most recent available date when the current-price feed is empty, and (b) bootstrapping trend history for new commodity/market combos. Capped at 10 records per request by the API, so pagination is required for bulk pulls.
+### Data source
+- **Current daily prices**: [`9ef84268-d588-465a-a308-a864a43d0070`](https://www.data.gov.in/resource/current-daily-price-various-commodities-various-markets-mandi) — near-real-time snapshot, refreshed by the ministry through the day. Does *not* retain history; if queried before the ministry has published for the day it returns `count: 0`.
+
+This is the **only** API this project calls. The government's separate "historical daily prices" resource is deliberately never used — it caps responses at 10 records/request, so reconstructing even one full day for Karnataka (~200–700 records) would take dozens of paginated calls and risks the API's rate limiter. Instead, `history.json` is built up incrementally, one day at a time, purely from this same daily current-price pull.
 
 ### Why static JSON instead of client-side API calls
 - **No exposed API key** — the key lives only in a GitHub Actions secret, never shipped to the browser.
 - **No per-visitor rate limiting** — only the hourly cron job talks to data.gov.in; visitors just read a static file.
-- **Morning-gap resilience** — if the current-price feed is empty when the cron runs, it automatically falls back to the most recent historical date instead of publishing an empty snapshot.
-- **Fast trend charts** — `history.json` accumulates a rolling ~14-day window per commodity/market/district combo from each hourly snapshot, so opening a trend chart is an instant local read with zero live API calls.
+- **Morning-gap resilience** — the API's `count` field is checked explicitly. When `count === 0` (today's data isn't published yet), the script does nothing and leaves `live.json`/`history.json` untouched, so the site keeps serving the most recently fetched day indefinitely, with no extra API calls, until the next real update arrives.
+- **Fast trend charts & date picker** — `history.json` keys each of the last 7 days to that day's full record list, built from ordinary hourly snapshots, so opening a trend chart or picking an earlier date is an instant local read with zero live API calls.
 
 ## Project structure
 
@@ -44,12 +45,12 @@ Rather than calling the government API directly from the browser (which exposes 
 .
 ├── index.html                  # frontend (static, no build step)
 ├── scripts/
-│   ├── fetch_data.py            # pulls current + historical data, writes data/*.json
-│   ├── backfill_history.py      # one-time seed of data/history.json from manually downloaded CSVs
-│   └── report_stats.py          # prints size/growth stats for data/history.json
+│   ├── fetch_data.py            # pulls current-day data, writes data/live.json + data/history.json
+│   ├── backfill_history.py      # manual/offline seed of data/history.json from downloaded CSVs
+│   └── report_stats.py          # prints size stats for data/live.json and data/history.json
 ├── data/
-│   ├── latest.json              # current snapshot consumed by index.html
-│   └── history.json             # rolling per-combo price history for trend charts
+│   ├── live.json                # most recent successfully fetched day, consumed by index.html
+│   └── history.json             # rolling 7-day window {iso_date: [that day's records]}
 └── .github/
     └── workflows/
         └── update-data.yml      # hourly cron: runs fetch_data.py, commits data/*.json
@@ -68,7 +69,7 @@ Rather than calling the government API directly from the browser (which exposes 
 3. **Enable GitHub Pages**
    Repo → **Settings → Pages** → deploy from the branch this code lives on (root, or `/docs` if you move `index.html` there).
 
-4. **Run the workflow once manually** to generate the first `data/latest.json` and `data/history.json`
+4. **Run the workflow once manually** to generate the first `data/live.json` and `data/history.json`
    Repo → **Actions → Update mandi data → Run workflow**
 
 After that, the workflow runs hourly on its own (`cron: "0 * * * *"` in `update-data.yml`) and keeps the data fresh.
@@ -78,11 +79,11 @@ After that, the workflow runs hourly on its own (`cron: "0 * * * *"` in `update-
 ```bash
 pip install requests
 export DATA_GOV_API_KEY=your_key_here
-python scripts/fetch_data.py     # generates data/latest.json and data/history.json
-python scripts/report_stats.py   # check file sizes / combo counts
+python scripts/fetch_data.py     # generates data/live.json and data/history.json
+python scripts/report_stats.py   # check file sizes / cached days
 ```
 
-To seed `data/history.json` from a folder of manually downloaded per-district CSVs (same columns as the historical API — useful for bootstrapping trend history faster than the per-run bootstrap cap allows):
+To seed or repair `data/history.json` from a folder of manually downloaded per-district CSVs (same columns as the government's data exports) — useful if a day is missing, since the pipeline itself never backfills from a live API:
 ```bash
 python scripts/backfill_history.py /path/to/csv/dir
 ```
@@ -95,8 +96,8 @@ python -m http.server 8000
 ## Data notes
 
 - Prices are per quintal (100 kg), as reported by APMC market committees. They may lag actual trading by a day.
-- `history.json` keeps roughly the last 14 reported days per commodity/market/district combination, trimmed automatically by `fetch_data.py` — this bounds file growth while keeping enough headroom for 7-day trend charts.
-- New commodity/market combinations are backfilled from the historical API automatically (capped at 30 new combos per cron run to stay within rate limits).
+- `history.json` keeps exactly the most recent 7 days seen from the current-price feed, trimmed automatically by `fetch_data.py` on each run. Fewer days may be present until the cache has had a week to fill up.
+- The date picker on the homepage only ever offers dates present in `history.json` — there's no way to request a date outside that window, since none is fetched.
 
 ## License / attribution
 

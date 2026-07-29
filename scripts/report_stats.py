@@ -1,5 +1,5 @@
 """
-Prints size and growth stats for data/latest.json and data/history.json.
+Prints size and stats for data/live.json and data/history.json.
 
 Run locally:
     python scripts/report_stats.py
@@ -12,7 +12,7 @@ import json
 import os
 
 HISTORY_FILE = "data/history.json"
-LATEST_FILE = "data/latest.json"
+LIVE_FILE = "data/live.json"
 
 
 def human_size(num_bytes):
@@ -28,43 +28,33 @@ def main():
     print("MANDI DATA — STORAGE REPORT")
     print("=" * 50)
 
-    if os.path.exists(LATEST_FILE):
-        size = os.path.getsize(LATEST_FILE)
-        with open(LATEST_FILE) as f:
-            latest = json.load(f)
-        print(f"\nlatest.json")
+    if os.path.exists(LIVE_FILE):
+        size = os.path.getsize(LIVE_FILE)
+        with open(LIVE_FILE) as f:
+            live = json.load(f)
+        print(f"\nlive.json")
         print(f"  size: {human_size(size)}")
-        print(f"  records: {len(latest.get('records', []))}")
-        print(f"  source: {latest.get('source')}")
-        print(f"  fetched_at: {latest.get('fetched_at')}")
+        print(f"  records: {len(live.get('records', []))}")
+        print(f"  arrival_date: {live.get('arrival_date')}")
+        print(f"  fetched_at: {live.get('fetched_at')}")
     else:
-        print("\nlatest.json — not found")
+        print("\nlive.json — not found")
 
     if os.path.exists(HISTORY_FILE):
         size = os.path.getsize(HISTORY_FILE)
         with open(HISTORY_FILE) as f:
             history = json.load(f)
 
-        combo_count = len(history)
-        total_day_entries = sum(len(days) for days in history.values())
-        avg_days_per_combo = total_day_entries / combo_count if combo_count else 0
-
-        combo_sizes = [(k, len(v)) for k, v in history.items()]
-        combo_sizes.sort(key=lambda x: x[1])
+        day_count = len(history)
+        total_records = sum(len(v) for v in history.values())
 
         print(f"\nhistory.json")
         print(f"  size: {human_size(size)}")
-        print(f"  unique combos: {combo_count}")
-        print(f"  total (combo x day) entries: {total_day_entries}")
-        print(f"  avg days tracked per combo: {avg_days_per_combo:.1f}")
-
-        if combo_sizes:
-            print(f"  least history: {combo_sizes[0][0]} ({combo_sizes[0][1]} days)")
-            print(f"  most history: {combo_sizes[-1][0]} ({combo_sizes[-1][1]} days)")
-
-        if avg_days_per_combo > 0 and avg_days_per_combo < 14:
-            projected_full_size = size * (14 / avg_days_per_combo)
-            print(f"  projected size once all combos reach 14 days: ~{human_size(projected_full_size)}")
+        print(f"  days cached: {day_count}")
+        print(f"  dates: {', '.join(sorted(history.keys()))}")
+        print(f"  total records across all days: {total_records}")
+        if day_count:
+            print(f"  avg records/day: {total_records / day_count:.1f}")
     else:
         print("\nhistory.json — not found")
 
