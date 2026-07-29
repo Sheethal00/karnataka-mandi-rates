@@ -147,6 +147,10 @@
     font-family:'Noto Sans Kannada',sans-serif; font-weight:500; font-size:16px;
     color:var(--turmeric); margin-left:8px; text-transform:none;
   }
+  .kn-name-sub{
+    font-family:'Noto Sans Kannada',sans-serif; font-weight:500; font-size:12px;
+    color:var(--turmeric); margin-left:4px;
+  }
   .commodity-cell .variety{ font-size:12.5px; color:var(--ink-soft); margin-top:2px; }
   .market-cell{ font-size:13px; line-height:1.35; }
   .market-cell .market-name{font-weight:600;}
@@ -476,6 +480,101 @@
     return KANNADA_COMMODITY_NAMES[commodity] || '';
   }
 
+  // Kannada names for APMC markets seen in the data so far. Unlike
+  // commodities (a small, closed vocabulary), the set of markets keeps
+  // growing as more mandis report over time -- this list will need new
+  // entries added as unfamiliar market names show up; anything missing just
+  // falls back to showing the English name only.
+  const KANNADA_MARKET_NAMES = {
+    'APMC Hubballi': 'ಹುಬ್ಬಳ್ಳಿ ಎಪಿಎಂಸಿ',
+    'APMC THIRTHAHALLI': 'ತೀರ್ಥಹಳ್ಳಿ ಎಪಿಎಂಸಿ',
+    'Arasikere APMC': 'ಅರಸೀಕೆರೆ ಎಪಿಎಂಸಿ',
+    'Bagalkot APMC': 'ಬಾಗಲಕೋಟೆ ಎಪಿಎಂಸಿ',
+    'Bailahongal APMC': 'ಬೈಲಹೊಂಗಲ ಎಪಿಎಂಸಿ',
+    'Bangarpet APMC': 'ಬಂಗಾರಪೇಟೆ ಎಪಿಎಂಸಿ',
+    'Bantwala APMC': 'ಬಂಟ್ವಾಳ ಎಪಿಎಂಸಿ',
+    'Basava Kalayana APMC': 'ಬಸವ ಕಲ್ಯಾಣ ಎಪಿಎಂಸಿ',
+    'Belthangdi APMC': 'ಬೆಳ್ತಂಗಡಿ ಎಪಿಎಂಸಿ',
+    'Bengaluru APMC': 'ಬೆಂಗಳೂರು ಎಪಿಎಂಸಿ',
+    'Bhadravathi APMC': 'ಭದ್ರಾವತಿ ಎಪಿಎಂಸಿ',
+    'Bidar APMC': 'ಬೀದರ್ ಎಪಿಎಂಸಿ',
+    'Binny Mill (FF&V) Bengaluru APMC': 'ಬಿನ್ನಿ ಮಿಲ್ (ಹಣ್ಣು ಮತ್ತು ತರಕಾರಿ) ಬೆಂಗಳೂರು ಎಪಿಎಂಸಿ',
+    'Challakere APMC': 'ಚಳ್ಳಕೆರೆ ಎಪಿಎಂಸಿ',
+    'Chamarajanagar APMC': 'ಚಾಮರಾಜನಗರ ಎಪಿಎಂಸಿ',
+    'Channagiri APMC': 'ಚನ್ನಗಿರಿ ಎಪಿಎಂಸಿ',
+    'Channapatna APMC': 'ಚನ್ನಪಟ್ಟಣ ಎಪಿಎಂಸಿ',
+    'Chickkaballapura APMC': 'ಚಿಕ್ಕಬಳ್ಳಾಪುರ ಎಪಿಎಂಸಿ',
+    'Chikkamagaluru APMC': 'ಚಿಕ್ಕಮಗಳೂರು ಎಪಿಎಂಸಿ',
+    'Chintamani APMC': 'ಚಿಂತಾಮಣಿ ಎಪಿಎಂಸಿ',
+    'Chitradurga APMC': 'ಚಿತ್ರದುರ್ಗ ಎಪಿಎಂಸಿ',
+    'Doddaballapur APMC': 'ದೊಡ್ಡಬಳ್ಳಾಪುರ ಎಪಿಎಂಸಿ',
+    'Gangavathi APMC': 'ಗಂಗಾವತಿ ಎಪಿಎಂಸಿ',
+    'Gundlupet APMC': 'ಗುಂಡ್ಲುಪೇಟೆ ಎಪಿಎಂಸಿ',
+    'H.B. Halli APMC': 'ಎಚ್.ಬಿ. ಹಳ್ಳಿ ಎಪಿಎಂಸಿ',
+    'Haliyala APMC': 'ಹಳಿಯಾಳ ಎಪಿಎಂಸಿ',
+    'Hanagal APMC': 'ಹಾನಗಲ್ ಎಪಿಎಂಸಿ',
+    'HarappanaHalli APMC': 'ಹರಪನಹಳ್ಳಿ ಎಪಿಎಂಸಿ',
+    'Harihara APMC': 'ಹರಿಹರ ಎಪಿಎಂಸಿ',
+    'Hiriyur APMC': 'ಹಿರಿಯೂರು ಎಪಿಎಂಸಿ',
+    'Holalkere APMC': 'ಹೊಳಲ್ಕೆರೆ ಎಪಿಎಂಸಿ',
+    'Honnali APMC': 'ಹೊನ್ನಾಳಿ ಎಪಿಎಂಸಿ',
+    'Honnavar APMC': 'ಹೊನ್ನಾವರ ಎಪಿಎಂಸಿ',
+    'Hoovinahadagali APMC': 'ಹೂವಿನಹಡಗಲಿ ಎಪಿಎಂಸಿ',
+    'Hospet APMC': 'ಹೊಸಪೇಟೆ ಎಪಿಎಂಸಿ',
+    'Hungund APMC': 'ಹುನಗುಂದ ಎಪಿಎಂಸಿ',
+    'Jagalur APMC': 'ಜಗಳೂರು ಎಪಿಎಂಸಿ',
+    'K.R. Pet APMC': 'ಕೆ.ಆರ್. ಪೇಟೆ ಎಪಿಎಂಸಿ',
+    'Kadur APMC': 'ಕಡೂರು ಎಪಿಎಂಸಿ',
+    'Kalaburagi APMC': 'ಕಲಬುರಗಿ ಎಪಿಎಂಸಿ',
+    'Kampli APMC': 'ಕಂಪ್ಲಿ ಎಪಿಎಂಸಿ',
+    'Kanakagiri APMC': 'ಕನಕಗಿರಿ ಎಪಿಎಂಸಿ',
+    'Kottur APMC': 'ಕೊಟ್ಟೂರು ಎಪಿಎಂಸಿ',
+    'Kudchi APMC': 'ಕುಡಚಿ ಎಪಿಎಂಸಿ',
+    'Kumta APMC': 'ಕುಮಟಾ ಎಪಿಎಂಸಿ',
+    'Kundapura APMC': 'ಕುಂದಾಪುರ ಎಪಿಎಂಸಿ',
+    'Kustagi APMC': 'ಕುಷ್ಟಗಿ ಎಪಿಎಂಸಿ',
+    'Laxmeshwar APMC': 'ಲಕ್ಷ್ಮೇಶ್ವರ ಎಪಿಎಂಸಿ',
+    'Lingasugur APMC': 'ಲಿಂಗಸುಗೂರು ಎಪಿಎಂಸಿ',
+    'Madikeri APMC': 'ಮಡಿಕೇರಿ ಎಪಿಎಂಸಿ',
+    'Malur APMC': 'ಮಾಲೂರು ಎಪಿಎಂಸಿ',
+    'Mandya APMC': 'ಮಂಡ್ಯ ಎಪಿಎಂಸಿ',
+    'Mangaluru APMC': 'ಮಂಗಳೂರು ಎಪಿಎಂಸಿ',
+    'Manvi APMC': 'ಮಾನ್ವಿ ಎಪಿಎಂಸಿ',
+    'Mudigere APMC': 'ಮೂಡಿಗೆರೆ ಎಪಿಎಂಸಿ',
+    'Mundaragi APMC': 'ಮುಂಡರಗಿ ಎಪಿಎಂಸಿ',
+    'Pandavapura APMC': 'ಪಾಂಡವಪುರ ಎಪಿಎಂಸಿ',
+    'Periyapatna APMC': 'ಪಿರಿಯಾಪಟ್ಟಣ ಎಪಿಎಂಸಿ',
+    'Puttur APMC': 'ಪುತ್ತೂರು ಎಪಿಎಂಸಿ',
+    'Raichur APMC': 'ರಾಯಚೂರು ಎಪಿಎಂಸಿ',
+    'Ramanagara APMC': 'ರಾಮನಗರ ಎಪಿಎಂಸಿ',
+    'Ranebennur APMC': 'ರಾಣೆಬೆನ್ನೂರು ಎಪಿಎಂಸಿ',
+    'Sagar APMC': 'ಸಾಗರ ಎಪಿಎಂಸಿ',
+    'Santhesargur APMC': 'ಸಂತೆ ಸರಗೂರು ಎಪಿಎಂಸಿ',
+    'Shikaripura APMC': 'ಶಿಕಾರಿಪುರ ಎಪಿಎಂಸಿ',
+    'Shimoga APMC': 'ಶಿವಮೊಗ್ಗ ಎಪಿಎಂಸಿ',
+    'Siddapur APMC': 'ಸಿದ್ದಾಪುರ ಎಪಿಎಂಸಿ',
+    'Sindagi APMC': 'ಸಿಂದಗಿ ಎಪಿಎಂಸಿ',
+    'Sindhanur APMC': 'ಸಿಂಧನೂರು ಎಪಿಎಂಸಿ',
+    'Sirsi APMC': 'ಶಿರಸಿ ಎಪಿಎಂಸಿ',
+    'Srirangapattana APMC': 'ಶ್ರೀರಂಗಪಟ್ಟಣ ಎಪಿಎಂಸಿ',
+    'Sulya APMC': 'ಸುಳ್ಯ ಎಪಿಎಂಸಿ',
+    'Tarikere APMC': 'ತರೀಕೆರೆ ಎಪಿಎಂಸಿ',
+    'Udupi APMC': 'ಉಡುಪಿ ಎಪಿಎಂಸಿ',
+    'Vijayapura APMC': 'ವಿಜಯಪುರ ಎಪಿಎಂಸಿ',
+    'Yadgir APMC': 'ಯಾದಗಿರಿ ಎಪಿಎಂಸಿ',
+    'Yalburga APMC': 'ಯಲಬುರ್ಗಾ ಎಪಿಎಂಸಿ',
+    'Yellapur APMC': 'ಯಲ್ಲಾಪುರ ಎಪಿಎಂಸಿ',
+  };
+
+  function kannadaMarketName(market){
+    return KANNADA_MARKET_NAMES[market] || '';
+  }
+
+  function marketLabelHtml(market, cls){
+    const kn = kannadaMarketName(market);
+    return kn ? `${esc(market)} <span class="${cls || 'kn-name'}">${esc(kn)}</span>` : esc(market);
+  }
+
   const els = {
     search: document.getElementById('searchInput'),
     district: document.getElementById('districtSelect'),
@@ -693,8 +792,8 @@
           <div class="variety">${g.count} listing${g.count!==1?'s':''} · ${g.marketCount} market${g.marketCount!==1?'s':''} — view details →</div>
         </div>
         <div class="market-cell">
-          <div class="market-name">↑ ${esc(g.highest ? g.highest.market : '—')}</div>
-          <div class="district-name">↓ ${esc(g.lowest ? g.lowest.market : '—')}</div>
+          <div class="market-name">↑ ${g.highest ? marketLabelHtml(g.highest.market) : '—'}</div>
+          <div class="district-name">↓ ${g.lowest ? marketLabelHtml(g.lowest.market) : '—'}</div>
         </div>
         <div class="lcd">
           <span class="lcd-label">LOW</span>
@@ -814,8 +913,9 @@
   }
 
   function openTrend(commodity, market, district){
-    els.trendTitle.textContent = commodity;
-    els.trendSub.textContent = `${market} · ${district} district`;
+    const kn = kannadaName(commodity);
+    els.trendTitle.innerHTML = `${esc(commodity)}${kn ? ` <span class="kn-name-inline">${esc(kn)}</span>` : ''}`;
+    els.trendSub.innerHTML = `${marketLabelHtml(market, 'kn-name-sub')} · ${esc(district)} district`;
     els.trendBody.innerHTML = trendStateHtml('loading');
     els.trendOverlay.hidden = false;
     document.body.style.overflow = 'hidden';
@@ -919,7 +1019,7 @@
     const dateLabel = d => d.toLocaleDateString('en-IN', {day:'numeric', month:'short'});
     const spanLabel = `${dateLabel(points[0].date)} – ${dateLabel(points[points.length-1].date)}`;
 
-    els.trendSub.textContent = `${meta.market} · ${meta.district} district · Last ${points.length} reported day${points.length!==1?'s':''} (${spanLabel})`;
+    els.trendSub.innerHTML = `${marketLabelHtml(meta.market, 'kn-name-sub')} · ${esc(meta.district)} district · Last ${points.length} reported day${points.length!==1?'s':''} (${spanLabel})`;
 
     els.trendBody.innerHTML = `
       <div class="trend-stats">
@@ -1105,7 +1205,7 @@
       return `
         <div class="market-row ${cls}">
           <div class="market-cell">
-            <div class="market-name">${esc(r.market)}${badge}</div>
+            <div class="market-name">${marketLabelHtml(r.market)}${badge}</div>
             <div class="district-name">${esc(r.district)} district${r.variety && r.variety !== '-' ? ' · ' + esc(r.variety) : ''}</div>
           </div>
           <div class="lcd">
