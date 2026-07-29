@@ -139,6 +139,14 @@
   .commodity-cell .name{
     font-family:'Rajdhani',sans-serif; font-weight:700; font-size:19px; line-height:1.1;
   }
+  .kn-name{
+    font-family:'Noto Sans Kannada',sans-serif; font-weight:500; font-size:13px;
+    color:var(--ink-soft); margin-left:4px;
+  }
+  .kn-name-inline{
+    font-family:'Noto Sans Kannada',sans-serif; font-weight:500; font-size:16px;
+    color:var(--turmeric); margin-left:8px; text-transform:none;
+  }
   .commodity-cell .variety{ font-size:12.5px; color:var(--ink-soft); margin-top:2px; }
   .market-cell{ font-size:13px; line-height:1.35; }
   .market-cell .market-name{font-weight:600;}
@@ -393,6 +401,77 @@
   const HISTORY_DATA_URL = 'data/history.json';
   const TREND_DAYS = 7;
 
+  // Kannada names for commodities as they appear in the government dataset.
+  // Keyed on the exact English string used by the API (including the
+  // parenthetical aliases it ships with, e.g. "Bajra(Pearl Millet/Cumbu)").
+  const KANNADA_COMMODITY_NAMES = {
+    'Alasande Gram': 'ಅಲಸಂದೆ ಕಾಳು',
+    'Alsandikai': 'ಅಲಸಂದೆಕಾಯಿ',
+    'Arecanut(Betelnut/Supari)': 'ಅಡಿಕೆ',
+    'Bajra(Pearl Millet/Cumbu)': 'ಸಜ್ಜೆ',
+    'Banana': 'ಬಾಳೆಹಣ್ಣು',
+    'Beans': 'ಬೀನ್ಸ್',
+    'Beetroot': 'ಬೀಟ್ರೂಟ್',
+    'Bengal Gram(Gram)(Whole)': 'ಕಡಲೆ',
+    'Bitter gourd': 'ಹಾಗಲಕಾಯಿ',
+    'Black Gram Dal(Urd Dal)': 'ಉದ್ದಿನ ಬೇಳೆ',
+    'Black pepper': 'ಕರಿಮೆಣಸು',
+    'Bottle gourd': 'ಸೋರೆಕಾಯಿ',
+    'Brinjal': 'ಬದನೆಕಾಯಿ',
+    'Bunch Beans': 'ಗುಚ್ಛ ಬೀನ್ಸ್',
+    'Cabbage': 'ಎಲೆಕೋಸು',
+    'Capsicum': 'ದೊಣ್ಣೆ ಮೆಣಸಿನಕಾಯಿ',
+    'Carrot': 'ಕ್ಯಾರೆಟ್',
+    'Cauliflower': 'ಹೂಕೋಸು',
+    'Chilly Capsicum': 'ಕ್ಯಾಪ್ಸಿಕಂ ಮೆಣಸಿನಕಾಯಿ',
+    'Coconut': 'ತೆಂಗಿನಕಾಯಿ',
+    'Cow': 'ಹಸು',
+    'Cowpea(Lobia/Karamani)': 'ಅಲಸಂದೆ',
+    'Cowpea(Veg)': 'ಅಲಸಂದೆಕಾಯಿ',
+    'Cucumbar(Kheera)': 'ಸೌತೆಕಾಯಿ',
+    'Drumstick': 'ನುಗ್ಗೆಕಾಯಿ',
+    'Dry Chillies': 'ಒಣ ಮೆಣಸಿನಕಾಯಿ',
+    'Foxtail Millet(Navane)': 'ನವಣೆ',
+    'Garlic': 'ಬೆಳ್ಳುಳ್ಳಿ',
+    'Ginger(Dry)': 'ಒಣ ಶುಂಠಿ',
+    'Ginger(Green)': 'ಹಸಿ ಶುಂಠಿ',
+    'Green Avare(W)': 'ಹಸಿ ಅವರೆ',
+    'Green Chilli': 'ಹಸಿ ಮೆಣಸಿನಕಾಯಿ',
+    'Green Gram(Moong)(Whole)': 'ಹೆಸರುಕಾಳು',
+    'Gur(Jaggery)': 'ಬೆಲ್ಲ',
+    'Jowar(Sorghum)': 'ಜೋಳ',
+    'Knool Khol': 'ಗಂಟುಕೋಸು',
+    'Kulthi(Horse Gram)': 'ಹುರುಳಿ',
+    'Ladies Finger': 'ಬೆಂಡೆಕಾಯಿ',
+    'Lime': 'ನಿಂಬೆಹಣ್ಣು',
+    'Maize': 'ಮೆಕ್ಕೆಜೋಳ',
+    'Neem Seed': 'ಬೇವಿನ ಬೀಜ',
+    'Onion': 'ಈರುಳ್ಳಿ',
+    'Paddy(Common)': 'ಭತ್ತ',
+    'Potato': 'ಆಲೂಗಡ್ಡೆ',
+    'Raddish': 'ಮೂಲಂಗಿ',
+    'Red gram split/Arhar dal/Tur dal': 'ತೊಗರಿ ಬೇಳೆ',
+    'Red gram/Arhar/Tur(whole)': 'ತೊಗರಿ',
+    'Rice': 'ಅಕ್ಕಿ',
+    'Ridgeguard(Tori)': 'ಹೀರೇಕಾಯಿ',
+    'Seemebadnekai': 'ಸೀಮೆ ಬದನೆಕಾಯಿ',
+    'She Buffalo': 'ಎಮ್ಮೆ',
+    'Sheep': 'ಕುರಿ',
+    'Snakeguard': 'ಪಡವಲಕಾಯಿ',
+    'Soyabean': 'ಸೋಯಾಬೀನ್',
+    'Sunflower/Sunflower Seed': 'ಸೂರ್ಯಕಾಂತಿ',
+    'Sweet Pumpkin': 'ಸಿಹಿ ಕುಂಬಳಕಾಯಿ',
+    'Tender Coconut': 'ಎಳನೀರು',
+    'Thondekai': 'ತೊಂಡೆಕಾಯಿ',
+    'Tomato': 'ಟೊಮ್ಯಾಟೊ',
+    'Turmeric': 'ಅರಿಶಿನ',
+    'Wheat': 'ಗೋಧಿ',
+  };
+
+  function kannadaName(commodity){
+    return KANNADA_COMMODITY_NAMES[commodity] || '';
+  }
+
   const els = {
     search: document.getElementById('searchInput'),
     district: document.getElementById('districtSelect'),
@@ -606,7 +685,7 @@
       <div class="row-card commodity-card" tabindex="0" role="button"
         aria-label="View details for ${esc(g.commodity)}" data-commodity="${esc(g.commodity)}">
         <div class="commodity-cell">
-          <div class="name">${esc(g.commodity)}</div>
+          <div class="name">${esc(g.commodity)}${kannadaName(g.commodity) ? ` <span class="kn-name">${esc(kannadaName(g.commodity))}</span>` : ''}</div>
           <div class="variety">${g.count} listing${g.count!==1?'s':''} · ${g.marketCount} market${g.marketCount!==1?'s':''} — view details →</div>
         </div>
         <div class="market-cell">
@@ -922,7 +1001,8 @@
     const recs = allRecords.filter(r => r.commodity === commodity);
     const marketCount = new Set(recs.map(r => r.market)).size;
 
-    els.commodityTitle.textContent = commodity;
+    const kn = kannadaName(commodity);
+    els.commodityTitle.innerHTML = `${esc(commodity)}${kn ? ` <span class="kn-name-inline">${esc(kn)}</span>` : ''}`;
     els.commoditySub.textContent = `${recs.length} listing${recs.length!==1?'s':''} across ${marketCount} market${marketCount!==1?'s':''} in Karnataka`;
     els.commodityBody.innerHTML = renderCommodityBody(recs);
     els.commodityOverlay.hidden = false;
