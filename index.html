@@ -816,13 +816,22 @@
     }
   }
 
+  function deltaHtml(first, last){
+    const fmt = v => v === null || v === undefined ? '—' : Math.round(v).toLocaleString('en-IN');
+    if(first === null || last === null) return {cls: '', valueHtml: '—', note: ''};
+    const delta = last - first;
+    const pct = first ? (delta / first * 100) : null;
+    const pctLabel = pct === null ? '' : `${pct > 0 ? '+' : ''}${pct.toFixed(1)}%`;
+    if(delta > 0) return {cls: 'up', valueHtml: `▲ +₹${fmt(delta)}`, note: pctLabel};
+    if(delta < 0) return {cls: 'down', valueHtml: `▼ -₹${fmt(Math.abs(delta))}`, note: pctLabel};
+    return {cls: '', valueHtml: `₹0`, note: pctLabel};
+  }
+
   function renderTrend(points, meta){
     const fmt = v => v === null || v === undefined ? '—' : Math.round(v).toLocaleString('en-IN');
     const first = points[0].modal;
     const last = points[points.length-1].modal;
-    const change = (first && last !== null) ? ((last-first)/first*100) : null;
-    const changeClass = change === null ? '' : (change > 0 ? 'up' : (change < 0 ? 'down' : ''));
-    const changeLabel = change === null ? '—' : `${change > 0 ? '+' : ''}${change.toFixed(1)}%`;
+    const delta = deltaHtml(first, last);
 
     const dateLabel = d => d.toLocaleDateString('en-IN', {day:'numeric', month:'short'});
     const spanLabel = `${dateLabel(points[0].date)} – ${dateLabel(points[points.length-1].date)}`;
@@ -837,7 +846,8 @@
         </div>
         <div class="trend-stat">
           <span class="k">Change over period</span>
-          <span class="v ${changeClass}">${changeLabel}</span>
+          <span class="v ${delta.cls}">${delta.valueHtml}</span>
+          ${delta.note ? `<span class="stat-note">${delta.note} vs ${dateLabel(points[0].date)}</span>` : ''}
         </div>
         <div class="trend-stat">
           <span class="k">Range shown</span>
@@ -920,10 +930,28 @@
 
     loadCommodityTrend(commodity).then(points => {
       const wrap = document.getElementById('commodityTrendWrap');
+      const changeWrap = document.getElementById('commodityTrendChange');
       if(!wrap) return;
       wrap.innerHTML = points.length
         ? buildTrendSvg(points)
         : '<p class="trend-note">Not enough saved history yet to chart a statewide trend.</p>';
+
+      if(changeWrap){
+        if(points.length > 1){
+          const delta = deltaHtml(points[0].modal, points[points.length-1].modal);
+          const dateLabel = d => d.toLocaleDateString('en-IN', {day:'numeric', month:'short'});
+          changeWrap.innerHTML = `
+            <div class="trend-stats" style="margin-bottom:10px;">
+              <div class="trend-stat">
+                <span class="k">Statewide change over period</span>
+                <span class="v ${delta.cls}">${delta.valueHtml}</span>
+                ${delta.note ? `<span class="stat-note">${delta.note} vs ${dateLabel(points[0].date)}</span>` : ''}
+              </div>
+            </div>`;
+        } else {
+          changeWrap.innerHTML = '';
+        }
+      }
     }).catch(() => {
       const wrap = document.getElementById('commodityTrendWrap');
       if(wrap) wrap.innerHTML = '<p class="trend-note">Could not load price history. Try again in a moment.</p>';
@@ -997,6 +1025,7 @@
 
     return `
       ${statsHtml}
+      <div id="commodityTrendChange"></div>
       <div class="trend-chart-wrap" id="commodityTrendWrap">
         <p class="trend-note">Loading statewide price trend…</p>
       </div>
