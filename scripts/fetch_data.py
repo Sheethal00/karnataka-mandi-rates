@@ -18,6 +18,12 @@ does nothing and leaves live.json / history.json exactly as they are, so the
 site keeps serving the last successfully fetched day indefinitely until the
 next real update arrives.
 
+If today's (IST) date is already the newest entry in history.json, the
+script skips calling the API at all -- there's nothing left to find until
+the date rolls over, so there's no point spending a request just to confirm
+that. This is what lets the cron poll hourly without hammering the API: once
+a day's data is found, every remaining run that day is a free no-op.
+
 Run via GitHub Actions on a schedule (see .github/workflows/update-data.yml),
 or locally with:
 
@@ -31,8 +37,11 @@ import sys
 import tempfile
 import time
 from datetime import date, datetime, timezone
+from zoneinfo import ZoneInfo
 
 import requests
+
+IST = ZoneInfo("Asia/Kolkata")
 
 API_KEY = os.environ.get("DATA_GOV_API_KEY")
 if not API_KEY:
@@ -133,8 +142,18 @@ def trim_to_last_n_days(history, n=HISTORY_DAYS):
     return {d: history[d] for d in keep}
 
 
+def today_ist_iso():
+    return datetime.now(IST).date().isoformat()
+
+
 def main():
     os.makedirs(DATA_DIR, exist_ok=True)
+    history = load_json(HISTORY_FILE) or {}
+
+    today = today_ist_iso()
+    if today in history:
+        print(f"Already have {today}'s data in history.json -- skipping API call")
+        return
 
     raw_records, count = fetch_current()
 
@@ -158,7 +177,6 @@ def main():
     }
     atomic_write(LIVE_FILE, live_payload)
 
-    history = load_json(HISTORY_FILE) or {}
     history[arrival_date_iso] = dated_records
     history = trim_to_last_n_days(history)
     atomic_write(HISTORY_FILE, history)

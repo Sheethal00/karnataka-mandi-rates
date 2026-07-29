@@ -37,6 +37,7 @@ This is the **only** API this project calls. The government's separate "historic
 - **No exposed API key** — the key lives only in a GitHub Actions secret, never shipped to the browser.
 - **No per-visitor rate limiting** — only the hourly cron job talks to data.gov.in; visitors just read a static file.
 - **Morning-gap resilience** — the API's `count` field is checked explicitly. When `count === 0` (today's data isn't published yet), the script does nothing and leaves `live.json`/`history.json` untouched, so the site keeps serving the most recently fetched day indefinitely, with no extra API calls, until the next real update arrives.
+- **Self-throttling** — once today's (IST) date is already the newest entry in `history.json`, the script skips calling the API at all for the rest of the day. The cron can poll hourly without hammering the API: only the runs before that day's data is found actually make a request.
 - **Fast trend charts & date picker** — `history.json` keys each of the last 7 days to that day's full record list, built from ordinary hourly snapshots, so opening a trend chart or picking an earlier date is an instant local read with zero live API calls.
 
 ## Project structure
