@@ -39,15 +39,53 @@ This is the **only** API this project calls. The government's separate "historic
 - **Morning-gap resilience** — the API's `total` field is checked explicitly. When `total === 0` (today's data isn't published yet), the script does nothing and leaves `live.json`/`history.json` untouched, so the site keeps serving the most recently fetched day indefinitely until the next real update arrives.
 - **Fills out through the day** — markets report in gradually, so a 07:00 pull sees only a fraction of the day's eventual rows. Every hourly run re-pulls the current day (paging until the API's reported `total` is collected) and replaces the stored day only when the fresh pull has *more* records. A partial morning snapshot can never overwrite a fuller set, including one written by hand via `backfill_from_api.py`.
 - **Fast trend charts & date picker** — `history.json` keys each of the last 7 days to that day's full record list, built from ordinary hourly snapshots, so opening a trend chart or picking an earlier date is an instant local read with zero live API calls.
+- **Works offline** — because the data is already static files rather than live API calls, a service worker can cache them wholesale. Rates stay readable with no signal (see below).
+
+## Install as a mobile app
+
+The site is a **PWA (Progressive Web App)**: installable on Android and iPhone straight from the browser, with a home-screen icon, no browser chrome, and offline access. There's no app store, no native build, and nothing to download — the installed app is this same page.
+
+- **Android** (Chrome/Edge) — tap **Install app** in the status bar, or the browser's ⋮ menu → *Install app*.
+- **iPhone** (Safari) — Share button **↑** → *Add to Home Screen*. iOS gives no in-page install button, which is why the footer spells the steps out.
+
+### What's cached, and how
+
+`sw.js` uses a different strategy per kind of request, because they have opposite requirements:
+
+| Request | Strategy | Why |
+|---|---|---|
+| `index.html` (navigations) | network-first, cache fallback | a deployed change appears on the next online launch; the app still opens with no signal |
+| icons, manifest | cache-first | immutable until `CACHE_VERSION` is bumped |
+| `data/*.json` | network-first, cache fallback | prices must be live when there's a connection, last-known when there isn't |
+| Google Fonts | cache-first | versioned URLs, so the Kannada text renders correctly offline |
+
+Two details worth knowing before editing the worker:
+
+- **The cache-buster is handled explicitly.** The app appends `?_=<timestamp>` to data requests to defeat HTTP caching. Left alone, that makes every request a unique URL — so every fetch would be a cache miss *and* a new cache entry, growing the cache forever while never serving a hit. `dataCacheKey()` strips the query string on both the read and write side.
+- **Bump `CACHE_VERSION` in `sw.js`** when icons or the manifest change. `index.html` doesn't strictly need it (network-first refreshes its own cache entry), but bumping is harmless and the `activate` handler deletes every non-current cache.
+
+### Regenerating the icons
+
+Icons are generated from the site's own palette rather than committed as unexplained binaries:
+
+```bash
+python scripts/make_icons.py     # requires Pillow
+```
+
+That writes `icons/` — 192/512 standard, 192/512 maskable (artwork inside the central 80% so Android's circular crop doesn't clip it), a 180px `apple-touch-icon` flattened onto the board colour (iOS composites transparency over black), and a favicon.
 
 ## Project structure
 
 ```
 .
 ├── index.html                  # frontend (static, no build step)
+├── manifest.webmanifest         # PWA metadata: name, icons, colours, standalone display
+├── sw.js                        # service worker: offline caching for shell + data
+├── icons/                       # generated app icons (see scripts/make_icons.py)
 ├── scripts/
 │   ├── fetch_data.py            # pulls current-day data, writes data/live.json + data/history.json
 │   ├── backfill_history.py      # manual/offline seed of data/history.json from downloaded CSVs
+│   ├── make_icons.py            # regenerates icons/ from the site palette
 │   └── report_stats.py          # prints size stats for data/live.json and data/history.json
 ├── data/
 │   ├── live.json                # most recent successfully fetched day, consumed by index.html

@@ -2,8 +2,26 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- viewport-fit=cover lets the page paint into the notch/home-indicator
+     area on iPhone when launched from the home screen; the safe-area insets
+     below keep actual content clear of it. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Mandi Rates · Karnataka</title>
+<meta name="description" content="Daily agricultural mandi prices for Karnataka — commodity, market, district and min/max/modal rates per quintal, with 7-day price trends.">
+
+<!-- Installable web app (Android/Chrome/Edge read the manifest) -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#F3ECDD">
+
+<!-- iOS ignores the manifest for home-screen installs and needs its own
+     tags: without apple-touch-icon it screenshots the page as the icon. -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Mandi Rates">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Hind:wght@400;500;600&family=Space+Mono:wght@400;700&family=Noto+Sans+Kannada:wght@500;700&display=swap" rel="stylesheet">
@@ -32,6 +50,9 @@
     color:var(--ink);
     font-family:'Hind',sans-serif;
     -webkit-font-smoothing:antialiased;
+    /* Keeps content off the rounded corners / camera cutout in landscape. */
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
   }
   ::selection{background:var(--turmeric); color:var(--ink);}
   a{color:inherit;}
@@ -40,6 +61,10 @@
     background:var(--paper);
     border-bottom:3px solid var(--ink);
     padding:28px clamp(16px,4vw,48px) 18px;
+    /* Installed on iPhone the page runs full-bleed under the status bar,
+       so the masthead absorbs the top inset. env() resolves to 0px in a
+       browser tab and on Android, leaving the padding above untouched. */
+    padding-top: calc(28px + env(safe-area-inset-top, 0px));
   }
   .masthead-row{
     display:flex; justify-content:space-between; align-items:flex-end;
@@ -106,6 +131,23 @@
     justify-content:space-between; flex-wrap:wrap; gap:8px;
   }
   .status .count strong{color:var(--brick);}
+
+  /* Hidden until Chrome fires beforeinstallprompt, so it only ever appears
+     when the app can actually be installed. */
+  .btn-install{
+    background:none; border:1px solid var(--turmeric-dim); color:var(--ink-soft);
+    font-family:'Space Mono',monospace; font-size:11px; letter-spacing:0.3px;
+    padding:3px 10px; border-radius:3px; cursor:pointer;
+    transition:background 0.15s ease, color 0.15s ease;
+  }
+  .btn-install:hover{background:var(--turmeric); color:var(--board);}
+  .btn-install:focus-visible{outline:2px solid var(--turmeric); outline-offset:2px;}
+  .btn-install[hidden]{display:none;}
+
+  .install-hint{
+    margin:10px auto 0; max-width:720px; font-size:11px;
+    color:rgba(243,236,221,0.45);
+  }
 
   .stale-banner{
     max-width:1180px; margin:14px auto 0; background:var(--warn-bg);
@@ -278,6 +320,8 @@
   footer{
     background:var(--ink); color:rgba(243,236,221,0.65); font-size:12px;
     padding:22px clamp(16px,4vw,48px); text-align:center;
+    /* Clears the iPhone home indicator when installed. */
+    padding-bottom: calc(22px + env(safe-area-inset-bottom, 0px));
   }
   footer a{color:var(--turmeric); text-decoration:none;}
   footer a:hover{text-decoration:underline;}
@@ -351,6 +395,7 @@
   <div class="status">
     <span class="count" id="statusCount">Loading…</span>
     <span id="statusUpdated"></span>
+    <button class="btn-install" id="installBtn" type="button" hidden>⤓ Install app</button>
   </div>
 </div>
 
@@ -373,6 +418,7 @@
 <footer>
   <p>Rates from the Ministry of Agriculture &amp; Farmers Welfare's <a href="https://www.data.gov.in/resource/9ef84268-d588-465a-a308-a864a43d0070" target="_blank" rel="noopener">Variety-wise Daily Market Prices</a> dataset via data.gov.in, fetched hourly and served as static data. Prices are as reported by market committees and may lag actual trading by a day. Rates are per quintal (100&nbsp;kg).</p>
   <p>Price trends and the date picker are built entirely from our own rolling 7-day local cache of this same daily feed — no separate historical API is queried.</p>
+  <p class="install-hint">Add to your phone's home screen to use it like an app, offline: on Android tap <strong>Install app</strong> above or your browser's ⋮ menu → <em>Install app</em>; on iPhone tap Safari's Share button <strong>↑</strong> → <em>Add to Home Screen</em>. Last-loaded rates stay readable with no signal.</p>
 </footer>
 
 <div class="trend-overlay" id="trendOverlay" hidden>
@@ -1255,6 +1301,53 @@
   }
 
   load();
+})();
+</script>
+
+<script>
+/* ================= Installable app (PWA) ================= */
+(function(){
+  if(!('serviceWorker' in navigator)) return;
+
+  // Registered from a relative path so it works both at a domain root and
+  // under a GitHub Pages project path. Registration is deferred to `load`
+  // so it never competes with the first data fetch for bandwidth.
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('sw.js').catch(function(err){
+      // A failed registration is not fatal -- the site simply behaves as an
+      // ordinary web page, so this is logged rather than surfaced.
+      console.warn('Service worker registration failed:', err);
+    });
+  });
+
+  /* Android/Chrome fire beforeinstallprompt when the app qualifies for
+     installation; iOS Safari never does, and offers no API to trigger the
+     Add to Home Screen flow, so iPhone users are given instructions instead
+     (see the install hint in the footer). */
+  var deferredPrompt = null;
+  var btn = document.getElementById('installBtn');
+
+  window.addEventListener('beforeinstallprompt', function(e){
+    e.preventDefault();
+    deferredPrompt = e;
+    if(btn) btn.hidden = false;
+  });
+
+  if(btn){
+    btn.addEventListener('click', async function(){
+      if(!deferredPrompt) return;
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      // The event is single-use: once prompted it cannot be re-fired.
+      deferredPrompt = null;
+      btn.hidden = true;
+    });
+  }
+
+  window.addEventListener('appinstalled', function(){
+    deferredPrompt = null;
+    if(btn) btn.hidden = true;
+  });
 })();
 </script>
 
