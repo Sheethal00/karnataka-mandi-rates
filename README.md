@@ -36,8 +36,8 @@ This is the **only** API this project calls. The government's separate "historic
 ### Why static JSON instead of client-side API calls
 - **No exposed API key** — the key lives only in a GitHub Actions secret, never shipped to the browser.
 - **No per-visitor rate limiting** — only the hourly cron job talks to data.gov.in; visitors just read a static file.
-- **Morning-gap resilience** — the API's `count` field is checked explicitly. When `count === 0` (today's data isn't published yet), the script does nothing and leaves `live.json`/`history.json` untouched, so the site keeps serving the most recently fetched day indefinitely, with no extra API calls, until the next real update arrives.
-- **Self-throttling** — once today's (IST) date is already the newest entry in `history.json`, the script skips calling the API at all for the rest of the day. The cron can poll hourly without hammering the API: only the runs before that day's data is found actually make a request.
+- **Morning-gap resilience** — the API's `total` field is checked explicitly. When `total === 0` (today's data isn't published yet), the script does nothing and leaves `live.json`/`history.json` untouched, so the site keeps serving the most recently fetched day indefinitely until the next real update arrives.
+- **Fills out through the day** — markets report in gradually, so a 07:00 pull sees only a fraction of the day's eventual rows. Every hourly run re-pulls the current day (paging until the API's reported `total` is collected) and replaces the stored day only when the fresh pull has *more* records. A partial morning snapshot can never overwrite a fuller set, including one written by hand via `backfill_from_api.py`.
 - **Fast trend charts & date picker** — `history.json` keys each of the last 7 days to that day's full record list, built from ordinary hourly snapshots, so opening a trend chart or picking an earlier date is an instant local read with zero live API calls.
 
 ## Project structure

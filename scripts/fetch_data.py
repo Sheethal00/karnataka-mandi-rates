@@ -12,17 +12,20 @@ at a time, purely from this daily current-price pull. If older days are ever
 missing, backfilling is a manual/offline step (see backfill_history.py) --
 not something this script does automatically.
 
-The API's own `count` field is the signal for whether today's data has been
-published yet. count == 0 means "not published" -- in that case this script
+The API's own `total` field is the signal for whether today's data has been
+published yet. total == 0 means "not published" -- in that case this script
 does nothing and leaves live.json / history.json exactly as they are, so the
 site keeps serving the last successfully fetched day indefinitely until the
 next real update arrives.
 
-If today's (IST) date is already the newest entry in history.json, the
-script skips calling the API at all -- there's nothing left to find until
-the date rolls over, so there's no point spending a request just to confirm
-that. This is what lets the cron poll hourly without hammering the API: once
-a day's data is found, every remaining run that day is a free no-op.
+A day's data is NOT published all at once: markets report in through the
+day, so an early-morning pull sees only a fraction of the eventual total
+(e.g. 162 rows at 07:00 UTC vs 435+ by evening). So every cron run re-pulls
+the current day rather than stopping once that date is present -- and the
+stored day is replaced only when the fresh pull has *more* records than
+what's already on disk. That "only grows" rule is what keeps a partial
+morning snapshot from clobbering a fuller set (including one written by
+hand via backfill_from_api.py), while still letting the day fill out.
 
 Run via GitHub Actions on a schedule (see .github/workflows/update-data.yml),
 or locally with:
@@ -37,11 +40,8 @@ import sys
 import tempfile
 import time
 from datetime import date, datetime, timezone
-from zoneinfo import ZoneInfo
 
 import requests
-
-IST = ZoneInfo("Asia/Kolkata")
 
 API_KEY = os.environ.get("DATA_GOV_API_KEY")
 if not API_KEY:
@@ -60,33 +60,61 @@ HISTORY_FILE = os.path.join(DATA_DIR, "history.json")
 
 HISTORY_DAYS = 7
 
+# The API silently caps `limit` per request, so a single call can come back
+# short even when it reports a larger `total` -- always page until `total`
+# rows are collected rather than trusting one response to hold everything.
+PAGE_SIZE = 1000
+MAX_PAGES = 10
+
 session = requests.Session()
 session.headers.update(HEADERS)
 
 
-def fetch_current(retries=3):
-    """Returns (records, count). `count` is the API's own explicit signal
-    for whether today's data has been published -- trusted over an empty
-    records list, since that's the field the API actually uses to mean it."""
+def fetch_page(offset, retries=3):
+    """Returns (records, total) for one page, or (None, 0) if every retry
+    failed. `total` is the API's own count of all rows matching the filter,
+    which is what tells us whether today's data has been published at all."""
     params = {
         "api-key": API_KEY,
         "format": "json",
         "filters[state]": "Karnataka",
-        "limit": 2000,
+        "limit": PAGE_SIZE,
+        "offset": offset,
     }
     for attempt in range(retries):
         try:
             resp = session.get(CURRENT_URL, params=params, timeout=45)
             resp.raise_for_status()
             data = resp.json()
-            count = int(data.get("count", data.get("total", 0)) or 0)
-            return data.get("records", []), count
+            records = data.get("records", [])
+            total = int(data.get("total", len(records)) or 0)
+            return records, total
         except requests.exceptions.RequestException as e:
-            print(f"fetch_current attempt {attempt+1} failed: {e}")
+            print(f"fetch page at offset {offset}, attempt {attempt+1} failed: {e}")
             if attempt < retries - 1:
                 time.sleep(5 * (attempt + 1))
-    print("fetch_current: all retries failed, treating as not-yet-published")
-    return [], 0
+    return None, 0
+
+
+def fetch_current():
+    """Returns (records, total) for the whole current-price result set."""
+    records = []
+    total = 0
+    for page in range(MAX_PAGES):
+        rows, page_total = fetch_page(len(records))
+        if rows is None:
+            # A mid-pagination failure would hand back a truncated day that
+            # could still look "bigger" than a real earlier pull, so bail out
+            # entirely and let the next cron run retry from scratch.
+            print("fetch_current: request failed, treating as not-yet-published")
+            return [], 0
+        total = max(total, page_total)
+        records.extend(rows)
+        if not rows or len(records) >= total:
+            break
+    else:
+        print(f"fetch_current: hit the {MAX_PAGES}-page ceiling with {len(records)}/{total} records")
+    return records, total
 
 
 def normalize_current(r):
@@ -142,32 +170,31 @@ def trim_to_last_n_days(history, n=HISTORY_DAYS):
     return {d: history[d] for d in keep}
 
 
-def today_ist_iso():
-    return datetime.now(IST).date().isoformat()
-
-
 def main():
     os.makedirs(DATA_DIR, exist_ok=True)
     history = load_json(HISTORY_FILE) or {}
 
-    today = today_ist_iso()
-    if today in history:
-        print(f"Already have {today}'s data in history.json -- skipping API call")
-        return
+    raw_records, total = fetch_current()
 
-    raw_records, count = fetch_current()
-
-    if count == 0:
-        print("Current resource has not published today's data yet (count=0) -- leaving live.json and history.json untouched")
+    if total == 0:
+        print("Current resource has not published today's data yet (total=0) -- leaving live.json and history.json untouched")
         return
 
     day_records = [normalize_current(r) for r in raw_records]
     dated_records = [r for r in day_records if r.get("arrival_date")]
     if not dated_records:
-        print("Current resource reported count>0 but returned no usable records -- leaving live.json and history.json untouched")
+        print("Current resource reported total>0 but returned no usable records -- leaving live.json and history.json untouched")
         return
 
     arrival_date_iso = to_iso(dated_records[0]["arrival_date"])
+
+    # Markets report in through the day, so re-running is how a day fills
+    # out -- but only ever upward, never replacing a fuller set with a
+    # partial one.
+    have = len(history.get(arrival_date_iso, []))
+    if have >= len(dated_records):
+        print(f"Already have {have} record(s) for {arrival_date_iso}; fetch returned {len(dated_records)} -- leaving live.json and history.json untouched")
+        return
 
     live_payload = {
         "records": day_records,
@@ -181,7 +208,7 @@ def main():
     history = trim_to_last_n_days(history)
     atomic_write(HISTORY_FILE, history)
 
-    print(f"Wrote {len(day_records)} records for {arrival_date_iso} to live.json")
+    print(f"Wrote {len(day_records)} records for {arrival_date_iso} to live.json (was {have})")
     print(f"history.json now holds {len(history)} day(s): {', '.join(sorted(history.keys()))}")
 
 
