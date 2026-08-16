@@ -27794,15 +27794,15 @@
   "2026-08-16": [
     {
       "state": "Karnataka",
-      "district": "Koppal",
-      "market": "Kustagi APMC",
-      "commodity": "Cotton",
-      "variety": "Other",
-      "grade": "FAQ",
+      "district": "Vijayanagara",
+      "market": "Hospet APMC",
+      "commodity": "Potato",
+      "variety": "Potato",
+      "grade": "Local",
       "arrival_date": "16/08/2026",
-      "min_price": 9300,
-      "max_price": 9800,
-      "modal_price": 9446
+      "min_price": 1300,
+      "max_price": 1700,
+      "modal_price": 1700
     },
     {
       "state": "Karnataka",
@@ -27815,6 +27815,66 @@
       "min_price": 8920,
       "max_price": 9300,
       "modal_price": 9099
+    },
+    {
+      "state": "Karnataka",
+      "district": "Chitradurga",
+      "market": "Hiriyur APMC",
+      "commodity": "Ground Nut Seed",
+      "variety": "Ground Nut Seed",
+      "grade": "Large",
+      "arrival_date": "16/08/2026",
+      "min_price": 11804,
+      "max_price": 13600,
+      "modal_price": 12704
+    },
+    {
+      "state": "Karnataka",
+      "district": "Vijayanagara",
+      "market": "Hospet APMC",
+      "commodity": "Jowar(Sorghum)",
+      "variety": "Jowar ( White)",
+      "grade": "Local",
+      "arrival_date": "16/08/2026",
+      "min_price": 5501,
+      "max_price": 6151,
+      "modal_price": 6151
+    },
+    {
+      "state": "Karnataka",
+      "district": "Vijayanagara",
+      "market": "Hospet APMC",
+      "commodity": "Cabbage",
+      "variety": "Cabbage",
+      "grade": "Local",
+      "arrival_date": "16/08/2026",
+      "min_price": 1800,
+      "max_price": 2000,
+      "modal_price": 2000
+    },
+    {
+      "state": "Karnataka",
+      "district": "Vijayanagara",
+      "market": "Hospet APMC",
+      "commodity": "Ladies Finger",
+      "variety": "Ladies Finger",
+      "grade": "Local",
+      "arrival_date": "16/08/2026",
+      "min_price": 2500,
+      "max_price": 3000,
+      "modal_price": 2500
+    },
+    {
+      "state": "Karnataka",
+      "district": "Vijayanagara",
+      "market": "Hospet APMC",
+      "commodity": "Onion",
+      "variety": "Local",
+      "grade": "Local",
+      "arrival_date": "16/08/2026",
+      "min_price": 1600,
+      "max_price": 1800,
+      "modal_price": 1700
     },
     {
       "state": "Karnataka",
@@ -27832,6 +27892,30 @@
       "state": "Karnataka",
       "district": "Koppal",
       "market": "Kustagi APMC",
+      "commodity": "Bajra(Pearl Millet/Cumbu)",
+      "variety": "Hybrid",
+      "grade": "FAQ",
+      "arrival_date": "16/08/2026",
+      "min_price": 2500,
+      "max_price": 2650,
+      "modal_price": 2582
+    },
+    {
+      "state": "Karnataka",
+      "district": "Vijayanagara",
+      "market": "Hospet APMC",
+      "commodity": "Tomato",
+      "variety": "Tomato",
+      "grade": "Local",
+      "arrival_date": "16/08/2026",
+      "min_price": 800,
+      "max_price": 1000,
+      "modal_price": 1000
+    },
+    {
+      "state": "Karnataka",
+      "district": "Koppal",
+      "market": "Kustagi APMC",
       "commodity": "Sunflower/Sunflower Seed",
       "variety": "Hybrid",
       "grade": "FAQ",
@@ -27844,25 +27928,13 @@
       "state": "Karnataka",
       "district": "Koppal",
       "market": "Kustagi APMC",
-      "commodity": "Bajra(Pearl Millet/Cumbu)",
-      "variety": "Hybrid",
+      "commodity": "Cotton",
+      "variety": "Other",
       "grade": "FAQ",
       "arrival_date": "16/08/2026",
-      "min_price": 2500,
-      "max_price": 2650,
-      "modal_price": 2582
-    },
-    {
-      "state": "Karnataka",
-      "district": "Chitradurga",
-      "market": "Hiriyur APMC",
-      "commodity": "Coconut",
-      "variety": "Small",
-      "grade": "Medium",
-      "arrival_date": "16/08/2026",
-      "min_price": 22000,
-      "max_price": 22000,
-      "modal_price": 22000
+      "min_price": 9300,
+      "max_price": 9800,
+      "modal_price": 9446
     },
     {
       "state": "Karnataka",
@@ -27880,13 +27952,13 @@
       "state": "Karnataka",
       "district": "Chitradurga",
       "market": "Hiriyur APMC",
-      "commodity": "Ground Nut Seed",
-      "variety": "Ground Nut Seed",
-      "grade": "Large",
+      "commodity": "Coconut",
+      "variety": "Small",
+      "grade": "Medium",
       "arrival_date": "16/08/2026",
-      "min_price": 11804,
-      "max_price": 13600,
-      "modal_price": 12704
+      "min_price": 22000,
+      "max_price": 22000,
+      "modal_price": 22000
     }
   ]
 }
